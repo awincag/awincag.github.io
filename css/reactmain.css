@@ -1,5 +1,5 @@
 html{
-  font-family:"Freight Sans Pro",Helvetica,Roboto,Arial,sans-serif;
+  font-family:"freight-sans-pro",Helvetica,Roboto,Arial,sans-serif;
   /* font-family:proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; */
   color:#484848;line-height:1.28
 }
@@ -20,6 +20,7 @@ em{
 }
 
 h1,h2,h3,h4,h5,h6{
+  font-family: "freight-big-pro", sans-serif;
   margin:10px 0;
   font-family:inherit;
   font-weight:bold;
