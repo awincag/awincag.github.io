@@ -13,6 +13,7 @@ p{
   line-height: 1.62em;
   margin-bottom: 1.8em;
   letter-spacing: 0.045em;
+  text-rendering:optimizelegibility
 }
 
 .subHeader{
@@ -42,6 +43,7 @@ h1,h2,h3,h4,h5,h6{
   font-family:inherit;
   line-height: 1.5em;
   color:inherit;
+  display:inherit;
   text-rendering:optimizelegibility
 }
 
@@ -291,7 +293,7 @@ span.stretch {
   display: block;
   padding: .4em 2.2em .4em 2.2em;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   border: solid 5px #fff;
 }
 
@@ -305,6 +307,10 @@ span.stretch {
   margin-right:auto;
   padding-left:20px;
   padding-right:20px
+}
+
+.vertical {
+  display: inline-block;
 }
 
 .skinnyWrap{
