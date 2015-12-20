@@ -58,12 +58,29 @@
 
   <header>
       <div class="nav" >
-        <a href="/" class=nav-logo></a>
-          <span class="logo"><span>
+        <div class="main-logo-wrapper">
+          <a href="/" class=nav-logo>Year In Review</a>
+        </div>
 
         <!-- Right Navigation -->
-
-      </div>
+        <div id="toggle"> </div>
+        <div class="menu closed">
+          <ul>
+            <li>January</li>
+            <li>February</li>
+            <li>March</li>
+            <li>April</li>
+            <li>May</li>
+            <li>June</li>
+            <li>July</li>
+            <li>August</li>
+            <li>September</li>
+            <li>October</li>
+            <li>November</li>
+            <li>December</li>
+          </ul>
+        </div>
+    </div>
   </header>
 
   <!-- main content -->
@@ -75,11 +92,20 @@
           <span class="stretch box right box-bg">2015</span>
           <h1 class="center">A Year in Review:</h1>
           <div class="paragraph">
-            <p class="left-align">Check out what I was up to this year. It was a good time with some great friends. Lots of ups, a few downs, but all around good laughs. I'll slowly be adding to this over the next few weeks. If you have photos to add, please send them to me</p>
+            <p class="left-align">Check out what I was up to this year. It was a good time with some great friends. Lots of ups, a few downs, but all around good laughs. I'll slowly be adding to this over the next few weeks. If you have photos to add, please <a href="mailto:alex.cagwin@gmail.com" type="mail">send them to me.</a></p>
           </div>
         </div>
     </section>
 
   </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $( "#toggle" ).click(function() {
+        $(".menu").toggleClass("closed");
+        $(this).toggleClass("closed");
+        $(".content").toggleClass("closed");
+        $("#wrapper").toggleClass("closed")
+    });
+</script>
 </body>
 </html>
