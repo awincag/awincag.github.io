@@ -9,10 +9,9 @@ p{
   font-family:"SofiaProLight", sans-serif;
   font-weight: 100;
   margin:0 0 0.9em;
-  font-size: 20pt;
+  font-size: 16pt;
   line-height: 1.56em;
   margin-bottom: 1.8em;
-  letter-spacing: 0.01em;
   text-rendering:optimizelegibility
 }
 
@@ -128,6 +127,12 @@ a{
     outline-offset:-2px
 }
 
+
+
+
+
+
+
 .center{
   text-align:center
 }
@@ -212,7 +217,7 @@ span.stretch {
   background: linear-gradient(-145deg, #7FC8D7, #69ADCE)
 } */
 
-.wrap{
+.main-content, .wrap{
   width:1200px;
   margin-left:auto;
   margin-right:auto;
