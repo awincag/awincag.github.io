@@ -1,7 +1,7 @@
 html{
   font-family:"SofiaProLight",Helvetica,Roboto,Arial,sans-serif;
   /* font-family:proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; */
-  color:#fff;
+  color:#333;
   line-height:1.51;
 }
 
@@ -113,13 +113,13 @@ li{
 }
 
 a{
-  color:#fff;
+  color:#333;
   text-decoration:underline;
   transition: 0.1s ease;
   }
   a:hover,a:focus{
     text-decoration:underline;
-    color:#f0f0f0;
+    color:#EE4654;
   }
   a:focus{
     outline:thin dotted #333;
@@ -159,7 +159,6 @@ html *{
 
 html{
   background: #fff;
-  background: linear-gradient(145deg, #66CCC3, #7FC8D7, #69ADCE, #728DA5)
 }
 
 .left{
@@ -331,7 +330,12 @@ h1:hover .hash-link,h2:hover .hash-link,h3:hover .hash-link,h4:hover .hash-link,
 }
 
 .menu ul li:hover {
+<<<<<<< HEAD
   color: #d6d6d6;
+=======
+  color: #d2d2d2;
+  border-left: solid 4px #d2d2d2;
+>>>>>>> master
   padding: 0 0 0 1.3em;
   cursor: pointer;
 }
