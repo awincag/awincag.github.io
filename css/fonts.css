@@ -1,0 +1,44 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3145400, 2015-12-23T19:34:33-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: SofiaProSemiBold by Mostardesign
+ * URL: http://www.myfonts.com/fonts/mostardesign/sofia-pro/semi-bold/
+ * Copyright: Copyright (c) Olivier Gourvat - Mostardesign Studio, 2012. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: SofiaProLight by Mostardesign
+ * URL: http://www.myfonts.com/fonts/mostardesign/sofia-pro/light/
+ * Copyright: Copyright (c) Olivier Gourvat - Mostardesign Studio, 2012. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: FF Mark Web Pro Bold by FontFont
+ * URL: http://www.myfonts.com/fonts/fontfont/mark/pro-bold/
+ * Copyright: 2013 published by FontShop International GmbH
+ * Licensed pageviews: 50,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3145400
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2ffeb8");
+
+  
+@font-face {font-family: 'SofiaProSemiBold';src: url('webfonts/2FFEB8_0_0.eot');src: url('webfonts/2FFEB8_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2FFEB8_0_0.woff2') format('woff2'),url('webfonts/2FFEB8_0_0.woff') format('woff'),url('webfonts/2FFEB8_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'SofiaProLight';src: url('webfonts/2FFEB8_1_0.eot');src: url('webfonts/2FFEB8_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2FFEB8_1_0.woff2') format('woff2'),url('webfonts/2FFEB8_1_0.woff') format('woff'),url('webfonts/2FFEB8_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FFMarkWebProBold';src: url('webfonts/2FFEB8_2_0.eot');src: url('webfonts/2FFEB8_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2FFEB8_2_0.woff2') format('woff2'),url('webfonts/2FFEB8_2_0.woff') format('woff'),url('webfonts/2FFEB8_2_0.ttf') format('truetype');}
+ 
