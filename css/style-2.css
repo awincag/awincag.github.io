@@ -149,6 +149,10 @@ html{
   background: #fff;
 }
 
+#page-header .section-padding {
+  padding: 5.5em 1.5em;
+}
+
 .section-padding {
   padding: 3.5em 1.5em;
 }
