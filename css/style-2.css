@@ -3,6 +3,8 @@ html{
   /* font-family:proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; */
   color:#333;
   line-height:1.51;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 p{
@@ -24,6 +26,8 @@ p{
 
 */
 
+
+
 em{
   font-style:italic
 }
@@ -34,11 +38,15 @@ header {
 section {
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 h1,h2,h3,h4,h5,h6{
   font-family: "FFMarkWebProBold", sans-serif;
   font-weight: 600;
   margin:0;
-  line-height: 1.5em;
+  line-height: 1.4em;
   color:inherit;
   display:inherit;
   text-rendering:optimizelegibility
