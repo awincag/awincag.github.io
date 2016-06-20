@@ -168,8 +168,8 @@ img {
 }
 
 .page-close {
-  -webkit-animation: close ease-out forwards 1 .4s;
-  animation: close ease-out forwards 1 .4s;
+  -webkit-animation: close ease-out forwards 1 .3s;
+  animation: close ease-out forwards 1 .3s;
 }
 
 @-webkit-keyframes close {
