@@ -46,6 +46,7 @@ h1,h2,h3,h4,h5,h6{
   font-family: "FFMarkWebProBold", sans-serif;
   font-weight: 600;
   margin:0;
+  letter-spacing: -1.05px;
   line-height: 1.3em;
   color:inherit;
   display:inherit;
@@ -135,6 +136,7 @@ img {
   position: absolute;
   top: 1em;
   right: 1em;
+  -webkit-transition:.4s ease-out all;
   transition: .4s ease-out all;
 }
 
@@ -153,24 +155,13 @@ img {
   content: '';
   display: block;
   background-color: #fff;
+  -webkit-transition:.2s ease-out background-color;
   transition: .2s ease-out background-color;
 }
 
 .close-out {
   content: '';
   height: 35px;
-}
-
-.close a:hover .close-button {
-  background-color: #ddd;
-}
-
-.close a:hover .close-out::before {
-    transform: rotate(405deg);
-}
-
-.close a:hover .close-out::after {
-  transform: rotate(135deg);
 }
 
 .close-out::before, .close-out::after {
@@ -182,16 +173,36 @@ img {
   top: 30px;
   left: 15px;
   background-color: #333;
+  -webkit-transition:.6s .2s ease-out all;
   transition: .6s .2s ease-out all;
-
 }
 
 .close-out::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .close-out::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close a:hover .close-button {
+  background-color: #ddd;
+}
+
+.close a:hover .close-out::before {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+}
+
+.close a:hover .close-out::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.close a:hover .close-out::before, .close a:hover .close-out::after {
+  background-color: #111;
 }
 
 .social {
@@ -340,9 +351,16 @@ html{
 
 .list-column {
   margin-bottom: 3em;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 260px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+  -webkit-flex-basis: 260px;
+      -ms-flex-preferred-size: 260px;
+          flex-basis: 260px;
 }
 
 .list-item {
@@ -389,6 +407,7 @@ a[title]:hover:after {
 
 .instructions, .nav-tooltip {
   position: absolute;
+  -webkit-transition:0.3s 0.3s ease-out;
   transition: 0.3s 0.3s ease-out;
   opacity: 0;
   font-size: 15px;
@@ -397,6 +416,7 @@ a[title]:hover:after {
 .close .fa {
   font-size: 26px;
   color: #666;
+  -webkit-transition:0.2s ease-out;
   transition: 0.2s ease-out;
 }
 
@@ -414,13 +434,14 @@ a[title]:hover:after {
 .nav-tooltip {
   font-size: 16px;
   color: #555;
-  left: -13em;
+  left: -12em;
   line-height: 30px;
   text-align: right;
   width: 170px;
   padding: 0;
   opacity: 0;
-  transition: 0.1s ease-out;
+  -webkit-transition:0.25s ease-out;
+  transition: 0.25s ease-out;
 }
 
 .social a:hover .fa {
@@ -438,16 +459,64 @@ a[title]:hover:after {
   opacity: 1;
 }
 
-/* .message {
-  position: absolute;
-  bottom: 4em;
-  left: 4em;
-  padding: 2em 5em;
+.message {
+  position: fixed;
+  bottom: 1em;
+  left: -50em;
+  padding: 1em 1.5em 0.8em;
+  font-size: 1.2rem;
   color: #fff;
-  text-transform: capitalize;
   background-color: #FD6382;
-} */
+  border: 1px solid: #333;
+  transition: 0.4s ease-out;
+}
 
+.content-open {
+  left: 1em;
+}
+
+.closebtn {
+  padding-left: 2em;
+  font-size: 1.4rem;
+  transition: 0.2s ease-out;
+}
+
+.closebtn:hover {
+  color: #333;
+  cursor: pointer;;
+}
+
+footer {
+  width: 100%;
+}
+
+.footer {
+  padding-top: 1.5em;
+  border-top: 3px solid #333;
+  margin-top: 4em;
+}
+
+.footer .social-footer .fa {
+  font-size: 26px;
+}
+
+.footer p {
+  font-size: 16px;
+}
+
+.footer p, .footer li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  padding: 0 3em 0 0;
+  transition: 0.2s ease-out;
+}
+
+.social-footer {
+  padding: 0 0 1em 0;
+}
 
 
 @media only screen and (min-width: 700px) {
@@ -481,6 +550,23 @@ a[title]:hover:after {
   #make .list-item a {
     font-size: 22px;
   }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .copyright {
+    flex: 1;
+  }
+  .footer a {
+    padding: 0 0 0 2em;
+  }
+
+  .footer a:hover {
+    color: #FD6382;
+  }
+  .social-footer {
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -507,6 +593,9 @@ a[title]:hover:after {
   }
   #make .list-item a {
     font-size: 24px;
+  }
+  .footer p {
+    font-size: 18px;
   }
 }
 

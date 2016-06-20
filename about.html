@@ -72,30 +72,30 @@
       <section id="nav">
         <div class="nav">
           <a href="/" title="Return Home"></a>
-          <a href="#header" class="fixed logo"></a>
+          <a data-scroll href="#header" class="fixed logo"></a>
           <div class="close">
             <a href="/" class="close-button" >
               <div class="close-out"></div>
             </a>
             <div class="social">
-            <div class="close-break"> </div>
+            <div class="close-break"></div>
               <ul class="social-nav">
                 <li>
                   <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">
                     <i class="fa fa-linkedin"></i>
-                    <span class="nav-tooltip">My LinkedIn</span>
+                    <span class="nav-tooltip">Connect with Me</span>
                   </a>
                 </li>
                 <li>
                   <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">
                     <i class="fa fa-twitter"></i>
-                    <span class="nav-tooltip">My Twitter</span>
+                    <span class="nav-tooltip">Follow Me</span>
                   </a>
                 </li>
                 <li>
                   <a id="btn" data-clipboard-text="hey@acag.win">
                     <i class="fa fa-envelope-o"></i>
-                    <span class="nav-tooltip">Copy to Clipboard</span>
+                    <span class="nav-tooltip">Shoot Me an Email</span>
                   </a>
                 </li>
               </ul>
@@ -132,9 +132,9 @@
             <p>Next, I found a small development agency at the time (across the hall -- both companies were sharing space) needed a project / product manager who had the ability to do some wireframing. This was <a href="http://westagilelabs.com" target="_blank" title="West Agile Labs">West Agile Labs</a>, which is where I am today.</p>
             <p>I quickly became insanely passionate about the entire creative &amp; design process. Reverse engineering &amp; designing everything I could get my hands on, reading every design team blog, getting all the books everyone says to buy on medium. I slowly transitioned from product manager to full-stack product designer.</p>
             <p>By now, I&#39;ve worked on over 40+ projects &amp; products. My projects have ranged from emerging, early-stage startups getting their prototype out the door to Fortune 500 companies. I&#39;ve had the opportunity to lead art direction on our company rebrand as well as do all of the front-end development for our new company website. </p>
-            <p>I specialize in interaction design, but have the ability to work on storyboarding, branding (mainly typography), visual design, animation design, front-end development and product management. I currently lead our awesome design team of 5. I champion the value and need for design on our all of our products to both the clients and the rest of the West Agile team. I aim to bridge the gap between development and all visual communication. I fucking love what I do. </p>
+            <p>I specialize in interaction design, but have the ability to work on storyboarding, branding (mainly typography), visual design, animation design, front-end development and product management. I currently lead our awesome design team of 5. I champion the value and need for design on our all of our products to both the clients and the rest of the West Agile team. I aim to bridge the gap between development and all visual communication. I love what I do. </p>
             <p>Occasionally, I&#39;ll do freelance work on the side. Scroll down to learn more about my philosophy and getting in contact. </p>
-            <p>I also make some really good fucking breakfast tacos. Seriously, this shit is decandant and almost hedonistic. Check out the <a href="http://theworldsbestbreakfasttacos.com" target="_blank" title="The World&#39;s Best Breakfast Tacos">website here</a> to learn more about them and how you can get a bite yourself. </p>
+            <p>I also make some really good breakfast tacos. Seriously, this shit is decandant and almost hedonistic. Check out the <a href="http://theworldsbestbreakfasttacos.com" target="_blank" title="The World&#39;s Best Breakfast Tacos">website here</a> to learn more about them and how you can get a bite yourself. </p>
           </div>
         </div>
       </section>
@@ -233,8 +233,8 @@
                 </div>
                 <div class="list-item">
                     <div id="btn" data-clipboard-text="hey@acag.win">
-                      <a>hey [@] acag.win</a>
-                      <span class="instructions">Click to Copy to Clipboard</span>
+                      <a href="mailto:hey@acag.win">hey [@] acag.win</a>
+                      <!-- <span class="instructions">Click to Copy to Clipboard</span> -->
                     </div>
                 </div>
               </div>
@@ -272,47 +272,50 @@
       </section>
 
       <section id="message">
-        <span id="msg" class="message"></span>
+        <div id="msg" class="message">
+          <span>Email Copied to Clipboard</span>
+          <!-- <span class="closebtn">&times;</span> -->
+        </div>
+        <a data-scroll href="#make" id="f-msg" class="message">
+          <span>Oops! Didn't Work. Click here to jump to the bottom and copy/paste my email.</span>
+          <span class="closebtn">&times;</span>
+        </a>
       </section>
 
       <footer>
-        <div class="section-padding">
-          <div class="wrap">
-            <div class="p-line flex">
-              <p>
-                <a href="mailto:hey@acag.win" title="Email Me">Contact</a>
-              </p>
-              <p>
-                <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">LinkedIn</a>
-              </p>
-              <p>
-                <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">Twitter</a>
-              </p>
-            </div>
+        <div class="footer">
+          <div class="f-grow">
+            <ul class="social-footer flex">
+              <li>
+                <a id="btn" data-clipboard-text="hey@acag.win">
+                  <i class="fa fa-envelope-o"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright flex flex-horizontal-center">
+            <p>Made with Love by Me. <i class="fa fa-copyright"></i> Alex Cagwin, 2016.</p>
           </div>
         </div>
       </footer>
     </div>
 
 
-
+    <script src="js/smooth-scroll.min.js"></script>
     <script src="dist/clipboard.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
-      var btn = document.getElementById('btn');
-      var clipboard = new Clipboard(btn);
-      clipboard.on('success', function(e) {
-          console.info('Action:', e.action);
-          console.info('Text:', e.text);
-          console.info('Trigger:', e.trigger);
-
-          e.clearSelection();
-      });
-
-      clipboard.on('error', function(e) {
-          console.error('Action:', e.action);
-          console.error('Trigger:', e.trigger);
-      });
+        smoothScroll.init();
     </script>
-
-  </body>
+    </body>
 </html>
