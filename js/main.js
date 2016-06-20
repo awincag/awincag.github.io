@@ -39,17 +39,18 @@ for (i = 0; i < close.length; i++) {
         var div = this.parentElement;
         message.classList.remove('content-open');
     }
-}
+};
+
 for (i = 0; i < close.length; i++) {
     close[i].onclick = function(){
         var div = this.parentElement;
         failMessage.classList.remove('content-open');
     }
-}
+};
 
 var page = document.getElementById('page-transition');
 var btn = document.getElementById('close')
 
 btn.addEventListener('click', function (e) {
     page.classList.add('page-close');
-}
+};
