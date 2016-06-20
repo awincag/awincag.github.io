@@ -125,6 +125,77 @@ img {
   width: 100%;
 }
 
+.an-s {
+  opacity: 0;
+  padding-top: 15em;
+}
+
+.page-animation-1 {
+  -webkit-animation: intro ease-out forwards 1 .4s;
+  animation: intro ease-out forwards 1 .4s;
+}
+
+.page-animation-2 {
+  -webkit-transition: intro ease-out forwards 1 .4s .25s;
+  animation: intro ease-out forwards 1 .4s .25s;
+}
+
+.page-animation-3 {
+  -webkit-transition: intro ease-out forwards 1 .4s 3s;
+  animation: intro ease-out forwards 1 .4s .3s;
+}
+
+@-webkit-keyframes intro {
+  0%  {
+    opacity: 0;
+    padding-top: 2em;
+  }
+  100% {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+
+@keyframes intro {
+  0%  {
+    opacity: 0;
+    padding-top: 2em;
+  }
+  100% {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+
+.page-close {
+  -webkit-animation: close ease-out forwards 1 .4s;
+  animation: close ease-out forwards 1 .4s;
+}
+
+@-webkit-keyframes close {
+  0%  {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 25vh
+  }
+}
+
+
+@keyframes close {
+  0%  {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 25vh
+  }
+}
+
+
 .nav {
   position: fixed;
   top: 0;
