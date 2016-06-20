@@ -53,4 +53,4 @@ var btn = document.getElementById('close')
 
 btn.addEventListener('click', function (e) {
     page.classList.add('page-close');
-};
+});
