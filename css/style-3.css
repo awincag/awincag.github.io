@@ -396,11 +396,11 @@ html{
   margin: 1em 0 1em 0;
 }
 
-.section-content a {
+.section-content a, #header a {
   border-bottom: 2px solid #bfbfbf;
 }
 
-.section-content a:hover {
+.section-content a:hover, #header a:hover {
   border: none;
   color: #FD6382
 }
