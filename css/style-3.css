@@ -149,10 +149,12 @@ img {
   0%  {
     opacity: 0;
     padding-top: 2em;
+    top: 3em;
   }
   100% {
     opacity: 1;
     padding-top: 0;
+    top: 1em
   }
 }
 
@@ -160,10 +162,12 @@ img {
   0%  {
     opacity: 0;
     padding-top: 2em;
+    top: 3em;
   }
   100% {
     opacity: 1;
     padding-top: 0;
+    top: 1em;
   }
 }
 
