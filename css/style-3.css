@@ -172,8 +172,8 @@ img {
 }
 
 .page-close {
-  -webkit-animation: close ease-out forwards 1 .3s;
-  animation: close ease-out forwards 1 .3s;
+  -webkit-animation: close ease-out forwards 1 .4s;
+  animation: close ease-out forwards 1 .4s;
 }
 
 @-webkit-keyframes close {
@@ -183,7 +183,7 @@ img {
   }
   100% {
     opacity: 0;
-    margin-top: 25vh
+    margin-top: 20vh
   }
 }
 
@@ -195,7 +195,7 @@ img {
   }
   100% {
     opacity: 0;
-    margin-top: 25vh
+    margin-top: 20vh
   }
 }
 
