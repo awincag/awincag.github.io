@@ -9,7 +9,7 @@ $(function(){
           duration: 250, // Duration of our animation
           render: function ($container) {
             // Add your CSS animation reversing class
-            $container.addClass('page-transition');
+            $container.addClass('page-close');
             // Restart your animation
             smoothState.restartCSSAnimations();
           }
@@ -18,7 +18,7 @@ $(function(){
           duration: 0,
           render: function ($container, $newContent) {
             // Remove your CSS animation reversing class
-            $container.removeClass('page-transition');
+            $container.removeClass('page-close');
             // Inject the new content
             $container.html($newContent);
           }
