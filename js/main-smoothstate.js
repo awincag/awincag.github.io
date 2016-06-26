@@ -24,7 +24,7 @@ $(function(){
             $container.html($newContent);
           }
         },
-        onAfter: {
+        onEnd: {
           duration: 0,
           render: function (url, $container, $newContent) {
             $container.html($site);
