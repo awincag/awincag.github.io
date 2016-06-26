@@ -1,4 +1,5 @@
 var btn = document.getElementsByClassName('copied');
+// var btn = document.getElementById('btn');
 var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
 
@@ -26,7 +27,8 @@ clipboard.on('error', function(e) {
     }, 5500);
 });
 
-clipboard.destroy();
+
+
 
 var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
