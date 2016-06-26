@@ -48,9 +48,9 @@ for (i = 0; i < close.length; i++) {
     }
 };
 
-var page = document.getElementById('page-transition');
-var btn = document.getElementById('close')
-
-btn.addEventListener('click', function (e) {
-    page.classList.add('page-close');
-});
+// var page = document.getElementById('page-transition');
+// var btn = document.getElementById('close')
+//
+// btn.addEventListener('click', function (e) {
+//     page.classList.add('page-close');
+// });
