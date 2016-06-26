@@ -29,6 +29,8 @@ clipboard.on('error', function(e) {
     }, 5500);
 });
 
+clipboard.destroy();
+
 var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
 var close = document.getElementsByClassName("closebtn");
@@ -47,8 +49,6 @@ for (i = 0; i < close.length; i++) {
         failMessage.classList.remove('content-open');
     }
 };
-
-clipboard.destroy();
 
 // var page = document.getElementById('page-transition');
 // var btn = document.getElementById('close')
