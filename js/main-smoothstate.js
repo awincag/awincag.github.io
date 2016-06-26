@@ -1,6 +1,7 @@
 $(function(){
   'use strict';
   var $page = $('#main'),
+      $site = #('html, body'),
       options = {
         debug: true,
         prefetch: true,
@@ -21,6 +22,12 @@ $(function(){
             $container.removeClass('page-close');
             // Inject the new content
             $container.html($newContent);
+          }
+        }
+        onAfter: {
+          duration: 0,
+          render: function ($container, $newContent) {
+            #container.html($site);
           }
         }
       },
