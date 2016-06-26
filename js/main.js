@@ -2,6 +2,7 @@ var btn = document.getElementById('btn');
 var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
 var clipboard = new Clipboard(btn);
+clipboard.destroy();
 
 for (var i; i < btn.length; i++) {
 
