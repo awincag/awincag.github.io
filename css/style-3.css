@@ -640,6 +640,41 @@ footer {
   padding: 0 0 1em 0;
 }
 
+#projects a {
+  border: none;
+}
+
+#projects li {
+  min-width: 100%;
+}
+
+#instapark .project-period, #instapark a:hover {
+  color: #29abe2;
+}
+
+#enhance .project-period, #enhance a:hover {
+  color: #45DDA6;
+}
+
+#moda .project-period, #moda a:hover {
+  color: #44098a;
+}
+
+#sociometrics .project-period, #sociometrics a:hover {
+  color: #29abe2;
+}
+
+#dodo .project-period, #dodo a:hover {
+  color: #29abe2;
+}
+
+#misc .project-period, #misc a:hover {
+  color: #111;
+}
+
+#yearinreview .project-period, #yearinreview a:hover {
+  color: #69AACA;
+}
 
 @media only screen and (min-width: 700px) {
   .wrap {
@@ -719,6 +754,35 @@ footer {
   .footer p {
     font-size: 18px;
   }
+  #projects .wrap {
+    position: relative;
+  }
+  #projects .picture-place {
+    position: absolute;
+    content: '';
+    top: 6em;
+    left: 21em;
+    width: calc(100% - 21em);
+    height: 420px;
+  }
+  #projects .project-picture {
+    position: relative;
+  }
+  #projects picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  #projects picture {
+    opacity: 0;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+  }
+  #projects a:hover picture {
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -741,6 +805,14 @@ footer {
   }
   #make .list-item a {
     font-size: 26px;
+  }
+  #projects .picture-place {
+    position: absolute;
+    content: '';
+    top: 6em;
+    left: 24em;
+    width: calc(100% - 24em);
+    height: 480px;
   }
 }
 
