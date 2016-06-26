@@ -7,7 +7,7 @@ $(function(){
         debug: true,
         prefetch: true,
         cacheLength: 2,
-        blacklist: '.no-smoothState',
+        blacklist: 'no-smoothState',
         onStart: {
           duration: 250, // Duration of our animation
           render: function ($container) {
