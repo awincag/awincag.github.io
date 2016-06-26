@@ -3,7 +3,6 @@ var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
 
 var clipboard = new Clipboard(btn);
-clipboard.destroy();
 
 clipboard.on('success', function(e) {
     console.info('Action:', e.action);
