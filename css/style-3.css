@@ -80,7 +80,7 @@ h4{
 }
 
 h5{
-  font-size:1.3em
+  font-size:1.5rem
 }
 
 h6{
@@ -648,16 +648,16 @@ footer {
   border: none;
 }
 
-#projects li {
-  min-width: 100%;
-}
-
 #instapark .project-period, #instapark a:hover {
   color: #29abe2;
 }
 
 #enhance .project-period, #enhance a:hover {
   color: #45DDA6;
+}
+
+#westagile .project-period, #westagile a:hover {
+  color: #4ea583;
 }
 
 #moda .project-period, #moda a:hover {
@@ -673,11 +673,31 @@ footer {
 }
 
 #misc .project-period, #misc a:hover {
-  color: #111;
+  color: #010101;
 }
 
 #yearinreview .project-period, #yearinreview a:hover {
   color: #69AACA;
+}
+
+#projects p {
+  color: initial !important;
+}
+
+.p-action {
+  position: relative;
+}
+
+.action {
+  opacity: 0;
+}
+
+#projects .action {
+  visibility: hidden;
+  position: absolute;
+  bottom: -2em;;
+  left: 0;
+  transition: 0.2s ease-in-out;
 }
 
 @media only screen and (min-width: 700px) {
@@ -759,32 +779,19 @@ footer {
     font-size: 18px;
   }
   #projects .wrap {
+    max-width: none;
     position: relative;
   }
-  #projects .picture-place {
-    position: absolute;
-    content: '';
-    top: 6em;
-    left: 21em;
-    width: calc(100% - 21em);
-    height: 420px;
+  #projects li {
+    width: 47%;
+    margin-right: 3%;
+    padding: 0 0 1em 0;
   }
-  #projects .project-picture {
-    position: relative;
-  }
-  #projects picture {
+  #projects a:hover .action {
+    visibility: visible;
     position: absolute;
-    top: 0;
+    bottom: -1.75em;;
     left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  #projects picture {
-    opacity: 0;
-    -webkit-transition: 0.2s ease-out;
-    transition: 0.2s ease-out;
-  }
-  #projects a:hover picture {
     opacity: 1;
   }
 }
@@ -810,13 +817,11 @@ footer {
   #make .list-item a {
     font-size: 26px;
   }
-  #projects .picture-place {
-    position: absolute;
-    content: '';
-    top: 6em;
-    left: 24em;
-    width: calc(100% - 24em);
-    height: 480px;
+  #projects .wrap {
+    max-width: none;
+  }
+  #projects li {
+    padding: 0 0 1.8em 0;
   }
 }
 
