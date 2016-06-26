@@ -2,7 +2,6 @@ var btn = document.getElementById('btn');
 var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
 var clipboard = new Clipboard(btn);
-clipboard.destroy();
 
 for (var i; i < btn.length; i++) {
 
@@ -48,6 +47,8 @@ for (i = 0; i < close.length; i++) {
         failMessage.classList.remove('content-open');
     }
 };
+
+clipboard.destroy();
 
 // var page = document.getElementById('page-transition');
 // var btn = document.getElementById('close')
