@@ -519,11 +519,11 @@ a[title]:hover:after {
   transition: 0.25s ease-out;
 }
 
-.social a:hover .fa, button:hover .fa {
+.social a:hover .fa {
   color: #FD6382;
 }
 
-.social a:hover .nav-tooltip, button:hover .nav-tooltip {
+.social a:hover .nav-tooltip {
   left: -11em;
   opacity: 1;
 }
