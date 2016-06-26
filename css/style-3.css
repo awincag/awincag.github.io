@@ -113,7 +113,7 @@ li{
   padding: 0 0 1em 0;
 }
 
-a{
+a, button {
   color:#333;
   text-decoration:none;
   -webkit-transition:0.2s ease color;
@@ -519,11 +519,11 @@ a[title]:hover:after {
   transition: 0.25s ease-out;
 }
 
-.social a:hover .fa {
+.social a:hover .fa, button:hover .fa {
   color: #FD6382;
 }
 
-.social a:hover .nav-tooltip {
+.social a:hover .nav-tooltip, button:hover .nav-tooltip {
   left: -11em;
   opacity: 1;
 }

@@ -1,11 +1,8 @@
-var btn = document.getElementById('btn');
+var btn = document.getElementsByClassName('copied');
 var message = document.getElementById('msg');
 var failMessage = document.getElementById('f-msg');
+
 var clipboard = new Clipboard(btn);
-
-for (var i; i < btn.length; i++) {
-
-};
 
 clipboard.on('success', function(e) {
     console.info('Action:', e.action);
