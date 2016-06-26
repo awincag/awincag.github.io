@@ -1,3 +1,5 @@
+
+
 $(function(){
   'use strict';
   var $page = $('#main'),
@@ -25,4 +27,5 @@ $(function(){
         }
       },
       smoothState = $page.smoothState(options).data('smoothState');
+      $('#main').smoothState({ blacklist: '.no-smoothState' });
 });
