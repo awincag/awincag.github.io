@@ -1,7 +1,7 @@
 $(function(){
   'use strict';
   var $page = $('#main'),
-      $site = #('html, body'),
+      $site = $('html, body'),
       options = {
         debug: true,
         prefetch: true,
