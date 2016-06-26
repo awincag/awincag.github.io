@@ -23,13 +23,13 @@ $(function(){
             // Inject the new content
             $container.html($newContent);
           }
+        },
+        onAfter: {
+          duration: 0,
+          render: function (url, $container, $newContent) {
+            $container.html($site);
+          }
         }
-        //onAfter: {
-        //  duration: 0,
-        //  render: function ($container, $newContent) {
-        //    $container.html($site);
-        //  }
-        //}
       },
       smoothState = $page.smoothState(options).data('smoothState');
 });
