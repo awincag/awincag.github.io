@@ -6,8 +6,6 @@ $(function(){
       options = {
         debug: true,
         prefetch: true,
-        cacheLength: 2,
-        blacklist: '#btn',
         blacklist: '.no-smoothState',
         onStart: {
           duration: 250, // Duration of our animation
