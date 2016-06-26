@@ -7,6 +7,7 @@ $(function(){
         debug: true,
         prefetch: true,
         cacheLength: 2,
+        blacklist: '.no-smoothState',
         onStart: {
           duration: 250, // Duration of our animation
           render: function ($container) {
@@ -27,5 +28,4 @@ $(function(){
         }
       },
       smoothState = $page.smoothState(options).data('smoothState');
-      $('#main').smoothState({ blacklist: '.no-smoothState' });
 });
