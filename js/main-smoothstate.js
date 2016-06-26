@@ -27,7 +27,7 @@ $(function(){
         onAfter: {
           duration: 0,
           render: function ($container, $newContent) {
-            #container.html($site);
+            $container.html($site);
           }
         }
       },
