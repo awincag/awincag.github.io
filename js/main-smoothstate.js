@@ -23,7 +23,7 @@ $(function(){
             // Inject the new content
             $container.html($newContent);
           }
-        },
+        }
         onAfter: {
           duration: 0,
           render: function ($container, $newContent) {
