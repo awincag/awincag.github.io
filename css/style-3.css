@@ -692,7 +692,7 @@ footer {
   font-size: 3.6rem;
 }
 
-#instapark .project-period, #instapark .main, #instapark .action, #instapark .close a:hover .fa, #instapark a:hover {
+#instapark .project-period, #instapark .main, #instapark .action, #instapark .close a:hover .fa, #instapark a:hover, #projects #instapark .action, #projects #instapark .project-period, #projects #instapark a:hover {
   color: #29abe2;
 }
 
@@ -700,7 +700,7 @@ footer {
   background-color: #29abe2;
 }
 
-#enhance .project-period, #enhance .main, #enhance .action, #enhance .close a:hover .fa, #enhance a:hover {
+#enhance .project-period, #enhance .main, #enhance .action, #enhance .close a:hover .fa, #enhance a:hover, #projects #enhance .action, #projects #enhance .project-period, #projects #enhance a:hover {
   color: #45DDA6;
 }
 
@@ -708,7 +708,7 @@ footer {
   background-color: #45DDA6;
 }
 
-#westagile .project-period, #westagile .main, #westagile .action, #westagile .close a:hover .fa, #westagile a:hover {
+#westagile .project-period, #westagile .main, #westagile .action, #westagile .close a:hover .fa, #westagile a:hover, #westagile a:hover, #projects #westagile .action, #projects #westagile .project-period, #projects #westagile a:hover {
   color: #4ea583;
 }
 
@@ -716,7 +716,7 @@ footer {
   background-color: #4ea583;
 }
 
-#moda .project-period, #moda .main, #moda .action, #moda .close a:hover .fa,#moda a:hover {
+#moda .project-period, #moda .main, #moda .action, #moda .close a:hover .fa,#moda a:hover, #moda a:hover, #projects #moda .action, #projects #moda .project-period, #projects #moda a:hover {
   color: #44098a;
 }
 
@@ -724,7 +724,7 @@ footer {
   background-color: #44098a;
 }
 
-#natera .project-period, #natera .main, #natera .action, #natera .close a:hover .fa, #natera a:hover {
+#natera .project-period, #natera .main, #natera .action, #natera .close a:hover .fa, #natera a:hover, #natera a:hover, #projects #natera .action, #projects #natera .project-period, #projects #natera a:hover {
 color: #00AB49;
 }
 
@@ -732,7 +732,7 @@ color: #00AB49;
   background-color: #00AB49;
 }
 
-#sociometrics .project-period, #sociometrics .main, #sociometrics .action, #sociometrics .close a:hover .fa,#sociometrics a:hover {
+#sociometrics .project-period, #sociometrics .main, #sociometrics .action, #sociometrics .close a:hover .fa, #sociometrics a:hover, #sociometrics a:hover, #projects #sociometrics .action, #projects #sociometrics .project-period, #projects #sociometrics a:hover {
   color: #4FB2FC;
 }
 
@@ -740,7 +740,7 @@ color: #00AB49;
   background-color: #4FB2FC;
 }
 
-#dodo .project-period, #dodo .main, #instapark .action, #dodo .close a:hover .fa,#dodo a:hover {
+#dodo .project-period, #dodo .main, #dodo .action, #dodo .close a:hover .fa,#dodo a:hover, #dodo a:hover, #projects #dodo .action, #projects #dodo .project-period, #projects #dodo a:hover {
   color: #f6921e;
 }
 
@@ -748,7 +748,7 @@ color: #00AB49;
   background-color: #f6921e;
 }
 
-#misc .project-period, #misc .main, #instapark .action, #misc .close a:hover .fa,#misc a:hover {
+#misc .project-period, #misc .main, #misc .action, #misc .close a:hover .fa,#misc a:hover, #misc a:hover, #projects #misc .action, #projects #misc .project-period, #projects #misc a:hover {
   color: #010101;
 }
 
