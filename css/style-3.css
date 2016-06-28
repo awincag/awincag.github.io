@@ -644,6 +644,10 @@ a[title]:hover:after {
   padding-left: 0.75em;
 }
 
+.bold {
+  font-family:"SofiaProSemiBold",Helvetica,Roboto,Arial,sans-serif;
+}
+
 .p-process {
   margin: -1.5em 0 1.5em 0;
 }
