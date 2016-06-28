@@ -774,7 +774,7 @@ color: #00AB49;
   background-color: #010101;
 }
 
-#yearinreview .project-period, #yearinreview a:hover {
+#yearinreview .project-period, #yearinreview .action, #yearinreview a:hover {
   color: #69AACA;
 }
 
