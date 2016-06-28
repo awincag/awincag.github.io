@@ -3,7 +3,6 @@ html{
   /* font-family:proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; */
   color:#333;
   line-height:1.51;
-  overflow-y: scroll;
 }
 
 p{
@@ -36,6 +35,10 @@ header {
 }
 
 section {
+}
+
+body {
+  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -621,6 +624,26 @@ a[title]:hover:after {
   cursor: pointer;;
 }
 
+.quote {
+  padding: 1.5em 0 1.25em 2em;
+  margin: 0 0 1em 0;
+}
+
+.quote p {
+  margin: 0;
+}
+
+.quote {
+  border-left: 3px solid #FD6382;
+}
+
+.author {
+  font-family:"SofiaProSemiBold",Helvetica,Roboto,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 90%;
+  padding-left: 0.75em;
+}
+
 footer {
   width: 100%;
 }
@@ -657,36 +680,80 @@ footer {
   z-index: 5;
 }
 
+#header .list-column {
+  margin-bottom: 0;
+}
+
 #projects a {
   border: none;
 }
 
-#instapark .project-period, #instapark .main, #instapark .close a:hover .fa, #instapark a:hover {
+#instapark h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1 {
+  font-size: 3.6rem;
+}
+
+#instapark .project-period, #instapark .main, #instapark .action, #instapark .close a:hover .fa, #instapark a:hover {
   color: #29abe2;
 }
 
-#enhance .project-period, #enhance .main, #enhance .close a:hover .fa,#enhance a:hover {
+#instapark .message {
+  background-color: #29abe2;
+}
+
+#enhance .project-period, #enhance .main, #enhance .action, #enhance .close a:hover .fa, #enhance a:hover {
   color: #45DDA6;
 }
 
-#westagile .project-period, #westagile .main, #westagile .close a:hover .fa,#westagile a:hover {
+#enhance .message {
+  background-color: #45DDA6;
+}
+
+#westagile .project-period, #westagile .main, #westagile .action, #westagile .close a:hover .fa, #westagile a:hover {
   color: #4ea583;
 }
 
-#moda .project-period, #moda .main, #moda .close a:hover .fa,#moda a:hover {
+#westagile .message {
+  background-color: #4ea583;
+}
+
+#moda .project-period, #moda .main, #moda .action, #moda .close a:hover .fa,#moda a:hover {
   color: #44098a;
 }
 
-#sociometrics .project-period, #sociometrics .main, #sociometrics .close a:hover .fa,#sociometrics a:hover {
+#moda .message {
+  background-color: #44098a;
+}
+
+#natera .project-period, #natera .main, #natera .action, #natera .close a:hover .fa, #natera a:hover {
+color: #00AB49;
+}
+
+#natera .message {
+  background-color: #00AB49;
+}
+
+#sociometrics .project-period, #sociometrics .main, #sociometrics .action, #sociometrics .close a:hover .fa,#sociometrics a:hover {
   color: #4FB2FC;
 }
 
-#dodo .project-period, #dodo .main, #dodo .close a:hover .fa,#dodo a:hover {
+#sociometrics .message {
+  background-color: #4FB2FC;
+}
+
+#dodo .project-period, #dodo .main, #instapark .action, #dodo .close a:hover .fa,#dodo a:hover {
   color: #f6921e;
 }
 
-#misc .project-period, #misc .main, #misc .close a:hover .fa,#misc a:hover {
+#dodo .message {
+  background-color: #f6921e;
+}
+
+#misc .project-period, #misc .main, #instapark .action, #misc .close a:hover .fa,#misc a:hover {
   color: #010101;
+}
+
+#misc .message {
+  background-color: #010101;
 }
 
 #yearinreview .project-period, #yearinreview a:hover {
@@ -720,7 +787,7 @@ footer {
   p {
     font-size: 22px;
   }
-  h1{
+  h1, #instapark h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1 {
     font-size: 5.5rem;
   }
   h3{
@@ -770,7 +837,7 @@ footer {
   p {
     font-size: 24px;
   }
-  h1{
+  h1, #instapark h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1{
     font-size: 7.5rem;
   }
   h3{
@@ -816,7 +883,7 @@ footer {
   p {
     font-size: 26px;
   }
-  h1{
+  h1, #instapark h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1 {
     font-size: 9.9rem;
   }
   h4{
