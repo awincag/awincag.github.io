@@ -652,14 +652,22 @@ a[title]:hover:after {
   margin: -1.5em 0 1.5em 0;
 }
 
+.p-process .list-column {
+  margin-bottom: 1em;
+}
+
 .p-process li {
-  font-size: 1.2rem;
-  padding: 0 0 0.25em 0.5em;
+  font-size: 1.3rem;
 }
 
 .prototype {
-  height: 0;
-  visibility: hidden;;
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+}
+
+.prototype img {
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
 }
 
 footer {
@@ -837,8 +845,7 @@ color: #00AB49;
     flex: 1;
   }
   .prototype {
-    height: auto;
-    visibility: visible;;;
+    max-width: 350px;
   }
   .p-process li {
     padding: 0 0 0.25em 1.5em;
