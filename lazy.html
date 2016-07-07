@@ -16,6 +16,10 @@
         img {
           width: 100%;
         }
+        .lazyload {
+          opacity: 0;
+          transition: opacity 400ms;
+        }
         .lazyloading {
           background-color: #ff00dd;
         }
@@ -26,6 +30,7 @@
         }
 
         .blur-up.lazyloaded {
+            opacity: 1;
             -webkit-filter: blur(0);
             filter: blur(0);
         }
@@ -52,7 +57,7 @@
             <img
                 data-sizes="auto"
                 src="media/lazy/placeholder.png"
-                data-src=""
+                data-src="media/lazy/placeholder.png"
                 class="lazyload blur-up" />
           </picture>
           <picture>
@@ -70,7 +75,7 @@
             <img
                 data-sizes="auto"
                 src="media/lazy/placeholder.png"
-                data-src=""
+                data-src="media/lazy/placeholder.png"
                 class="lazyload blur-up" />
           </picture>
         </div>
