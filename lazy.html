@@ -4,7 +4,7 @@
     <style>
         .body-center {
           width: 100%;
-          max-width: 600px;
+          max-width: 800px;
           display:flex;
           justify-content: center;
           align-items: center;
@@ -24,7 +24,6 @@
           background-color: #ff00dd;
         }
         .blur-up {
-            opacity: 0;
             -webkit-filter: blur(5px);
             filter: blur(5px);
             transition: filter 400ms, -webkit-filter 400ms;
@@ -45,38 +44,46 @@
         <div class="photo-width">
           <picture>
             <source
-                src="media/lazy/placeholder.png"
-                data-srcset="media/lazy/large.png"
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/xlarge.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/large.jpg"
                 media="(min-width: 1000px)" />
             <source
                 src="media/lazy/small.png"
-                data-srcset="media/lazy/medium.png"
+                data-srcset="media/lazy/medium.jpg"
                 media="(min-width: 700px)" />
             <source
-            		data-srcset="media/lazy/small.png"
+            		data-srcset="media/lazy/small.jpg"
             		media="(min-width: 100px)" />
             <img
                 data-sizes="auto"
-                src="media/lazy/placeholder.png"
-                data-src="media/lazy/placeholder.png"
+                src="media/lazy/placeholder.jpg"
+                data-src="media/lazy/placeholder.jpg"
                 class="lazyload blur-up" />
           </picture>
           <picture>
             <source
-            		data-srcset="media/lazy/small.png"
-            		media="(max-width: 699px)" />
-      	    <source
-                src="media/lazy/small.png"
-          			data-srcset="media/lazy/medium.png"
-          			media="(max-width: 999px)" />
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/xlarge.jpg"
+                media="(min-width: 1200px)" />
             <source
-                src="media/lazy/placeholder.png"
-            		data-srcset="media/lazy/large.png"
-            		media="(min-width: 1000px)" />
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                src="media/lazy/small.png"
+                data-srcset="media/lazy/medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/small.jpg"
+            		media="(min-width: 100px)" />
             <img
                 data-sizes="auto"
-                src="media/lazy/placeholder.png"
-                data-src="media/lazy/placeholder.png"
+                src="media/lazy/placeholder.jpg"
+                data-src="media/lazy/placeholder.jpg"
                 class="lazyload blur-up" />
           </picture>
         </div>
