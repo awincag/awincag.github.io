@@ -3,6 +3,7 @@
   <head>
     <style>
         .body-center {
+          width: 100%;
           max-width: 600px;
           display:flex;
           justify-content: center;
@@ -33,21 +34,21 @@
   </head>
   <body style="display: flex; justify-content: center">
     <div class="body-center">
-      <div>
-      <h1>this is testing images</h1>
+      <div style="flex:1">
+      <h1 style="width: 100%">this is testing images</h1>
         <div class="photo-width">
           <picture>
             <source
-            		data-srcset="media/lazy/small.png"
-            		media="(max-width: 699px)" />
-      	    <source
-                src="media/lazy/small.png"
-          			data-srcset="media/lazy/medium.png"
-          			media="(max-width: 999px)" />
-            <source
                 src="media/lazy/placeholder.png"
-            		data-srcset="media/lazy/large.png"
-            		media="(min-width: 1000px)" />
+                data-srcset="media/lazy/large.png"
+                media="(min-width: 1000px)" />
+            <source
+                src="media/lazy/small.png"
+                data-srcset="media/lazy/medium.png"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/small.png"
+            		media="(min-width: 100px)" />
             <img
                 data-sizes="auto"
                 src="media/lazy/placeholder.png"
