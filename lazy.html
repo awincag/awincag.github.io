@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <style>
+        .body-center {
+          display:flex;
+
+        }
+        .lazyloading {
+          background-color: #ff00dd;
+        }
+        .blur-up {
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+            transition: filter 400ms, -webkit-filter 400ms;
+        }
+
+        .blur-up.lazyloaded {
+            -webkit-filter: blur(0);
+            filter: blur(0);
+        }
+    </style>
+    <script src="js/lazysizes.min.js" async=""></script>
+  </head>
+  <body>
+    <div class="body-center">
+      <div>
+      <h1>this is testing images</h1>
+        <div class="photo-width">
+          <picture>
+            <source
+            		data-srcset="media/lazy/small.png"
+            		media="(max-width: 699px)" />
+      	    <source
+                src="media/lazy/small.png"
+          			data-srcset="media/lazy/medium.png"
+          			media="(max-width: 999px)" />
+            <source
+                src="media/lazy/placeholder.png"
+            		data-srcset="media/lazy/large.png"
+            		media="(min-width: 1000px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/placeholder.png"
+                data-src=""
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
