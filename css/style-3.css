@@ -786,7 +786,7 @@ footer {
   font-size: 3.6rem;
 }
 
-#misc-2 h1 {
+#misc-2 h1, #eventyoda h1 {
   font-size: 2.45rem;
 }
 
@@ -933,7 +933,7 @@ color: #00AB49;
   p {
     font-size: 22px;
   }
-  h1, #misc-2 h1, #instapark h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1 {
+  h1, #misc-2 h1, #instapark h1, #eventyoda h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1 {
     font-size: 5.5rem;
   }
   h3{
@@ -994,7 +994,7 @@ color: #00AB49;
   p {
     font-size: 24px;
   }
-  h1, #misc-2 h1, #instapark h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1{
+  h1, #misc-2 h1, #instapark h1, #eventyoda h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1{
     font-size: 7.5rem;
   }
   h3{
@@ -1049,7 +1049,7 @@ color: #00AB49;
   p {
     font-size: 26px;
   }
-  h1, #misc-2 h1, #instapark h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1 {
+  h1, #misc-2 h1, #instapark h1, #eventyoda h1, #enhance h1, #westagile h1, #moda h1, #natera h1, #sociometrics h1, #dodo h1, #misc h1 {
     font-size: 9.9rem;
   }
   h4{
