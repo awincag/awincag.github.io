@@ -890,8 +890,12 @@ color: #00AB49;
   color: #010101;
 }
 
-#misc-2 a, #misc-2 p, #misc-2 .close .fa, #misc-2 #projects .p-action p, #enhance a, #enhance p, #enhance .close .fa, #enhance #projects .p-action p {
+#misc-2 a, #misc-2 p, #misc-2 .close .fa, #misc-2 #projects .p-action p, #enhance a, #enhance p, #enhance .close .fa, #enhance #projects .p-action p, #misc-2 #enhance h5 {
   color: #d6d6d6;
+}
+
+#misc-2 .line-break, #misc-2 .header-line {
+  background-color: #ffffff;
 }
 
 #enhance h1, #enhance h4, #enhance .label {
