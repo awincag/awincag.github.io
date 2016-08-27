@@ -813,6 +813,26 @@ footer {
   background-color: #3C4255;
 }
 
+#enhance a h5 {
+  color: #333;
+}
+
+#enhance a:hover h5 {
+  color: #45DDA6;
+}
+
+#eventyoda .project-period, #eventyoda .main, #eventyoda .action, #eventyoda .close a:hover .fa, #eventyoda a:hover, #projects #eventyoda .action, #projects #eventyoda .project-period, #projects #eventyoda a:hover {
+  color: #37B554;
+}
+
+#eventyoda .mocks {
+  background-color: #28AAE2;
+}
+
+#eventyoda .section-title h5 {
+  color: #ffffff;
+}
+
 #westagile .project-period, #westagile .main, #westagile .action, #westagile .close a:hover .fa, #westagile a:hover, #westagile a:hover, #projects #westagile .action, #projects #westagile .project-period, #projects #westagile a:hover {
   color: #4ea583;
 }
