@@ -123,9 +123,40 @@ a, button {
   transition: 0.2s ease color;
 }
 
+section {
+  padding: 3em 0;
+}
 
 img {
   width: 100%;
+}
+
+.picture {
+  overflow: hidden;
+}
+
+.picture img {
+  width: 100%;
+}
+
+.lazyload {
+  opacity: 1;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+.lazyloading {
+  background-color: #ff00dd;
+}
+.blur-up {
+    -webkit-filter: blur(25px);
+    filter: blur(25px);
+    transition: filter 300ms, -webkit-filter 300ms;
+}
+
+.blur-up.lazyloaded {
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
 }
 
 .an-s {
@@ -288,7 +319,6 @@ img {
   border-radius: 50%;
   content: '';
   display: block;
-  background-color: #fff;
   -webkit-transition:.2s ease-out background-color;
   transition: .2s ease-out background-color;
 }
@@ -311,11 +341,13 @@ img {
   transition: .6s .2s ease-out all;
 }
 
-#misc-2 .close-button {
-  background-color: #454545;
-}
 
 #misc-2 .close-out::before, #misc-2 .close-out::after {
+  background-color: #fff;
+}
+
+
+#enhance .close-out::before, #enhance .close-out::after {
   background-color: #fff;
 }
 
@@ -350,6 +382,11 @@ img {
 .social {
   visibility: hidden;
 }
+
+.photo-width {
+  margin: 2em auto;
+}
+
 
 
 .t-center{
@@ -452,15 +489,24 @@ html{
   width: 55px;
 }
 
-.line-break {
+#projects .line-break {
   width: 100%;
   margin: 3em 0 1em 0;
+}
+
+.line-break {
+  width: 35px;
+  margin: 15px 0 25px;
 }
 
 .label-break {
   position: absolute;
   width: 35px;
   top: .9em;
+}
+
+.section-title h5 {
+  text-align: center;
 }
 
 .section-content {
@@ -678,6 +724,10 @@ a[title]:hover:after {
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
 }
 
+.mocks {
+  padding: 4em 1em;
+}
+
 .mockup {
   padding: 1em 0 1em 0;
 }
@@ -755,6 +805,14 @@ footer {
   background-color: #45DDA6;
 }
 
+#enhance .line-break, #enhance .label-break, #enhance .header-line {
+  background-color: #ffffff;
+}
+
+#enhance .mocks {
+  background-color: #3C4255;
+}
+
 #westagile .project-period, #westagile .main, #westagile .action, #westagile .close a:hover .fa, #westagile a:hover, #westagile a:hover, #projects #westagile .action, #projects #westagile .project-period, #projects #westagile a:hover {
   color: #4ea583;
 }
@@ -807,15 +865,19 @@ color: #00AB49;
   color: #010101;
 }
 
-#misc-2 a, #misc-2 p, #misc-2 .close .fa, #misc-2 #projects .p-action p {
+#misc-2 a, #misc-2 p, #misc-2 .close .fa, #misc-2 #projects .p-action p, #enhance a, #enhance p, #enhance .close .fa, #enhance #projects .p-action p {
   color: #d6d6d6;
 }
 
-#misc-2 .ov {
+#enhance h1, #enhance h4, #enhance .label {
+  color: #ffffff;
+}
+
+#misc-2 .ov, #enhance .ov {
   color: #d6d6d6 !important;
 }
 
-#misc-2 .main, #misc-2 a:hover, #misc-2 .close a:hover .fa, #misc-2 .nav-tooltip {
+#misc-2 .main, #misc-2 a:hover, #misc-2 .close a:hover .fa, #misc-2 .nav-tooltip, #enhance .nav-tooltip {
   color: #fff;
 }
 
@@ -858,6 +920,9 @@ color: #00AB49;
   }
   h4{
     font-size:2rem;
+  }
+  .photo-width {
+    max-width: 700px;
   }
   .social {
     visibility: visible;
@@ -917,6 +982,15 @@ color: #00AB49;
   h4{
     font-size: 2.25rem;
   }
+  section {
+    padding: 5em 0 4em !important;
+  }
+  .mocks {
+    padding: 6em 1em;
+  }
+  .photo-width {
+    max-width: 1000px;
+  }
   .padding {
     padding: 1.7em 9em;
   }
@@ -960,6 +1034,9 @@ color: #00AB49;
   h4{
     font-size: 2.625rem;
   }
+  .photo-width {
+    max-width: 1200px;
+  }
   .padding {
     padding: 1.7em 0;
     max-width: 1000px;
@@ -979,5 +1056,8 @@ color: #00AB49;
 @media only screen and (min-width: 1500px) {
   .padding {
     max-width: 1200px;
+  }
+  .photo-width {
+    max-width: 1400px;
   }
 }

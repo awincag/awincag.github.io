@@ -61,16 +61,17 @@
 
       <link href="css/fonts.css" type="text/css" rel="stylesheet">
       <link href="css/style-3.css" type="text/css" rel="stylesheet">
-      <style>.main-bg { } </style>
+      <style> .main-bg { background-color: #464B60; } </style>
       <script src="https://use.fontawesome.com/0aee54882c.js"></script>
       <script>
         // Picture element HTML5 shiv
         document.createElement( "picture" );
         </script>
-      <script src="js/picturefill.js" async></script>
+      <script src="js/lazysizes.min.js" async=""></script>
+      <script src="js/picturefill.min.js" async=""></script>
   </head>
   <body id="enhance" class="main-bg">
-      <div id="main" class="content padding flex flex-horizontal-center">
+      <div id="main" class="content flex flex-horizontal-center">
           <section id="nav">
             <div class="nav">
               <a href="/" title="Return Home"></a>
@@ -107,7 +108,7 @@
             </div>
         </section>
 
-        <section id="header" class="f-width">
+        <section id="header" class="padding f-width">
           <div class="header wrap an-s page-animation-1">
             <div class="space"></div>
             <div class="header-title block">
@@ -142,83 +143,190 @@
           </div>
         </section>
 
-        <section id="history" class="f-width">
+        <section id="mocks" class="f-width mocks">
+            <div class="screens--screen">
+              <div class="photo-width">
+                <picture>
+                  <source
+                      data-srcset="media/enhance/hero-xl.jpg"
+                      media="(min-width: 1500px)" />
+                  <source
+                      data-srcset="media/enhance/hero-large.jpg"
+                      media="(min-width: 1200px)" />
+                  <source
+                      data-srcset="media/enhance/hero-medium.jpg"
+                      media="(min-width: 1000px)" />
+                  <source
+                      data-srcset="media/enhance/hero-small.jpg"
+                      media="(min-width: 700px)" />
+                  <source
+                      data-srcset="media/enhance/hero-phone.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/enhance/hero-placeholder.jpg"
+                      data-src="media/enhance/hero-large.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+            </div>
+        </section>
+
+        <section id="like" class="padding f-width">
           <div class="wrap">
             <div class="section-title">
+              <h3 class="main">Overview &amp; Problem</h3>
               <div class="line-break"></div>
-              <h3 class="main">Overview</h3>
             </div>
             <div class="section-content">
-              <p>Born and raised in lovely <a href="https://goo.gl/maps/bEYJrXj91YU2" target="_blank" title="South Bay, California">South Bay, California.</a></p>
+              <p>Recovering from an injury isn't just rest and ice. Sometimes stronger and more active efforts must take place to proactively defeat one's injury. Physical therapist aim to provide the tools and resources for patients to battle and defeat injury. The road to recovery varies in length and is almost never easy. Patients need to consistently keep up with their post-clinic-visit excercises. While in principle, it's straightforward, excuting your exercises on a regular basis with proper form proves difficult. Exercises can sometimes last 2-3 hours a day, depending on the type of recovery.</p>
+              <p>As a Clinicial and Physical therapist, their single goal is to ensure their patients success (or at least in theory). That means tracking their progress to ensure they are or aren't on tracking. In the current physical therapy market, there isn't one centralized application to help both patients and physical therapists. Enter Enhance Physical therapy.</p>
+              <p>Enhance Physical Therapy's main goal is to help improve the entire phyiscal therapy process. From making easier to track progress to helping reduce the total number of in-person clinic visit, Enhance hopes to help every aspect patient recovery and rehabilitation.</p>
+              <p>After personally dealing with 5 and 4 month stints of physical therapy, I had ample empathy and experience for how that process. Working with the client, we decided to take a phased approved to building out the system. The first phase was to give clinics the resources they need such that they could share exercises easily and effective. This phase of the project focused around one core product: how can clinics easily choose and share individualized recovery plans with their patients?</p>
             </div>
           </div>
         </section>
 
-        <section id="experience" class="f-width">
+        <section id="like" class="padding f-width">
           <div class="wrap">
             <div class="section-title">
+              <h3 class="main">The Process</h3>
               <div class="line-break"></div>
-              <h3 class="main">Experience</h3>
-            </div>
-            <div class="section-content flex">
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Work</span>
-                  <div class="label-break"></div>
-                </div>
-                <div class="list-item">
-                  <p>Lead Designer</p>
-                  <a class="label-small" href="http://westagilelabs.com" target="_blank" title="West Agile Labs">West Agile Labs</a>
-                </div>
-                <div class="list-item">
-                  <p>Product Manager</p>
-                  <p class="label-small">Ten Dollar Wholesale</p>
-                </div>
-                <div class="list-item">
-                  <p>Founder</p>
-                  <a class="label-small" href="http://cpdistanceclub.com/" target="_blank" title="Cal Poly Distance Club">Cal Poly Distance Club</a>
-                </div>
-              </div>
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Education</span>
-                  <div class="label-break"></div>
-                </div>
-                <div class="list-item">
-                  <p>BA, Political Science</p>
-                  <a class="label-small" href="http://www.calpoly.edu/" target="_blank" title="Cal Poly, SLO">Cal Poly, SLO 2013</a>
-                </div>
-              </div>
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Thoughts &amp; Ideas</span>
-                  <div class="label-break"></div>
-                </div>
-                <div class="list-item">
-                  <p>Coming Soon!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="like" class="f-width">
-          <div class="wrap">
-            <div class="section-title">
-              <div class="line-break"></div>
-              <h3 class="main">Other Shit I Really Like</h3>
             </div>
             <div class="section-content">
-              <p>Being creative doesn&#39;t mean being limited to pixels. I&#39;m a huge fan of music and photography.</p>
-              <p>I played piano and guitar for 8 years respectively. More recently, I produce music with the help of my handy dandy friend, <a href="https://www.image-line.com/flstudio/" target="_blank" title="Fl Studio">FL Studio.</a>You can hear some of that music <a href="https://soundcloud.com/awincag" target="_blank" title="Soundcloud">here</a>.</p>
-              <p>You can find me at music festivals such as <a href="https://www.youtube.com/watch?v=cUhPA5qIxDQ" target="_blank" title="Tomorrowland">Tommorrowland Belgium</a>, <a href="https://www.youtube.com/watch?v=PkkWr3cz9as" target="_blank" title="Coachella">Coachella</a>, <a href="http://www.sfoutsidelands.com/" target="_blank" title="Outside Lands">Outside Lands</a>, <a href="http://www.aclfestival.com/" target="_blank" title="Austin City Limits">Austin City Limits</a> or <a href="https://www.youtube.com/watch?v=PkkWr3cz9as" target="_blank">Governors Ball</a>.</p>
-              <p>I try to do as much photography as I can. I normally shoot with a <a href="http://www.bhphotovideo.com/c/product/892349-REG/Canon_8035b002_EOS_6D_Digital_Camera.html" target="_blank" title="Canon 6d">Canon 6d</a> and <a href="http://www.bhphotovideo.com/c/product/843008-USA/Canon_5175B002_EF_24_70mm_f_2_8L_II.html" target="_blank" title="Campm 24-70mm">Canon 24-70mm f/2.8</a>, which I feel like allows me to take the best photos of my favorite subject, people. <a href="https://500px.com/alexcagwin" target="_blank" title="500px">Here's</a> some photo's that I've taken in the past. I love doing portrait photography, so if you&#39;d like to shoot together, let&#39;s connect.</p>
-              <p>My biggest passion is making some delicious breakfast tacos. Not like some okay tacos you get from a quasi-tqaueria, but breakfast tacos that literally blow your pants off. If you want to learn more about them, <a href="http://theworldsbestbreakfasttacos.com" target="_blank">check out this website</a> and find out when you can taste them. </p>
+              <p>Initially, Enhance was set designed as a platform to help build customizable plans for each patient. Therapists would sit down and add various exercises specific to a patient. However, after the first iteration of usability tests, we quickly discovered that most Therapists have about < 2 minutes to decide and present the exercise to their patient before moving on to the next patient. This would include a demonstration and a printed out list of exercises (static by nature). After the initial demonstration, the assistant would sit down and walk the patient through a few exercises before sending them on their way with their instructions until the patient would visit again. An example could be: "do exercises a, b and c, twice a day with 3 sets of 15 with 3lbs of weight. See you in two weeks". While this method proved quick, it didn't necesarily bode well for people with shit memories, myself included. Often, patients walk out the door, do exercises for about 5 times (of the 28 times they should've done it), and forget how to properly excute their exercise. We also learned that more often than not, the average plan sent out to patients with the same injury has about an 85% overlap in exercises. Ie, my hip injury and everyone else who had a hip injury, were practicing 9 of the 10 same exercises. This lead us to re-think the core focus of where we should be spending our mindshare.</p>
+              <p>Our next iteration primarily focused on how do we set up the platform such that therapists can quickly share their genericized plans. Our big assumption was that therapists sit down and build their 20 most common plans. After discussions with users, we quickly affirmed that they rarely change their most common recovery plans. If there are edits, it usually anywhere from 2-3 exercises (each plan typically had a course of 12-14 exercises over the duration of the recovery period).</p>
+              <p>After some more finessing and usability testing< i was able to design a solution that allowed therapists to find their pre-built plan, customize it, share it with a patient, and add all of their exercise information (sets, duration, weight, etc.) in about < 90 seconds. We tested this with about 6 clinics, all of which signed up to use the application directly after completing the usability tests. Below is that flow.</p>
             </div>
           </div>
         </section>
 
-        <section id="projects" class="f-width">
+        <section id="mocks" class="f-width mocks">
+            <div class="section-title">
+              <h5 class="main">Core Flow</h5>
+            </div>
+            <div class="screens--screen">
+              <div class="photo-width">
+                <picture>
+                  <source
+                      data-srcset="media/enhance/1-xl.jpg"
+                      media="(min-width: 1500px)" />
+                  <source
+                      data-srcset="media/enhance/1-large.jpg"
+                      media="(min-width: 1200px)" />
+                  <source
+                      data-srcset="media/enhance/1-medium.jpg"
+                      media="(min-width: 1000px)" />
+                  <source
+                      data-srcset="media/enhance/1-small.jpg"
+                      media="(min-width: 700px)" />
+                  <source
+                      data-srcset="media/enhance/1-phone.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/enhance/1-placeholder.jpg"
+                      data-src="media/enhance/1-large.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+            </div>
+            <div class="section-title">
+              <h5 class="main">Application Screens</h5>
+            </div>
+          <div class="screens--screen">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="media/enhance/2-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="media/enhance/2-large.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="media/enhance/2-medium.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="media/enhance/2-small.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="media/enhance/2-phone.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    src="media/enhance/2-placeholder.jpg"
+                    data-src="media/enhance/2-large.jpg"
+                    class="lazyload blur-up" />
+              </picture>
+            </div>
+          </div>
+          <div class="screens--screen">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="media/enhance/3-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="media/enhance/3-large.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="media/enhance/3-medium.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="media/enhance/3-small.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="media/enhance/3-phone.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    src="media/enhance/3-placeholder.jpg"
+                    data-src="media/enhance/3-large.jpg"
+                    class="lazyload blur-up" />
+              </picture>
+            </div>
+          </div>
+          <div class="screens--screen">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="media/enhance/4-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="media/enhance/4-large.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="media/enhance/4-medium.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="media/enhance/4-small.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="media/enhance/4-phone.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    src="media/enhance/4-placeholder.jpg"
+                    data-src="media/enhance/4-large.jpg"
+                    class="lazyload blur-up" />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section id="like" class="padding f-width">
+          <div class="wrap">
+            <div class="section-title">
+              <h3 class="main">End Result</h3>
+              <div class="line-break"></div>
+            </div>
+            <div class="section-content">
+              <p>As we were doing usability tests with about 6 different clinics, Enhance was bought out and merged with another physical therapy company with a slightly different strategy and application. While the end product was never used in production, every clinic that had tried the application had signed up to pay.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="padding f-width">
           <div class="wrap">
             <div class="section-title">
               <div class="line-break"></div>
@@ -226,11 +334,20 @@
             </div>
             <div class="section-content">
               <ul class="flex">
+                <li id="eventyoda">
+                  <a href="/eventyoda" title="EventYoda">
+                    <h5>EventYoda<span class="project-period">.</span></h5>
+                    <div class="p-action">
+                      <p class="ov">Product design and prototyping for a responsive new way to book team building events.</p>
+                      <span class="action">View Project</span>
+                    </div>
+                  </a>
+                </li>
                 <li id="instapark">
-                  <a href="/instapark" title="West Agile Labs">
+                  <a href="/instapark" title="Instapark">
                     <h5>InstPark<span class="project-period">.</span></h5>
                     <div class="p-action">
-                      <p>Product design and iterative prototyping of a on-demand, car-port-sharing mobile app.</p>
+                      <p class="ov">Product design and iterative prototyping of a on-demand, car-port-sharing mobile app.</p>
                       <span class="action">View Project</span>
                     </div>
                   </a>
@@ -239,7 +356,7 @@
                   <a href="/dodo" title="Dodo">
                     <h5>Dodo<span class="project-period">.</span></h5>
                     <div class="p-action">
-                      <p>Product design and prototyping for internal tool to help reduce mobile-bug reporting time.</p>
+                      <p class="ov">Product design and prototyping for internal tool to help reduce mobile-bug reporting time.</p>
                       <span class="action">View Project</span>
                     </div>
                   </a>
