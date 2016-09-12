@@ -798,6 +798,24 @@ footer {
   background-color: #29abe2;
 }
 
+#instapark .mobile-mockup {
+  max-width: 1200px;
+  margin: 2em auto;
+}
+
+#instapark .mobile-mockup li {
+  padding: 0;
+  margin: 0 1em;
+}
+
+#instapark .photo-width {
+  margin: .5em auto;
+}
+
+#instapark .mocks {
+  background-color: #f9f9f9;
+}
+
 #enhance .project-period, #enhance .main, #enhance .action, #enhance .close a:hover .fa, #enhance a:hover, #projects #enhance .action, #projects #enhance .project-period, #projects #enhance a:hover {
   color: #45DDA6;
 }
@@ -951,6 +969,12 @@ color: #00AB49;
   }
   .photo-width {
     max-width: 700px;
+  }
+  #instapark .photo-width {
+    margin: .5em auto;
+  }
+  #instapark .mobile-mockup li {
+    max-width: 368px;
   }
   .social {
     visibility: visible;
