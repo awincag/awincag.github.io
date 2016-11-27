@@ -1,42 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-  <!--
-
-  /* master
-     * @license
-     * MyFonts Webfont Build ID 3145400, 2015-12-23T19:34:33-0500
-     *
-     * The fonts listed in this notice are subject to the End User License
-     * Agreement(s) entered into by the website owner. All other parties are
-     * explicitly restricted from using the Licensed Webfonts(s).
-     *
-     * You may obtain a valid license at the URLs below.
-     *
-     * Webfont: SofiaProSemiBold by Mostardesign
-     * URL: http://www.myfonts.com/fonts/mostardesign/sofia-pro/semi-bold/
-     * Copyright: Copyright (c) Olivier Gourvat - Mostardesign Studio, 2012. All rights
-     * reserved.
-     * Licensed pageviews: 10,000
-     *
-     * Webfont: SofiaProLight by Mostardesign
-     * URL: http://www.myfonts.com/fonts/mostardesign/sofia-pro/light/
-     * Copyright: Copyright (c) Olivier Gourvat - Mostardesign Studio, 2012. All rights
-     * reserved.
-     * Licensed pageviews: 10,000
-     *
-     * Webfont: FF Mark Web Pro Bold by FontFont
-     * URL: http://www.myfonts.com/fonts/fontfont/mark/pro-bold/
-     * Copyright: 2013 published by FontShop International GmbH
-     * Licensed pageviews: 50,000
-     *
-     *
-     * License: http://www.myfonts.com/viewlicense?type=web&buildid=3145400
-     *
-     * © 2015 MyFonts Inc
-    */
-
-    -->
 
       <title>West Agile Labs | Alex Cagwin</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -44,13 +8,13 @@
       <meta name="description" content="Alex Cagwin is a Full-Stack Product Designer and Co-Creator of the World's Best Breakfast Tacos">
       <meta name="keywords" content="Product, Design, Designer, Full-Stack, Alex, Cagwin, Breakfast Taco, Alex Cagwin, Worlds Best Tacos">
       <meta name="author" content="Alex Cagwin">
-      <meta property="og:title" content="West Agile Labs | Alex Cagwin">
+      <meta property="og:title" content="Alex Cagwin | Product Designer">
       <meta property="og:type" content="website">
       <meta property="og:url" content="http://acag.win">
       <meta property="og:image" content="awincag.github.io/media/meta-image.png" />
       <meta property="og:description" content="Full-Stack Product Designer &amp; Co-creator of World's Best Breakfast Tacos">
 
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary_l_image" />
       <meta name="twitter:site" content="@awincag" />
       <meta name="twitter:title" content="Alex Cagwin | Product Designer." />
       <meta name="twitter:description" content="Full Stack Product Designer &amp; Co-createor of World's Best Breakfast Tacos" />
@@ -61,195 +25,436 @@
 
       <link href="css/fonts.css" type="text/css" rel="stylesheet">
       <link href="css/style-3.css" type="text/css" rel="stylesheet">
-      <style>.main-bg { } </style>
+      <style> .main-bg {  } </style>
       <script src="https://use.fontawesome.com/0aee54882c.js"></script>
       <script>
         // Picture element HTML5 shiv
         document.createElement( "picture" );
         </script>
-      <script src="js/picturefill.js" async></script>
+      <script src="js/lazysizes.min.js" async=""></script>
+      <script src="js/picturefill.min.js" async=""></script>
   </head>
   <body id="westagile" class="main-bg">
-      <div id="main" class="content padding flex flex-horizontal-center">
-          <section id="nav">
-            <div class="nav">
-              <a href="/" title="Return Home"></a>
-              <a data-scroll href="#header" class="fixed logo"></a>
-              <div class="close">
-                <a href="/" id="close" class="close-button an-s page-animation-3" >
-                  <div class="close-out"></div>
+    <div id="main" class="content flex flex-horizontal-center">
+      <div id="header" class="nav-2 header animated header--fixed">
+        <div class="nav--content">
+          <a href="/" id="close" class="close-button" >
+            <div class="close-out"></div>
+          </a>
+          <div class="nav--break"></div>
+          <a href="/dodo" title="Dodo App">
+            <i class="fa fa-angle-left"></i>
+            <span class="nav-tooltip">Previous Project</span>
+          </a>
+          <a href="/ug"title="The Underground Symphony">
+            <i class="fa fa-angle-right"></i>
+            <span class="nav-tooltip">Next Project</span>
+          </a>
+          <a href="mailto:hey@acag.win" class="desktop-hide">
+            <i class="fa fa-envelope-o"></i>
+          </a>
+          <a data-clipboard-text="hey@acag.win" class="no-smoothState copied mobile-hide">
+            <i class="fa fa-envelope-o"></i>
+            <span class="nav-tooltip">Shoot Me an Email</span>
+          </a>
+        </div>
+      </div>
+
+      <div id="header" class="project--header f-width">
+        <div class="header">
+          <div class="header-title block an-s-1 page-animation-1">
+            <h1 class="hidden">West Agile Labs</h1>
+            <span class="h1">West Agile Labs</span><span class="h1 project-period">.</span>
+          </div>
+          <div class="header-content an-s page-animation-2">
+            <span class="h4">SF-based digital product agency.</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="mocks" class="f-width mocks an-s page-animation-3">
+          <div class="screens--screen an-s page-animation-4">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="media/westagile/hero-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="media/westagile/hero-l.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="media/westagile/hero-m.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="media/westagile/hero-s.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="media/westagile/hero-p.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    src="media/westagile/hero-placeholder.jpg"
+                    data-src="media/westagile/hero-l.jpg"
+                    class="lazyload blur-up" />
+              </picture>
+            </div>
+          </div>
+      </section>
+
+        <section class="footer" style="margin: 0">
+            <div class="footer--content">
+              <div class="footer--item-2">
+                <span class="footer-label grey">Challenge</span>
+                <div class="list-item">
+                  <p>Promote and legitimize a growing digital product agency.</p>
+                </div>
+              </div>
+              <div class="footer--item">
+                <span class="footer-label grey">Role</span>
+                <div class="list-item">
+                  <p>Lead Designer &amp; Front-end Developer</p>
+                </div>
+              </div>
+              <div class="footer--item">
+                <span class="footer-label grey">Art Director</span>
+                <div class="list-item">
+                  <p>Jackie Cruickshank</p>
+                </div>
+              </div>
+              <div class="footer--item">
+                <span class="footer-label grey">Designers</span>
+                <div class="list-item">
+                  <p>Danielle Hadley, Annie Pyle</p>
+                </div>
+              </div>
+              <div class="footer--item">
+                <span class="footer-label grey">Agency</span>
+                <div class="list-item">
+                  <p>West Agile Labs</p>
+                </div>
+              </div>
+              <div class="footer--item">
+                <span class="footer-label grey">Year</span>
+                <div class="list-item">
+                  <p>Fall 2016</p>
+                </div>
+              </div>
+              <div class="footer--item-2">
+                <a href="http://westagilelabs.com" target="_blank" title="View Live" class="project-live">
+                  <span class="view">View Live</span>
                 </a>
-                <div class="social">
-                <div class="close-break an-s-1 page-animation-4"></div>
-                  <ul class="social-nav">
-                    <li class="an-s page-animation-5">
-                      <a href="/dodo" title="Dodo App">
-                        <i class="fa fa-angle-right"></i>
-                        <span class="nav-tooltip">Next Project</span>
-                      </a>
-                    </li>
-                    <li class="an-s page-animation-6">
-                      <a href="/enhance" title="Enhance Physical Therapy">
-                        <i class="fa fa-angle-left"></i>
-                        <span class="nav-tooltip">Previous Project</span>
-                      </a>
-                    </li>
-                    <div class="close-break-2 an-s-1 page-animation-4"></div>
-                    <li class="an-s page-animation-7">
-                      <a data-clipboard-text="hey@acag.win" class="no-smoothState copied">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="nav-tooltip">Shoot Me an Email</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
         </section>
 
-        <section id="header" class="f-width">
-          <div class="header wrap an-s page-animation-1">
-            <div class="space"></div>
-            <div class="header-title block">
-              <h1>West Agile Labs</h1><h1 class="project-period">.</h1>
-              <div class="header-line"></div>
-            </div>
-            <div class="space"></div>
-            <div class="header-content an-s page-animation-2">
-              <h4>SF-Based Digital Design &amp; <br>Development Agency.</h4>
-            </div>
-            <div class="section-content flex">
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Lead Designer &amp; Developer</span>
-                  <div class="label-break"></div>
-                </div>
-              </div>
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">3 People</span>
-                  <div class="label-break"></div>
-                </div>
-              </div>
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Spring 2016</span>
-                  <div class="label-break"></div>
-                </div>
-              </div>
-            </div>
-            <div class="space"></div>
-          </div>
-        </section>
-
-        <section id="history" class="f-width">
+        <section id="like" class="padding f-width">
           <div class="wrap">
             <div class="section-title">
-              <div class="line-break"></div>
-              <h3 class="main">Overview</h3>
+              <span class="h4 main">Overview</span>
             </div>
             <div class="section-content">
-              <p>Born and raised in lovely <a href="https://goo.gl/maps/bEYJrXj91YU2" target="_blank" title="South Bay, California">South Bay, California.</a></p>
+              <p>I joined West Agile in March of 2014. There was only 3 full time employees, 1 part-time, 1 other intern and 2 overseas partners. Today, we have 26 full-time employees, 6 partners and over 250 projects completed.</p>
+              <p>When I started, we had a somewhat of a throw-away brand, with a logo from 99 designs that was created back in 2012. While I have nothing against 99 designs, you are probably not going to get a timeless logo for $499. Maybe, but probably not.</p>
+              <p> 2015 was a big year for us as we expanded the team and worked on large scale projects, some of which for fortune 500 companies. However, the brand that we had wasn't keeping up. We contracted out to "Few of Many", a branding agency out in Oakland to re-do the logo and color. The re-brand was wrapped up early 2016.</p>
+              <p>Unfortunately, things didn't work out as we had hoped and the relationship between the two agencies slowly dwindled. That left the remaining deisgn team to pick up where they had left off.</p>
+              <p>With an upcoming event in late February that set our deadline, we quickly got to work. Unfortunately, the brand and website that we had pushed out at the time was rushed and didn't reflect who we were as company and team. We realized that we were only about 50% of where we knew we were. Jackie and myself, slowly started chipping away, evolving the brand and the voice of the company over the coming months to help upgrade us to where we knew we were.</p>
+              <p>Being a small team of 5, we juggled important work while still fine tuning the visual identity of who we are. Come end of July, we were able to make a big push and see progress in the direction we had hoped. From there, we were swamped under client work until only relatively recently, here in November. The following screens are a reflection of that latest work. This iteration of the website should be up in the next few weeks.</p>
             </div>
           </div>
         </section>
 
-        <section id="experience" class="f-width">
-          <div class="wrap">
-            <div class="section-title">
-              <div class="line-break"></div>
-              <h3 class="main">Experience</h3>
-            </div>
-            <div class="section-content flex">
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Work</span>
-                  <div class="label-break"></div>
-                </div>
-                <div class="list-item">
-                  <p>Lead Designer</p>
-                  <a class="label-small" href="http://westagilelabs.com" target="_blank" title="West Agile Labs">West Agile Labs</a>
-                </div>
-                <div class="list-item">
-                  <p>Product Manager</p>
-                  <p class="label-small">Ten Dollar Wholesale</p>
-                </div>
-                <div class="list-item">
-                  <p>Founder</p>
-                  <a class="label-small" href="http://cpdistanceclub.com/" target="_blank" title="Cal Poly Distance Club">Cal Poly Distance Club</a>
-                </div>
-              </div>
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Education</span>
-                  <div class="label-break"></div>
-                </div>
-                <div class="list-item">
-                  <p>BA, Political Science</p>
-                  <a class="label-small" href="http://www.calpoly.edu/" target="_blank" title="Cal Poly, SLO">Cal Poly, SLO 2013</a>
-                </div>
-              </div>
-              <div class="list-column">
-                <div class="column-header">
-                  <span class="label">Thoughts &amp; Ideas</span>
-                  <div class="label-break"></div>
-                </div>
-                <div class="list-item">
-                  <p>Coming Soon!</p>
-                </div>
+        <section id="mocks" class="f-width mocks an-s page-animation-3">
+            <div class="screens--screen an-s page-animation-4">
+              <div class="photo-width" style="display: flex;">
+                <picture class="logo-center">
+                    <img src="media/westagile/main.png" alt="West Agile Labs Logo" class="logo">
+                </picture>
               </div>
             </div>
-          </div>
         </section>
 
-        <section id="like" class="f-width">
-          <div class="wrap">
-            <div class="section-title">
-              <div class="line-break"></div>
-              <h3 class="main">Other Shit I Really Like</h3>
+        <section id="mocks" class="f-width mocks-dark ">
+            <div class="screens--screen">
+              <div class="photo-width">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/1-l.jpg"
+                      media="(min-width: 1200px)" />
+                  <source
+                      data-srcset="media/westagile/1-m.jpg"
+                      media="(min-width: 1000px)" />
+                  <source
+                      data-srcset="media/westagile/1-s.jpg"
+                      media="(min-width: 700px)" />
+                  <source
+                      data-srcset="media/westagile/1-p.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/1-placeholder.jpg"
+                      data-src="media/westagile/1-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
             </div>
-            <div class="section-content">
-              <p>Being creative doesn&#39;t mean being limited to pixels. I&#39;m a huge fan of music and photography.</p>
-              <p>I played piano and guitar for 8 years respectively. More recently, I produce music with the help of my handy dandy friend, <a href="https://www.image-line.com/flstudio/" target="_blank" title="Fl Studio">FL Studio.</a>You can hear some of that music <a href="https://soundcloud.com/awincag" target="_blank" title="Soundcloud">here</a>.</p>
-              <p>You can find me at music festivals such as <a href="https://www.youtube.com/watch?v=cUhPA5qIxDQ" target="_blank" title="Tomorrowland">Tommorrowland Belgium</a>, <a href="https://www.youtube.com/watch?v=PkkWr3cz9as" target="_blank" title="Coachella">Coachella</a>, <a href="http://www.sfoutsidelands.com/" target="_blank" title="Outside Lands">Outside Lands</a>, <a href="http://www.aclfestival.com/" target="_blank" title="Austin City Limits">Austin City Limits</a> or <a href="https://www.youtube.com/watch?v=PkkWr3cz9as" target="_blank">Governors Ball</a>.</p>
-              <p>I try to do as much photography as I can. I normally shoot with a <a href="http://www.bhphotovideo.com/c/product/892349-REG/Canon_8035b002_EOS_6D_Digital_Camera.html" target="_blank" title="Canon 6d">Canon 6d</a> and <a href="http://www.bhphotovideo.com/c/product/843008-USA/Canon_5175B002_EF_24_70mm_f_2_8L_II.html" target="_blank" title="Campm 24-70mm">Canon 24-70mm f/2.8</a>, which I feel like allows me to take the best photos of my favorite subject, people. <a href="https://500px.com/alexcagwin" target="_blank" title="500px">Here's</a> some photo's that I've taken in the past. I love doing portrait photography, so if you&#39;d like to shoot together, let&#39;s connect.</p>
-              <p>My biggest passion is making some delicious breakfast tacos. Not like some okay tacos you get from a quasi-tqaueria, but breakfast tacos that literally blow your pants off. If you want to learn more about them, <a href="http://theworldsbestbreakfasttacos.com" target="_blank">check out this website</a> and find out when you can taste them. </p>
-            </div>
-          </div>
         </section>
 
-        <section id="projects" class="f-width">
-          <div class="wrap">
-            <div class="section-title">
-              <div class="line-break"></div>
-              <h3 class="main">Other Projects</h3>
-            </div>
-            <div class="section-content">
-              <ul class="flex">
-                <li id="instapark">
-                  <a href="/instapark" title="InstaPark">
-                    <h5>InstaPark<span class="project-period">.</span></h5>
-                    <div class="p-action">
-                      <p>Product design and iterative prototyping of a on-demand, car-port-sharing mobile app.</p>
-                      <span class="action">View Project</span>
-                  </div>
-                  </a>
-                </li>
-                <li id="enhance">
-                  <a href="/enhance" title="Enhance Physical Therapy">
-                    <h5>Enhance<span class="project-period">.</span></h5>
-                    <div class="p-action">
-                      <p>Branding, product design and prototyping a new way to help physical therapy.</p>
-                      <span class="action">View Project</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+        <div class="fw">
+          <div class="screens--screen">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="media/westagile/2-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="media/westagile/2-l.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="media/westagile/2-m.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="media/westagile/2-s.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="media/westagile/2-p.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    src="media/westagile/2-placeholder.jpg"
+                    data-src="media/westagile/2-l.jpg"
+                    class="lazyload blur-up" />
+              </picture>
             </div>
           </div>
+        </div>
+
+        <section id="mocks" class="f-width mocks">
+            <div class="screens--screen">
+              <div class="photo-width">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/3-l.jpg"
+                      media="(min-width: 1200px)" />
+                  <source
+                      data-srcset="media/westagile/3-m.jpg"
+                      media="(min-width: 1000px)" />
+                  <source
+                      data-srcset="media/westagile/3-s.jpg"
+                      media="(min-width: 700px)" />
+                  <source
+                      data-srcset="media/westagile/3-p.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/3-placeholder.jpg"
+                      data-src="media/westagile/3-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+            </div>
         </section>
 
-        <section id="message">
+        <section id="mocks" class="f-width mocks-light">
+            <div class="screens--screen double">
+              <div class="photo-width left">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/4-l.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/4-placeholder.jpg"
+                      data-src="media/westagile/4-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+              <div class="photo-width right">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/5-l.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/5-placeholder.jpg"
+                      data-src="media/westagile/5-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+              <div class="photo-width left">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/5-alt-l.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/5-alt-placeholder.jpg"
+                      data-src="media/westagile/5-alt-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+              <div class="photo-width right">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/5-alt-2-l.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/5-alt-2-placeholder.jpg"
+                      data-src="media/westagile/5-alt-2-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+            </div>
+        </section>
+
+        <div class="fw">
+          <div class="screens--screen">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="media/westagile/6-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="media/westagile/6-l.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="media/westagile/6-m.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="media/westagile/6-s.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="media/westagile/6-p.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    src="media/westagile/6-placeholder.jpg"
+                    data-src="media/westagile/6-l.jpg"
+                    class="lazyload blur-up" />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <section id="mocks" class="f-width mocks">
+            <div class="screens--screen">
+              <div class="photo-width">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/7-l.jpg"
+                      media="(min-width: 1200px)" />
+                  <source
+                      data-srcset="media/westagile/7-m.jpg"
+                      media="(min-width: 1000px)" />
+                  <source
+                      data-srcset="media/westagile/7-s.jpg"
+                      media="(min-width: 700px)" />
+                  <source
+                      data-srcset="media/westagile/7-p.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/7-placeholder.jpg"
+                      data-src="media/westagile/7-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+              <div class="photo-width">
+                <picture>
+                  <source
+                      data-srcset="media/westagile/8-l.jpg"
+                      media="(min-width: 1200px)" />
+                  <source
+                      data-srcset="media/westagile/8-m.jpg"
+                      media="(min-width: 1000px)" />
+                  <source
+                      data-srcset="media/westagile/8-s.jpg"
+                      media="(min-width: 700px)" />
+                  <source
+                      data-srcset="media/westagile/8-p.jpg"
+                      media="(min-width: 100px)" />
+                  <img
+                      data-sizes="auto"
+                      src="media/westagile/8-placeholder.jpg"
+                      data-src="media/westagile/8-l.jpg"
+                      class="lazyload blur-up" />
+                </picture>
+              </div>
+            </div>
+        </section>
+
+        <div class="fw">
+          <div class="screens--screen">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="media/westagile/9-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="media/westagile/9-l.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="media/westagile/9-m.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="media/westagile/9-s.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="media/westagile/9-p.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    src="media/westagile/9-placeholder.jpg"
+                    data-src="media/westagile/9-l.jpg"
+                    class="lazyload blur-up" />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="next-project" id="nvolv">
+          <a href="/nvolv" title="Nvolv" class="next--content wrap">
+            <span class="footer-label">Next Project</span>
+            <span class="next-label trns">Nvolv</span>
+            <div class="next-background"></div>
+          </a>
+        </div>
+      </div>
+
+        <footer>
+          <div class="footer">
+            <div class="footer--content">
+              <div class="footer--item">
+                <span class="footer-label">Copyright</span>
+                <span><i class="fa fa-copyright"></i> Alex Cagwin, 2016.</span>
+              </div>
+              <div class="footer--item">
+                <span class="footer-label">Email</span>
+                <a href="mailto:hey@acag.win" title="Email Me">
+                  <span>Hey@acag.win</span>
+                </a>
+                <a data-clipboard-text="hey@acag.win" class="copied no-smoothState">
+                  <span class="footer-contact">Copy Email Link</span>
+                </a>
+              </div>
+              <div class="footer--item">
+                <span class="footer-label">Elsewhere</span>
+                <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">
+                  <span>Twitter</span>
+                </a>
+                <a href="https://500px.com/alexcagwin" target="_blank" title="500px">
+                  <span>500px</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <div id="message">
           <div id="msg" class="message">
             <span>Email Copied to Clipboard</span>
             <!-- <span class="closebtn">&times;</span> -->
@@ -258,45 +463,28 @@
             <span>Oops! Didn't Work. Click here to jump to the bottom and copy/paste my email.</span>
             <span class="closebtn">&times;</span>
           </a>
-        </section>
-
-        <footer>
-          <div class="footer">
-            <div class="f-grow">
-              <ul class="social-footer flex">
-                <li>
-                  <a data-clipboard-text="hey@acag.win" class="no-smoothState copied">
-                    <i class="fa fa-envelope-o"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright flex flex-horizontal-center">
-              <p>Made with Love by Me. <i class="fa fa-copyright"></i> Alex Cagwin, 2016.</p>
-            </div>
-          </div>
-        </footer>
-    </div>
+        </div>
 
 
+
+    <script src="js/headroom.min.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
-    <script src="dist/clipboard.min.js"></script>
-    <script src="js/jquery-2.1.1.js"></script>
-    <!-- <script src="js/jquery.smoothState.min.js"></script>
-    <script src="js/main-smoothstate.js"></script> -->
+    <script src="js/clipboard.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        smoothScroll.init();
+      (function() {
+        var header = new Headroom(document.querySelector("#header"), {
+            tolerance: 3,
+            offset: 50,
+            classes: {
+              initial: "animated",
+              pinned: "slideDown",
+              unpinned: "slideUp"
+            }
+        });
+        header.init();
+
+    }());
     </script>
     </body>
 </html>
