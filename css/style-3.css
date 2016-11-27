@@ -2018,6 +2018,7 @@ a:hover .footer-contact {
     .phone-flow.photo-width {
       max-width: 362px;
       top: 137px;
+      margin: 1.75em auto;
     }
   }
 
