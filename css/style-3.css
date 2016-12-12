@@ -432,14 +432,19 @@ img {
 
 
 .close-button {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   content: '';
   display: block;
   -webkit-transition:.2s ease-out background-color;
-  transition: .2s ease-out background-color;
-}
+  transition: .2s ease-out background-color; }
+  @media only screen and (min-width: 700px) {
+    .close-button {
+      width: 60px;
+      height: 60px;
+    }
+  }
 
 .close-out {
   content: '';
@@ -632,7 +637,6 @@ img {
 
 
 .nav--content {
-  min-height: 65px;
   width: 100%;
   background-color: #ffffff;
   border-top: 1px solid #dadada;
@@ -711,14 +715,14 @@ img {
 }
 
 .nav--content .close-out {
-  height: 55px;
+  height: 40px;
   position: relative;
   width: 32px;
   margin: 0 auto;
 }
 
 .nav--content .close-out::before, .nav--content .close-out::after {
-  top: 29px;
+  top: 19px;
   left: 0px;
 }
 
