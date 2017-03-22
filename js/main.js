@@ -49,6 +49,9 @@ for (i = 0; i < close.length; i++) {
     }
 };
 
+
+
+
 // var page = document.getElementById('page-transition');
 // var btn = document.getElementById('close')
 //

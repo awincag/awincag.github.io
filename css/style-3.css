@@ -8,7 +8,7 @@ html{
 p{
   font-family:"SofiaProRegular", sans-serif;
   font-size: 1.063rem;
-  line-height: 1.51em;
+  line-height: 1.6em;
   margin: 0 0 1.75em 0;
   text-rendering: optimizelegibility; }
   @media only screen and (min-width: 1000px) {
@@ -18,12 +18,12 @@ p{
   }
   @media only screen and (min-width: 1200px) {
     p {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     p {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
 }
 
@@ -148,7 +148,7 @@ h5{
 }
 
 .h5 {
-  font-family: "FFMarkWebProBold", sans-serif;
+  font-family: "FFMarkWebProBlack", sans-serif;
   font-size: 1.25rem;
   line-height: 1.3em;
   text-rendering: optimizelegibility;  }
@@ -169,7 +169,7 @@ h5{
   }
   @media only screen and (min-width: 1800px) {
     .h5 {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
 }
 
@@ -453,7 +453,7 @@ img {
 
 .close-out::before, .close-out::after {
   content: '';
-  width: 32px;
+  width: 24px;
   height: 3px;
   display: inline-block;
   position: absolute;
@@ -461,8 +461,12 @@ img {
   left: 15px;
   background-color: #333;
   -webkit-transition:.6s .2s ease-out all;
-  transition: .6s .2s ease-out all;
-}
+  transition: .6s .2s ease-out all; }
+  @media only screen and (min-width: 700px) {
+    .close-out::before, .close-out::after {
+      width: 32px;
+    }
+  }
 
 
 .light .close-out::before, .light .close-out::after {
@@ -585,6 +589,18 @@ img {
     width: 100%;
 }
 
+.laptop-flow {
+  z-index: 2;
+  max-width: 64.5%;
+  margin: auto;
+}
+
+.laptop-bg {
+  max-width: 95%;
+  z-index: 1;
+  margin: auto;
+}
+
 .fw .photo-width, .fw-2 .photo-width {
   padding: 0;
   margin: 0; }
@@ -640,7 +656,7 @@ img {
   width: 100%;
   background-color: #ffffff;
   border-top: 1px solid #dadada;
-  padding: .5em; }
+  padding: .5em .5em .4em; }
   @media only screen and (min-width: 700px) {
     .nav--content {
       min-width: 76px;
@@ -939,6 +955,52 @@ html{
     }
   }
 
+.about-content {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 1000px) {
+    .about-content {
+      flex-direction: row;
+    }
+  }
+
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1000px) {
+  .clients {
+    width: 30%;
+    margin: 0 3% 0 0;
+  }
+}
+
+.client-list span {
+  width: 47%;
+  margin: 0 3% .5em 0; }
+  @media only screen and (min-width: 700px) {
+    .client-list span {
+      font-size:
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .client-list span {
+      font-size: 1.125rem;
+      width: 100%;
+      margin: 0 0 .5em 0;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .client-list span {
+      font-size: 1.25rem;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .client-list span {
+      font-size: 1.5rem;
+    }
+  }
 
 
 .header-line, .line-break, .label-break {
@@ -987,29 +1049,30 @@ html{
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
-  padding: 0 0 1.75em 0; }
+  padding: 0 0 0.25em 0; }
   @media only screen and (min-width: 700px) {
     .projects li {
-      -webkit-flex-basis: 47%;
-          -ms-flex-preferred-size: 47%;
-              flex-basis: 47%;
-      margin-right: 3%;
+      -webkit-flex-basis: 43%;
+          -ms-flex-preferred-size: 43%;
+              flex-basis: 43%;
+      margin-right: 7%;
+      padding: 0 0 1.75em 0;
     }
   }
   @media only screen and (min-width: 1200px) {
     .projects li {
-      -webkit-flex-basis: 30%;
-          -ms-flex-preferred-size: 30%;
-              flex-basis: 30%;
-      margin-right: 3%;
+      -webkit-flex-basis: 28%;
+          -ms-flex-preferred-size: 28%;
+              flex-basis: 28%;
+      margin-right: 5%;
     }
   }
   @media only screen and (min-width: 1800px) {
     .projects li {
-      -webkit-flex-basis: 22%;
-          -ms-flex-preferred-size: 22%;
-              flex-basis: 22%;
-      margin-right: 3%;
+      -webkit-flex-basis: 21%;
+          -ms-flex-preferred-size: 21%;
+              flex-basis: 21%;
+      margin-right: 4%;
     }
 }
 
@@ -1385,7 +1448,7 @@ a[title]:hover:after {
 }
 
 .double.phone img {
-  max-width: 450px;
+  max-width: 550px;
 }
 
 .multiple-phone {
@@ -1548,6 +1611,10 @@ a[title]:hover:after {
     }
 }
 
+.fw-2 img {
+  margin-bottom: -2px;
+}
+
 .next-label {
   font-family: "FFMarkWebProBlack", sans-serif;
   font-size: 1.5rem;
@@ -1572,6 +1639,99 @@ a[title]:hover:after {
       font-size: 4.5rem;
     }
 }
+
+.vfl-video {
+  margin-top: -1px;
+  margin-left: 1px; }
+  @media only screen and (min-width: 700px) {
+    .vfl-video {
+      margin-top: 5px;
+    }
+}
+
+.nvolv-video {
+  margin-top: 26px; }
+  @media only screen and (min-width: 700px) {
+    .nvolv-video {
+      margin-top: 4px;
+    }
+}
+
+.insta-video {
+  margin-top: 0px; }
+  @media only screen and (min-width: 700px) {
+    .insta-video {
+      margin-top: 4px;
+    }
+}
+
+
+.press, .section-results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-stat {
+  font-family: "FFMarkWebProBold", sans-serif;
+  line-height: 1em;
+  font-size: 4rem; }
+  @media only screen and (min-width: 700px) {
+    .result-stat {
+      font-size: 6rem;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .result-stat {
+      font-size: 8rem;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .result-stat {
+      font-size: 6rem;
+    }
+  }
+
+.result-label {
+  font-family:"SofiaProBlack",Helvetica,Roboto,Arial,sans-serif;
+  text-transform: uppercase;
+  color: #777;
+  font-size: .875rem;
+  letter-spacing: 0.15em;
+}
+
+.press-item-1, .press-item-2 {
+  margin: 0 0 2em 0;
+}
+
+.press-item-1 {
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.press-item-1 p, .press-item-2 p {
+  margin: 0;
+}
+
+.press-item-1 a, .press-item-2 a {
+  font-family:"SofiaProBlack",Helvetica,Roboto,Arial,sans-serif;
+  font-size: 1.063rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .press-item-2, .result-item {
+    flex-basis: 47%;
+    margin: 0 3% 2em 0;
+  }
+  .press-item-1 a, .press-item-2 a {
+    font-size: 1.25rem;
+  }
+}
+
 
 footer {
   width: 100%;
@@ -1705,12 +1865,100 @@ a:hover .footer-contact {
   background-color: #ffffff !important;
 }
 
+#hopsy .project-period, #hopsy .main, #hopsy .action, #hopsy .close a:hover .fa, #hopsy a:hover, #projects #hopsy .action, #projects #hopsy .project-period, #projects #hopsy a:hover, #hopsy a:hover .footer-contact {
+  color: #FCB714;
+}
+
+#hopsy .message {
+  background-color: #FCB714;
+}
+
+#hopsy .mocks {
+  background-color: #FCB714;
+}
+
+#hopsy .mocks.alt-2 {
+  background-color: #FCBD04;
+}
+
+#hopsy .mocks-light {
+  background-color: #f2f2f2;
+}
+
+#hopsy a:hover .next-label {
+  color: #111;
+}
+
+#hopsy .light .footer, #hopsy .mocks-dark {
+  background-color: #1F1F1F;
+}
+
+@media only screen and (max-width: 700px) {
+  #hopsy .light .nav--content {
+    background-color: #222;
+  }
+  #hopsy .light .nav--content {
+    border-top: 1px solid #111;
+  }
+}
+
+
+#westagile #hopsy .next-background {
+  background-color: #F77143;
+}
+
+
 #octane .project-period, #octane .main, #octane .action, #octane .close a:hover .fa, #octane a:hover, #projects #octane .action, #projects #octane .project-period, #projects #octane a:hover, #octane a:hover .footer-contact {
   color: #106BE0;
 }
 
+#octane .message {
+  background-color: #106BE0;
+}
+
+#octane a:hover .next-label {
+  color: #FFF;
+}
+
+#dumptruck #octane .next-background {
+  background-color: #106BE0;
+}
+
+#dumptruck .project-period, #dumptruck .main, #dumptruck .action, #dumptruck .close a:hover .fa, #dumptruck a:hover, #projects #dumptruck .action, #projects #dumptruck .project-period, #projects #dumptruck a:hover, #dumptruck a:hover .footer-contact {
+  color: #1C6FB3;
+}
+
+#dumptruck .message {
+  background-color: #1C6FB3;
+}
+
+#dumptruck .mocks {
+  background-color: #1C6FB3;
+}
+
+#dumptruck .mocks.alt-2 {
+  background-color: #FCBD04;
+}
+
+#dumptruck .mocks-light {
+  background-color: #f2f2f2;
+}
+
+#dumptruck a:hover .next-label {
+  color: #FFF;
+}
+
+#hopsy #dumptruck .next-background {
+  background-color: #1C6FB3;
+}
+
+
 #nvolv .project-period, #nvolv .main, #nvolv .action, #nvolv .close a:hover .fa, #nvolv a:hover, #projects #nvolv .action, #projects #nvolv .project-period, #projects #nvolv a:hover, #nvolv a:hover .footer-contact {
   color: #F77143;
+}
+
+#nvolv .message {
+  background-color: #F77143;
 }
 
 #nvolv .mocks {
@@ -1725,12 +1973,54 @@ a:hover .footer-contact {
   background-color: #d7d7d7;
 }
 
-#nvolv a:hover .next-label {
+#everwill #nvolv a:hover .next-label {
   color: #111;
 }
 
-#westagile #nvolv .next-background {
+#everwill #nvolv .next-background {
   background-color: #F77143;
+}
+
+#vfl .project-period, #vfl .main, #vfl .action, #vfl .close a:hover .fa, #vfl a:hover, #projects #vfl .action, #projects #vfl .project-period, #projects #vfl a:hover, #vfl a:hover .footer-contact {
+  color: #4268FF;
+}
+
+#vfl .message {
+  background-color: #4268FF;
+}
+
+#vfl .mocks {
+  background-color: #4268FF;
+}
+
+#vfl .mocks.alt-2 {
+  background-color: #333;
+}
+
+#vfl .mocks-light {
+  background-color: #222;
+}
+
+#vfl .light .footer, #vfl .mocks-dark {
+  background-color: #2a2a2a;
+}
+
+@media only screen and (max-width: 700px) {
+  #vfl .light .nav--content {
+    background-color: #222;
+  }
+  #vfl .light .nav--content {
+    border-top: 1px solid #111;
+  }
+}
+
+
+#vfl a:hover .next-label {
+  color: #4268FF;
+}
+
+#octane #vfl .next-background {
+  background-color: #222;
 }
 
 
@@ -1738,12 +2028,45 @@ a:hover .footer-contact {
   color: #51D39F;
 }
 
-#everwill .next-background {
-  background-color: #204C59;
+#everwill .message {
+  background-color: #51D39F;
+}
+
+#everwill a:hover .next-label {
+  color: #51D39F;
+}
+
+#vfl #everwill .next-background {
+  background-color: #224E5B;
 }
 
 #iwaboo .project-period, #iwaboo .main, #iwaboo .action, #iwaboo .close a:hover .fa, #iwaboo a:hover, #projects #iwaboo .action, #projects #iwaboo .project-period, #projects #iwaboo a:hover, #iwaboo a:hover .footer-contact {
   color: #FFF041;
+}
+
+#iwaboo .mocks {
+  background-color: #FFF041;
+}
+
+#iwaboo .mocks.alt-2 {
+  background-color: #2D2D2D;
+}
+
+#iwaboo .mocks-light {
+  background-color: #222;
+}
+
+#iwaboo .light .footer, #vfl .mocks-dark {
+  background-color: #222;
+}
+
+
+#iwaboo a:hover .next-label {
+  color: #111;
+}
+
+#westagile #iwaboo .next-background {
+  background-color: #F77143;
 }
 
 #breakfast .project-period, #breakfast .main, #breakfast .action, #breakfast .close a:hover .fa, #breakfast a:hover, #projects #breakfast .action, #projects #breakfast .project-period, #projects #breakfast a:hover, #breakfast a:hover .footer-contact {
@@ -1832,10 +2155,6 @@ a:hover .footer-contact {
   margin: 0 1em;
 }
 
-#instapark .photo-width {
-  margin: .5em auto;
-}
-
 #instapark .mocks {
   background-color: #29abe2;
 }
@@ -1846,8 +2165,6 @@ a:hover .footer-contact {
 
 #instapark a:hover .next-label {
   color: #29abe2;
-  -webkit-transition:.3s ease-out;
-  transition: .3s ease-out;
 }
 
 #instapark .next-background {
@@ -1920,6 +2237,14 @@ a:hover .footer-contact {
   background-color: #37B554;
 }
 
+#instapark #eventyoda a:hover .next-label {
+  color: #fff;
+}
+
+#instapark #eventyoda .next-background {
+  background-color: #37B554;
+}
+
 #eventyoda .section-title .h5 {
   color: #ffffff;
 }
@@ -1949,8 +2274,16 @@ a:hover .footer-contact {
   color: #353332;
 }
 
+#natera .project-period, #natera .main, #natera .action, #natera .close a:hover .fa, #natera a:hover, #natera a:hover, #projects #natera .action, #projects #natera .project-period, #natera a:hover, #natera a:hover .footer-contact {
+  color: #00AA49;
+}
 
-#dodo .project-period, #dodo .main, #dodo .action, #dodo .close a:hover .fa,#dodo a:hover, #dodo a:hover, #projects #dodo .action, #projects #dodo .project-period, #projects #dodo, #dodo a:hover, #dodo a:hover .footer-contact {
+#fidelity .project-period, #fidelity .main, #fidelity .action, #fidelity .close a:hover .fa, #fidelity a:hover, #fidelity a:hover, #projects #fidelity .action, #projects #fidelity .project-period, #fidelity a:hover, #fidelity a:hover .footer-contact {
+  color: #408800;
+}
+
+
+#dodo .project-period, #dodo .main, #dodo .action, #dodo .close a:hover .fa,#dodo a:hover, #dodo a:hover, #projects #dodo .action, #projects #dodo .project-period, #dodo a:hover, #dodo a:hover .footer-contact {
   color: #f6921e;
 }
 
@@ -1966,11 +2299,11 @@ a:hover .footer-contact {
   background-color: #d7d7d7;
 }
 
-#nvolv #dodo .next-background {
+#eventyoda #dodo .next-background {
   background-color: #f6921e;
 }
 
-#nvolv #dodo a:hover .next-label {
+#eventyoda #dodo a:hover .next-label {
   color: #fff;
 }
 
@@ -1993,9 +2326,28 @@ a:hover .footer-contact {
     .animation {
       padding: 31em 0;
     }
-  }
+}
 
-.phone-bg, .phone-flow, .laptop-bg, .laptop-flow {
+.l-animation {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 41.667% 0;
+  margin: -6% 0 -15%;
+}
+
+
+.phone-bg, .phone-flow, .laptop-bg, .laptop-flow, .phone-bg-2 {
   position: absolute;
   display: block;
   top: 0;
@@ -2026,14 +2378,21 @@ a:hover .footer-contact {
     }
   }
 
+.phone-bg-2 {
+  max-width: 379px;
+  padding: 0 !important;
+}
+
 .phone-bg {
-  max-width: 350px;
+  max-width: 333px;
   padding: 0 !important; }
   @media only screen and (min-width: 700px) {
-    .phone-bg {
-      max-width: 600px;
+    .phone-bg, .phone-bg-2 {
+      max-width: 590px;
     }
   }
+
+
 
 #misc-2 a, #misc-2 p, #misc-2 .close .fa, #misc-2 #projects .p-action p {
   color: #d6d6d6;
@@ -2057,10 +2416,11 @@ a:hover .footer-contact {
 }
 
 #projects p {
-  color: initial !important;
+  color: #4a4a4a !important;
 }
 
 .p-action {
+  margin-top: .25em;
   position: relative;
 }
 
@@ -2082,9 +2442,6 @@ a:hover .footer-contact {
   }
   h4{
     font-size:2rem;
-  }
-  #instapark .photo-width {
-    margin: .5em auto;
   }
   #instapark .mobile-mockup li {
     max-width: 368px;
