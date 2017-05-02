@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <style>
+        .body-center {
+          width: 100%;
+          max-width: 800px;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          padding: 2em;
+        }
+        .photo-width {
+          width: 100%;
+          overflow: hidden;
+        }
+        img {
+          width: 100%;
+        }
+        .lazyload {
+          opacity: 0;
+          transition: opacity 400ms;
+        }
+        .lazyloading {
+          background-color: #ff00dd;
+        }
+        .blur-up {
+            -webkit-filter: blur(15px);
+            filter: blur(15px);
+            transition: filter 500ms, -webkit-filter 500ms;
+        }
+
+        .blur-up.lazyloaded {
+            opacity: 1;
+            -webkit-filter: blur(0);
+            filter: blur(0);
+        }
+    </style>
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+      </script>
+    <script src="js/lazysizes.min.js" async=""></script>
+    <script src="js/picturefill.min.js" async=""></script>
+  </head>
+  <body style="display: flex; justify-content: center">
+    <div class="body-center">
+      <div style="flex:1">
+      <h1 style="width: 100%">this is testing images</h1>
+        <div class="photo-width">
+          <picture>
+            <source
+                data-srcset="media/lazy/1-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                data-srcset="media/lazy/1-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                data-srcset="media/lazy/1-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/1-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/1-placeholder.jpg"
+                data-src="media/lazy/1-large.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+        <div class="photo-width">
+          <picture>
+            <source
+                data-srcset="media/lazy/2-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                data-srcset="media/lazy/2-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                data-srcset="media/lazy/2-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/2-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/2-placeholder.jpg"
+                data-src="media/lazy/2-large.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+        <div class="photo-width">
+          <picture>
+            <source
+                data-srcset="media/lazy/3-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                data-srcset="media/lazy/3-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                data-srcset="media/lazy/3-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/3-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/3-placeholder.jpg"
+                data-src="media/lazy/3-large.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+        <div class="photo-width">
+          <picture>
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/4-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/4-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                src="media/lazy/small.png"
+                data-srcset="media/lazy/4-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/4-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/4-placeholder.jpg"
+                data-src="media/lazy/4-placeholder.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+        <div class="photo-width">
+          <picture>
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/5-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/5-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                src="media/lazy/small.png"
+                data-srcset="media/lazy/5-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/5-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/5-placeholder.jpg"
+                data-src="media/lazy/5-placeholder.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+        <div class="photo-width">
+          <picture>
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/6-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/6-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                src="media/lazy/small.png"
+                data-srcset="media/lazy/6-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/6-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/6-placeholder.jpg"
+                data-src="media/lazy/6-placeholder.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+        <div class="photo-width">
+          <picture>
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/7-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/7-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                src="media/lazy/small.png"
+                data-srcset="media/lazy/7-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/7-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/7-placeholder.jpg"
+                data-src="media/lazy/7-placeholder.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+        <div class="photo-width">
+          <picture>
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/8-raw.jpg"
+                media="(min-width: 1200px)" />
+            <source
+                src="media/lazy/placeholder.jpg"
+                data-srcset="media/lazy/8-large.jpg"
+                media="(min-width: 1000px)" />
+            <source
+                src="media/lazy/small.png"
+                data-srcset="media/lazy/8-medium.jpg"
+                media="(min-width: 700px)" />
+            <source
+            		data-srcset="media/lazy/8-small.jpg"
+            		media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                src="media/lazy/8-placeholder.jpg"
+                data-src="media/lazy/8-placeholder.jpg"
+                class="lazyload blur-up" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
