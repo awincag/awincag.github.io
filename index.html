@@ -1,32 +1,13 @@
-<!DOCTYPE html>
+---
+meta_title: Alex Cagwin | Digital Designer
+---
+
 <html lang="en-us">
   <head>
 
-      <title>Alex Cagwin | Digital Product Designer </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
-      <meta name="title" content="Alex Cagwin | Product Designer">
-      <meta name="description" content="Alex Cagwin is a Digital Product Designer and Co-Creator of the World's Best Breakfast Tacos">
-      <meta name="keywords" content="Product, Design, Designer, Full-Stack, Alex, Cagwin, Breakfast Taco, Alex Cagwin, Worlds Best Tacos">
-      <meta name="author" content="Alex Cagwin">
-      <meta property="og:title" content="Alex Cagwin | Digital Product Designer">
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="http://acag.win">
-      <meta property="og:image" content="awincag.github.io/media/meta-image.png" />
-      <meta property="og:description" content="Digital Product Designer &amp; Co-creator of World's Best Breakfast Tacos">
+      {% include head.html %}
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@awincag" />
-      <meta name="twitter:title" content="Alex Cagwin | Product Designer." />
-      <meta name="twitter:description" content="Digital Product Designer &amp; Co-createor of World's Best Breakfast Tacos" />
-      <meta name="twitter:image" content="awincag.github.io/media/meta-image.png" />
-
-      <link rel="shortcut icon" href="/img/favicon.png">
-      <link rel="icon" type="image" href="/img/favicon.png">
-
-      <link href="css/fonts.css" type="text/css" rel="stylesheet">
-      <!-- <link href="css/style-2.css" type="text/css" rel="stylesheet"> -->
-      <link href="css/style-3.css" type="text/css" rel="stylesheet">
-      <script src="https://use.fontawesome.com/0aee54882c.js"></script>
+      {% include headjs.html %}
   </head>
   <body>
 
@@ -51,36 +32,27 @@
         </div>
       </div>
 
-      <section id="header" class="home-width">
-        <div class="header an-s page-animation-1">
+      <section id="header" class="home-width header-space">
+        <div class="header">
           <div class="header-title block">
-            <h1 class="hidden">Alex Cagwin</h1><h1 class="pink hidden">.</h1>
-            <span class="h1">Alex Cagwin</span><span class="h1 pink">.</span>
+            <h1 class="hidden">Alex Cagwin</h1>
+            <span class="h1">Alex Cagwin.</span>
           </div>
         </div>
-      </section>
-
-      <div class="an-s page-animation-2" style="width: 100%">
-        <div class="header-line"></div>
-      </div>
-
-      <section id="projects" class="home-width projects">
-        <div class="section-title an-s page-animation-3">
-          <span class="header-label pink">About Me</span>
-        </div>
-        <div class="section-content section-content-display an-s page-animation-4">
-          <span class="h5">Digital Designer</span><span class="h5 project-period">.</span>
+        <div class="section-content-display">
           <div class="p-action">
-            <p class="ov">I’m a digital designer freelancing in San Francisco. I recently lead the design team over at West Agile Labs. I also created the World’s Best Breakfast Tacos with my roommate Lambert. <a href="/about" title="About Me">Read the Full Bio.</a></p>
+            <span class="ov">I’m a digital designer freelancing in San Francisco. I recently lead the design team over at West Agile Labs. I also created the World’s Best Breakfast Tacos with my roommate Lambert. <a href="/about" title="About Me">Read the Full Bio.</a></span>
           </div>
           </a>
         </div>
+      </section>
 
+      <section id="projects" class="home-width projects">
 
-          <div class="section-title an-s page-animation-5">
+          <div class="section-title">
             <span class="header-label pink">Client Work</span>
           </div>
-          <div class="section-content  an-s page-animation-6">
+          <div class="section-content">
             <ul class="flex">
               <li id="hopsy">
                 <span class="h5">Hopsy</span><span class="h5 project-period">.</span>
@@ -100,7 +72,7 @@
                   <p class="ov">Designed and prototyped a large-scale, trucking logistics platform. Worked on it in fall/winter of 2016. <a href="/dumptruck" title="View Case Study">View Case Study.</a> </p>
                 </div>
               </li>
-              <li id="octane">
+              <li id="octaneai">
                 <span class="h5">Octane AI</span><span class="h5 project-period">.</span>
                 <div class="p-action">
                   <p class="ov">Lead product design and prototyping for <a href="https://octaneai.com/" target="_blank" title="View Site">Octane AI</a>, a new way to build chatbots, in Fall of 2016. Did some of front-end development as well. <a href="/octaneai" title="View Case Study">View Case Study.</a></p>
@@ -142,13 +114,6 @@
                   <p>Helped design some internal sales tools and a <a href="https://my.natera.com/" target="_blank">client facing portal</a> back in Fall of 2015.</p>
                 </div>
               </li>
-              <li id="eventyoda">
-
-                  <span class="h5">Eventyoda</span><span class="h5 project-period">.</span>
-                  <div class="p-action">
-                    <p class="ov">Helped small and medium businesses quote and book team building events. I oversaw the product development and lead product design in 2015. <a href="/eventyoda" title="View Case Study">View Case Study.</a></p>
-                  </div>
-              </li>
             </ul>
         </div>
 
@@ -185,7 +150,7 @@
             <li id="yearinreview">
               <span class="h5">Year In Review</span><span class="h5 project-period">.</span>
               <div class="p-action">
-                <p>Personal project. Adventures and photos throughout the years. <a href="http://yearinreview.acag.win/2016" title="Year In Review">Take a Peek Into My Life</a></p>
+                <p>Personal project. Adventures and photos throughout the years. <a href="http://yearinreview.acag.win/2016" target="_blank" title="Year In Review">Take a Peek Into My Life</a></p>
               </div>
             </li>
           </ul>
@@ -194,67 +159,11 @@
     </div>
 
 
-    <footer>
-      <div class="footer">
-        <div class="footer--content">
-          <div class="footer--item">
-            <span class="footer-label">Copyright</span>
-            <span><i class="fa fa-copyright"></i> Alex Cagwin, 2016.</span>
-          </div>
-          <div class="footer--item">
-            <span class="footer-label">Email</span>
-            <a href="mailto:hey@acag.win" title="Email Me">
-              <span>Hey@acag.win</span>
-            </a>
-            <a data-clipboard-text="hey@acag.win" class="copied no-smoothState">
-              <span class="footer-contact">Copy Email Link</span>
-            </a>
-          </div>
-          <div class="footer--item">
-            <span class="footer-label">Elsewhere</span>
-            <a href="https://www.linkedin.com/in/alex-cagwin-25b90937" target="_blank" title="LinkedIn">
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://twitter.com/wincag1" target="_blank" title="Twitter">
-              <span>Twitter</span>
-            </a>
-            <a href="https://500px.com/alexcagwin" target="_blank" title="500px">
-              <span>500px</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    {% include footer.html %}
 
-    <div id="message">
-      <div id="msg" class="message">
-        <span>Email Copied to Clipboard</span>
-        <!-- <span class="closebtn">&times;</span> -->
-      </div>
-      <a data-scroll href="#make" id="f-msg" class="message">
-        <span>Oops! Didn't Work. Click here to jump to the bottom and copy/paste my email.</span>
-        <span class="closebtn">&times;</span>
-      </a>
-    </div>
+    {% include message.html %}
 
-    <script src="js/headroom.min.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/clipboard.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      (function() {
-        var header = new Headroom(document.querySelector("#header"), {
-            tolerance: 3,
-            offset: 50,
-            classes: {
-              initial: "animated",
-              pinned: "slideDown",
-              unpinned: "slideUp"
-            }
-        });
-        header.init();
+    {% include js.html %}
 
-    }());
-    </script>
   </body>
 </html>
