@@ -175,12 +175,12 @@ h5{
   }
   @media only screen and (min-width: 1200px) {
     .h5 {
-      font-size: 1.75rem;
+      font-size: 1.65rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     .h5 {
-      font-size: 2.25rem;
+      font-size: 2.15rem;
     }
 }
 
@@ -551,7 +551,7 @@ img {
 }
 
 .desktop-hide .nav--break {
-  margin: 0 25px 0 0;
+  margin: 0;
 }
 
 .project-btn-out {
@@ -594,7 +594,7 @@ img {
 }
 
 .mobile-nav-mail a {
-  padding: 0 25px 0 0;
+  padding: 0 25px;
 }
 
 .social {
@@ -774,7 +774,7 @@ img {
   width: 100%;
   background-color: #ffffff;
   border-top: 1px solid #dadada;
-  padding: 12px 0 9px; }
+  padding: 10px 0 9px; }
   @media only screen and (min-width: 700px) {
     .nav--content {
       min-width: 76px;
@@ -822,6 +822,12 @@ img {
     }
   }
 
+@media only screen and (max-width: 699px) {
+  .home-nav-footer {
+    padding-top: .25em;
+    padding-bottom: .45em;
+  }
+}
 
 .nav--content a {
   -webkit-box-flex: 1;
@@ -829,7 +835,7 @@ img {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
   @media only screen and (min-width: 700px) {
     .nav--content a {
       background-color: rgba(0,0,0,0.3);
@@ -913,6 +919,10 @@ img {
     display: block;
     visibility: visible;
   }
+}
+
+.personal-padding {
+  margin-top: 3em;
 }
 
 
@@ -2493,6 +2503,14 @@ a:hover .footer-contact {
 
 #all .next-background {
   background-color: #ffffff !important;
+}
+
+#hd .project-period {
+  color: #ff6600;
+}
+
+#roadtrip .project-period {
+  color: #32B67A;
 }
 
 #hopsy .project-period, #hopsy .main, #hopsy .action, #hopsy .close a:hover .fa, #hopsy a:hover, #projects #hopsy .action, #projects #hopsy .project-period, #projects #hopsy a:hover, #hopsy a:hover .footer-contact, #hopsy a.project-live p {
