@@ -1763,7 +1763,7 @@ a[title]:hover:after {
   left: -12em;
   top: 13px;
   line-height: 30px;
-  text-align: right;
+  text-align: right !important;
   width: 170px;
   padding: 0;
   opacity: 0;
