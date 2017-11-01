@@ -581,6 +581,7 @@ img {
 }
 
 .project-btn span {
+  text-align: left;
   font-size: 1.25rem;
   line-height: 1;
   margin: 0 0 0 10px; }
@@ -599,6 +600,22 @@ img {
 
 .social {
   visibility: hidden;
+}
+
+.nav-padding-l-b {
+  padding-left: 25px !important;
+}
+
+.nav-padding-l-s {
+  padding-left: 12px !important;
+}
+
+.nav-padding-r-b {
+  padding-right: 25px !important;
+}
+
+.nav-padding-r-s {
+  padding-right: 12px !important;
 }
 
 .photo-width {
