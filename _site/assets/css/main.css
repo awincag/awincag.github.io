@@ -1742,6 +1742,7 @@ html{
 .header-label-2 {
 	font-family: "Miller Disp It", Georgia, serif;
   color: #B4B4B4;
+  font-style: italic;
   font-size: 1rem; }
   @media only screen and (min-width: 1000px) {
     .header-label-2 {
