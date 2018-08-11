@@ -32,7 +32,7 @@ p{
   }
   @media only screen and (min-width: 1800px) {
     p {
-      font-size: 1.65rem;
+      font-size: 1.5rem;
     }
 }
 
@@ -95,26 +95,21 @@ h1{
   font-size: 4.6rem; }
 
 .h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   line-height: 1.15em;}
-  @media only screen and (min-width: 770px) {
-    .h1 {
-      font-size: 3.125rem;
-    }
-  }
   @media only screen and (min-width: 1000px) {
     .h1 {
-      font-size: 3.5rem;
+      font-size: 1.75rem;
     }
   }
   @media only screen and (min-width: 1200px) {
     .h1 {
-      font-size: 4rem;
+      font-size: 2.25rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     .h1 {
-      font-size: 5.1rem;
+      font-size: 2.75rem;
     }
 }
 
@@ -173,14 +168,9 @@ h5{
       font-size: 1.5rem;
     }
   }
-  @media only screen and (min-width: 1200px) {
-    .h5 {
-      font-size: 1.65rem;
-    }
-  }
   @media only screen and (min-width: 1800px) {
     .h5 {
-      font-size: 2.15rem;
+      font-size: 1.85rem;
     }
 }
 
@@ -223,20 +213,20 @@ a, button {
 
 
 section {
-  padding: 3em 0 0; }
+  padding: 4em 0 0; }
   @media only screen and (min-width: 770px) {
     section {
-      padding: 3.5em 0 0;
+      padding: 6em 0 0;
     }
   }
   @media only screen and (min-width: 1200px) {
     section {
-      padding: 4em 0 0;
+      padding: 6em 0 0;
     }
   }
   @media only screen and (min-width: 1800px) {
     section {
-      padding: 6em 0 0;
+      padding: 8em 0 0;
     }
   }
 
@@ -283,23 +273,128 @@ img {
   opacity: 0;
 }
 
-.header-space {
-  margin: 4em 0 2em; }
-  @media only screen and (min-width: 1000px) {
-    .header-space {
-      margin: 5em 0 3em;
+.header-title {
+  margin: 2em 0 3em; }
+  @media only screen and (min-width: 770px) {
+    .header-title {
+      margin: 1em 0;
     }
   }
-  @media only screen and (min-width: 1200px) {
+
+.header-space {
+  padding: 3em 0 2em;
+  width: 100%;
+  min-height: 90vh; }
+  @media only screen and (min-width: 770px) {
     .header-space {
-      margin: 6em 0 4.5em;
+      padding: 3em 0 1em;
+    }
+  }
+
+.p-action, .fold-sep {
+  display: flex;
+  flex-direction: column;
+}
+
+.fold-sep {
+  justify-content: space-between;
+}
+
+.case-studies {
+  margin: 10em 0 0; }
+  @media only screen and (min-width: 770px) {
+    .case-studies {
+      margin: 2em 0 0;
+    }
+  }
+
+.case-studies .header-label-2 {
+  color: #555555;
+}
+
+.case-studies .section-break {
+  background-color: #282828;
+}
+
+.p-action a {
+  font-size: 1.25rem;
+  width: fit-content;
+  transition-duration: .2s;
+  padding: .5em 0; }
+  @media only screen and (min-width: 770px) {
+    .p-action a {
+      padding: .15em 0;
     }
   }
   @media only screen and (min-width: 1800px) {
-    .header-space {
-      margin: 7em 0 5em;
+    .p-action a {
+      font-size: 1.5rem;
     }
   }
+
+
+a .header-action {
+	font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  color: #868686;
+  transition-duration: .2s;
+}
+
+a:hover .header-action {
+	font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  color: #ffffff; }
+
+a .header-action-a {
+  font-family: "Miller Disp It", Georgia, serif;
+  font-style: italic;
+  color: #e8e8e8;
+  transition-duration: .2s;
+  display: block; }
+  @media only screen and (min-width: 700px) {
+    a .header-action-a {
+      display: initial;
+    }
+  }
+
+a:hover.about-color .header-action-a {
+  color: #9A404D;
+}
+
+a:hover.baby-color .header-action-a {
+  color: #F28E1E;
+}
+
+a:hover.marcel-color .header-action-a {
+  color: #ffffff;
+}
+
+a:hover.hopsy-color .header-action-a {
+  color: #FCB715;
+}
+
+a:hover.octane-color .header-action-a {
+  color: #106BE0;
+}
+
+a:hover.dumptruck-color .header-action-a {
+  color: #0076B3;
+}
+
+a:hover.nvolv-color .header-action-a {
+  color: #FD6800;
+}
+
+/*
+a:hover.about-color span{
+  color: #9A404D;
+}
+
+a:hover.baby-color span {
+  color: #F28E1E;
+}
+
+a:hover.marcel-color span{
+  color: #ffffff;
+} */
 
 
 .hidden {
@@ -673,8 +768,35 @@ img {
   display: flex;
 }
 
+.header-content-bio {
+  font-family: "Miller Disp Lt", Georgia, serif;
+  font-size: 1.38rem;
+  line-height: 1.7;
+  margin: 0 0 1em 0;}
+  @media only screen and (min-width: 770px) {
+    .header-content-bio {
+      font-size: 1.45rem;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .header-content-bio {
+      font-size: 1.55rem;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .header-content-bio {
+      font-size: 1.75rem;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .header-content-bio {
+      font-size: 2.25rem;
+  }
+}
+
+/*
 .header-content-bio, .p-action span {
-  font-family: "Miller Disp Lt", serif;
+  font-family: "Miller Disp Lt", Georgia, serif;
   font-size: 1.38rem;
   line-height: 1.7;
   margin: 0 0 1em 0;}
@@ -697,7 +819,7 @@ img {
     .header-content-bio, .p-action span {
       font-size: 2.25rem;
   }
-}
+} */
 
 .space-btn {
   justify-content: space-between;
@@ -1099,12 +1221,17 @@ html{
   padding: 0 25px; }
   @media only screen and (min-width: 770px) {
     .home-padding {
-      padding: 0 120px 2em 35px;
+      padding: 0 120px 2em 50px;
     }
   }
   @media only screen and (min-width: 1200px) {
     .home-padding {
       padding: 0 120px 3em 80px;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .home-padding {
+      padding: 0 120px 3em 120px;
     }
 }
 
@@ -1152,7 +1279,11 @@ html{
     .wrap {
       max-width: 920px;
     }
-  }
+}
+
+.black-bg {
+  background-color: #000;
+}
 
 .about-content {
   display: -webkit-box;
@@ -1343,13 +1474,13 @@ html{
 }
   @media only screen and (min-width: 770px) {
     .split-p-a {
-      padding: 4em 120px 3em 35px;
+      padding: 4em 120px 3em 50px;
     }
     .split-p-t {
-      padding: 4em 120px 0 35px;
+      padding: 4em 120px 0 50px;
     }
     .split-p-b {
-      padding: 1em 120px 0 35px;
+      padding: 1em 120px 0 50px;
     }
   }
   @media only screen and (min-width: 1200px) {
@@ -1365,13 +1496,13 @@ html{
   }
   @media only screen and (min-width: 1800px) {
     .split-p-a {
-      padding: 8em 120px 5em 80px;
+      padding: 8em 120px 5em 120px;
     }
     .split-p-t {
-      padding: 8em 120px 0 80px;
+      padding: 8em 120px 0 120px;
     }
     .split-p-b {
-      padding: 4em 120px 0 80px;
+      padding: 4em 120px 0 120px;
     }
   }
 
@@ -1611,15 +1742,15 @@ html{
 .header-label-2 {
 	font-family: "Miller Disp It", Georgia, serif;
   color: #B4B4B4;
-  font-size: 1.125rem; }
+  font-size: 1rem; }
   @media only screen and (min-width: 1000px) {
     .header-label-2 {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
   @media only screen and (min-width: 1200px) {
     .header-label-2 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
   }
   @media only screen and (min-width: 1800px) {
@@ -1638,6 +1769,11 @@ html{
   @media only screen and (min-width: 1000px) {
     .section-break {
         margin: 1.5em 0 2em;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .case-studies .section-break {
+        margin: 1.5em 0 1.8em;
     }
   }
 
@@ -1694,22 +1830,12 @@ html{
 }
 
 
-.p-action a, #header .p-action a, .section-content a {
+.section-content a {
   font-family: "Miller Disp It", serif;
   color: #9A404D;
   font-style: italic;
 }
 
-#header a {
-  font-family: "Miller Disp It", serif;
-  color: #000;
-  font-style: italic;
-}
-
-#header a:hover {
-  color: #9A404D;
-  cursor: pointer;
-}
 
 .section-content a:hover, #header .p-action a:hover {
   color: #000;
@@ -2373,7 +2499,7 @@ footer {
   margin: 0 0 65px 0; }
   @media only screen and (min-width: 770px) {
     .footer {
-      padding: 3.5em 120px 3.5em 35px;
+      padding: 3.5em 120px 3.5em 50px;
       margin: 0;
     }
   }
@@ -2384,7 +2510,7 @@ footer {
   }
   @media only screen and (min-width: 1800px) {
     .footer {
-      padding: 6em 120px 6em 80px;
+      padding: 6em 120px 6em 120px;
     }
 }
 
