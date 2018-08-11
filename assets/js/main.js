@@ -49,6 +49,23 @@ for (i = 0; i < close.length; i++) {
     }
 };
 
+
+
+$(document).ready(function() {
+  $(".header-action").each(function() {
+    $(this).mouseenter(function() {
+      var target = $(this).data("target");
+      $('[data-target="'+target+'"]').addClass("hovered");
+    });
+
+    $(this).mouseleave(function() {
+      var target = $(this).data("target");
+      $('[data-target="'+target+'"]').removeClass("hovered");
+    });
+  });
+});
+
+
 var body = document.body;
 var menuButton = document.getElementById('menu-nav');
 var menu = document.getElementById('menu');
@@ -59,6 +76,9 @@ menuButton.addEventListener('click', function (e) {
     body.classList.add('body-height-fixed');
     e.preventDefault();
 });
+
+
+
 
 
 

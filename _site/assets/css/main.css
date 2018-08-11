@@ -290,6 +290,11 @@ img {
       padding: 3em 0 1em;
     }
   }
+  @media only screen and (min-width: 180px) {
+    .header-space {
+      padding: 5em 0 2em;
+    }
+  }
 
 .p-action, .fold-sep {
   display: flex;
@@ -321,7 +326,7 @@ img {
   width: fit-content;
   transition-duration: .2s;
   padding: .5em 0; }
-  @media only screen and (min-width: 770px) {
+  @media only screen and (min-width: 700px) {
     .p-action a {
       padding: .15em 0;
     }
