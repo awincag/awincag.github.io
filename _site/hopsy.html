@@ -543,7 +543,10 @@
 <script>
   (function() {
     var header = new Headroom(document.querySelector("#header"), {
-        tolerance: 3,
+        tolerance: {
+          up : 5,
+          down : 20
+        },
         offset: 50,
         classes: {
           initial: "animated",
