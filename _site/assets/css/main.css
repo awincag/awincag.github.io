@@ -794,7 +794,12 @@ img {
   padding: 10px 0 9px; }
   @media only screen and (device-height: 812px) and (device-height: 812px) and (-webkit-device-pixel-ratio : 3) {
     .nav--content {
-      padding: 10px 0 32px;
+      padding: 10px 0 28px;
+    }
+  }
+  @media only screen and (min-width: 700px) {
+    .nav--content {
+      padding: 16px 0 13px;
     }
   }
   @media only screen and (min-width: 770px) {
