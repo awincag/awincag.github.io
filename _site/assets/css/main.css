@@ -327,6 +327,7 @@ img {
   font-size: 1.25rem;
   width: fit-content;
   transition-duration: .2s;
+  transform: translate3d(0,0,0);
   padding: .35em 0; }
   @media only screen and (min-width: 700px) {
     .p-action a {
@@ -443,6 +444,7 @@ a:hover.nvolv-color .header-action-a {
   bottom: 0px;
   opacity: 0;
   transition: .4s ease-out;
+  transform: translate3d(0,0,0);
 }
 
 .header-assets-img img.hovered {
