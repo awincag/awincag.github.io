@@ -327,7 +327,7 @@ img {
   font-size: 1.25rem;
   width: fit-content;
   transition-duration: .2s;
-  padding: .75em 0; }
+  padding: .35em 0; }
   @media only screen and (min-width: 700px) {
     .p-action a {
       padding: .15em 0;
@@ -355,7 +355,7 @@ a .header-action-a {
   font-style: italic;
   color: #e8e8e8;
   transition-duration: .2s;
-  display: block; }
+  /*display: block;*/ }
   @media only screen and (min-width: 700px) {
     a .header-action-a {
       display: initial;
