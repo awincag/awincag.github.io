@@ -69,13 +69,13 @@
           </div>
           <div class="section-content-display">
             <div id="abouts" class="p-action">
-              <a href="/about" title="About" class="header-action about-color" data-target="">
+              <a href="/about" title="About" class="header-action about-color">
                 <span class="header-action">NY based freelance</span> <span class="header-action-a">Digital Design Director</span>
               </a>
-              <a href="http://www.babynoggin.com/" target="_blank" title="Baby Noggin" class="header-action baby-color" data-target="">
+              <a href="http://www.babynoggin.com/" target="_blank" title="Baby Noggin" class="header-action baby-color">
                 <span class="header-action">Head of Design at </span><span class="header-action-a">Baby Noggin</span>
               </a>
-              <a href="https://www.youtube.com/watch?v=eid8C_dTVvo" target="_blank" title="Marcel" class="header-action marcel-color" data-target="">
+              <a href="https://www.youtube.com/watch?v=eid8C_dTVvo" target="_blank" title="Marcel" class="header-action marcel-color">
                   <span class="header-action">UX Lead on Publicis' </span><span class="header-action-a">Marcel</span>
               </a>
             </div>
@@ -87,21 +87,39 @@
             <div class="section-break"></div>
           </div>
           <div id="case-studies" class="p-action">
-            <a href="/hopsy" title="Hopsy Case Study" class="header-action hopsy-color" data-target="header-action">
+            <a href="/hopsy" title="Hopsy Case Study" class="header-action header-project hopsy-color" data-target="hopsy-asset">
               <span class="header-action">Hopsy </span> <span class="header-action-a">Redesign</span>
             </a>
-            <a href="/octaneai" title="Octane AI Case Study" class="header-action octane-color" data-target="">
+            <a href="/octaneai" title="Octane AI Case Study" class="header-action header-project octane-color" data-target="octane-asset">
               <span class="header-action">Octane AI </span> <span class="header-action-a">Chatbot Manager</span>
             </a>
-            <a href="/dumptruck" title="Dumptruck.com Case Study" class="header-action dumptruck-color" data-target="">
+            <a href="/dumptruck" title="Dumptruck.com Case Study" class="header-action header-project dumptruck-color" data-target="dumptruck-asset">
               <span class="header-action">Dumptruck </span> <span class="header-action-a">Logistics Platform</span>
             </a>
-            <a href="/nvolv" title="About" class="header-action nvolv-color" data-target="">
+            <a href="/nvolv" title="About" class="header-action header-project nvolv-color" data-target="nvolv-asset">
               <span class="header-action">Nvolv </span> <span class="header-action-a">Conferences</span>
             </a>
           </div>
         </div>
       </section>
+
+      <div class="header-assets">
+        <div class="header-assets-overlay"></div>
+        <div class="header-assets-content">
+          <div class="hopsy-asset header-assets-img">
+            <img src="../assets/media/hopsy/main-hero.png" data-target="hopsy-asset" alt="Mobile Background">
+          </div>
+          <div class="octane-asset header-assets-img">
+            <img src="../assets/media/octane/main-hero.png" data-target="octane-asset" alt="Mobile Background">
+          </div>
+          <div class="dumptruck-asset header-assets-img">
+            <img src="../assets/media/dumptruck/main-hero.png" data-target="dumptruck-asset" alt="Mobile Background">
+          </div>
+          <div class="nvolv-asset header-assets-img">
+            <img src="../assets/media/nvolv/main-hero.png" data-target="nvolv-asset" alt="Mobile Background">
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="content" class="content home-padding flex flex-horizontal-center">
@@ -287,6 +305,7 @@
     <script src="../assets/js/headroom.min.js"></script>
 <script src="../assets/js/smooth-scroll.min.js"></script>
 <script src="../assets/js/clipboard.min.js"></script>
+<script src="../assets/js/jquery-2.1.1.js"></script>
 <script src="../assets/js/main.js"></script>
 <script>
   (function() {
@@ -306,7 +325,6 @@
 
 }());
 </script>
-<script src="../assets/js/jquery-2.1.1.js"></script>
 
 
   </body>

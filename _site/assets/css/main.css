@@ -283,6 +283,8 @@ img {
 
 .header-space {
   padding: 3em 0 2em;
+  position: relative;
+  z-index: 100;
   width: 100%;
   min-height: 90vh; }
   @media only screen and (min-width: 770px) {
@@ -338,7 +340,7 @@ img {
   }
 
 
-a .header-action {
+a .header-action, a .header-action-2 {
 	font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
   color: #868686;
   transition-duration: .2s;
@@ -386,6 +388,70 @@ a:hover.dumptruck-color .header-action-a {
 
 a:hover.nvolv-color .header-action-a {
   color: #FD6800;
+}
+
+.hovered span {
+  color: #4A4A4A;
+}
+
+.header-assets-overlay {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+}
+
+.header-assets {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-assets-content {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.header-assets-img {
+  max-width: 1200px;
+  max-height: 1200px;
+  width: 70%;
+  position: relative;
+  top: 30%;
+  right: 0;
+  left: 50%;
+  bottom: 0;
+}
+
+.header-assets-img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0px;
+  opacity: 0;
+  transition: .4s ease-out;
+}
+
+.header-assets-img img.hovered {
+  position: absolute;
+  opacity: 1;
+  top: -2em;
+  right: 0;
+  left: -.5em;
+  bottom: 0px;
 }
 
 /*
@@ -1288,6 +1354,8 @@ html{
 
 .black-bg {
   background-color: #000;
+  overflow: hidden;
+  position: relative;
 }
 
 .about-content {
