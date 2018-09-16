@@ -324,11 +324,11 @@ img {
 }
 
 .p-action a {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   width: fit-content;
   transition-duration: .2s;
   transform: translate3d(0,0,0);
-  padding: .35em 0; }
+  padding: .2em 0; }
   @media only screen and (min-width: 700px) {
     .p-action a {
       padding: .15em 0;
