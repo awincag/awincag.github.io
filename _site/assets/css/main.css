@@ -3,9 +3,10 @@
 
 @font-face {font-family: 'NHaasGroteskTXStd-75Bd';src: url('neuehaasgrotsek/3371E2_0_0.eot');src: url('neuehaasgrotsek/3371E2_0_0.eot?#iefix') format('embedded-opentype'),url('neuehaasgrotsek/3371E2_0_0.woff2') format('woff2'),url('neuehaasgrotsek/3371E2_0_0.woff') format('woff'),url('neuehaasgrotsek/3371E2_0_0.ttf') format('truetype');}
 
+@font-face {font-family: 'NHaasGroteskDSPro-45Lt';src: url('neuehaasgrotsek/37BB15_0_0.eot');src: url('neuehaasgrotsek/37BB15_0_0.eot?#iefix') format('embedded-opentype'),url('neuehaasgrotsek/37BB15_0_0.woff2') format('woff2'),url('neuehaasgrotsek/37BB15_0_0.woff') format('woff'),url('neuehaasgrotsek/37BB15_0_0.ttf') format('truetype');}
 
 html{
-  font-family: "Miller Disp Rom", serif;
+  font-family: "Miller Disp Lt", serif;
   /* font-family:proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; */
   color:#111;
   line-height:1.51;
@@ -15,24 +16,26 @@ html{
 }
 
 p{
-  font-family: "Miller Disp Rom", serif;
-  font-size: 1.063rem;
+  font-family: "Miller Disp Roman", serif;
+  font-size: 1.125rem;
   line-height: 1.6em;
   margin: 0 0 1.75em 0;
+  letter-spacing: 0px;
   text-rendering: optimizelegibility; }
   @media only screen and (min-width: 1000px) {
     p {
-      font-size: 1.125rem;
+        font-family: "Miller Disp Lt", serif;
+      font-size: 1.25rem;
     }
   }
   @media only screen and (min-width: 1200px) {
     p {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     p {
-      font-size: 1.5rem;
+      font-size: 1.875rem;
     }
 }
 
@@ -287,9 +290,15 @@ img {
   z-index: 100;
   width: 100%;
   min-height: 90vh; }
+.header-space.about {
+  min-height: 500px;
+}
   @media only screen and (min-width: 770px) {
     .header-space {
       padding: 3em 0 1em;
+    }
+    .header-space.about {
+      min-height: 90vh;
     }
   }
   @media only screen and (min-width: 180px) {
@@ -747,7 +756,7 @@ a:hover.marcel-color span{
 }
 
 .light .project-btn-item {
-  background-color: #fff;
+  background-color: #ccc;
 }
 
 .light #header a {
@@ -847,29 +856,67 @@ a:hover.marcel-color span{
   display: flex;
 }
 
-.header-content-bio {
-  font-family: "Miller Disp Lt", Georgia, serif;
-  font-size: 1.38rem;
-  line-height: 1.7;
-  margin: 0 0 1em 0;}
+.about-title {
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  margin: .5em 0;
+  font-size: 2rem;
+  line-height: 1.1; }
   @media only screen and (min-width: 770px) {
-    .header-content-bio {
-      font-size: 1.45rem;
+    .about-title {
+      font-size: 2.5rem;
     }
   }
   @media only screen and (min-width: 1000px) {
-    .header-content-bio {
-      font-size: 1.55rem;
+    .about-title {
+      font-size: 2.75rem;
+      width: 80%;
     }
   }
   @media only screen and (min-width: 1200px) {
+    .about-title {
+      font-size: 3.25rem;
+      width: 70%;
+    }
+  }
+  @media only screen and (min-width: 1600px) {
+    .about-title {
+      font-size: 3.25rem;
+      width: 60%;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .about-title {
+      font-size: 4rem;
+      width: 70%;
+  }
+}
+
+.header-content-bio {
+  font-family: "Miller Disp Lt", Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 0 1em 0;}
+  @media only screen and (min-width: 770px) {
     .header-content-bio {
       font-size: 1.75rem;
     }
   }
+  @media only screen and (min-width: 1000px) {
+    .header-content-bio {
+      font-size: 2rem;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .header-content-bio {
+      font-size: 2.375rem;
+    }
+  }
   @media only screen and (min-width: 1800px) {
     .header-content-bio {
-      font-size: 2.25rem;
+      font-size: 3rem;
   }
 }
 
@@ -1066,21 +1113,22 @@ a:hover.marcel-color span{
   font-size: 1.25rem; }
   @media only screen and (min-width: 770px) {
     .nav--content a {
-      background-color: rgba(0,0,0,0.3);
+      background-color: rgba(0,0,0,0.0);
       display: flex;
       justify-content: center;
       align-items: center;
       width: 48px;
       height: 48px;
+      border-radius: 50%;
       margin: 2px 0;
-      transition: .2s ease-out;
+      transition: .3s ease-out;
     }
     #header .nav--content a {
-      color: #fff;
+      color: #ccc;
     }
     #header .nav--content a:hover {
       color: #fff !important;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0,0,0,0.4);
     }
     .nav--content a.close-button {
       padding: 0 0 1em 0;
@@ -1092,7 +1140,10 @@ a:hover.marcel-color span{
       margin: 3px 0 0 3px;
     }
     .project-btn-item {
-      background-color: #fff;
+      background-color: #ccc;
+    }
+    #header .nav--content a:hover .project-btn-item {
+      background-color: #fff !important;
     }
   }
 
@@ -1396,10 +1447,20 @@ html{
           flex-wrap: wrap;
 }
 
+.clients {
+  order: 2;
+}
+
 @media only screen and (min-width: 1000px) {
-  .clients, .home-wrap-2 {
-    width: 47%;
+  .clients {
+    width: 22%;
+    margin: 0 10% 0 0;
+    order: 1;
+    }
+  .home-wrap-2 {
+    width: 63%;
     margin: 0 3% 0 0;
+    order: 2;
   }
   .section-content.m-b {
     margin: 0 0 1em;
@@ -1408,25 +1469,24 @@ html{
 
 
 .client-list span {
-  font-family: "Miller Disp It", serif;
-  width: 47%;
-  font-style: italic;
+  font-family: 'NHaasGroteskDSPro-45Lt', helvetica, sans-serif;
+  color: #686868;
   margin: 0 3% .5em 0; }
   @media only screen and (min-width: 1000px) {
     .client-list span {
-      font-size: 1.125rem;
+      font-size: 1rem;
       width: 100%;
       margin: 0 0 .5em 0;
     }
   }
   @media only screen and (min-width: 1200px) {
     .client-list span {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     .client-list span {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
   }
 
@@ -1825,6 +1885,8 @@ html{
   color: #B4B4B4;
   font-style: italic;
   font-size: 1rem; }
+  .header-label-2.pink {
+      color: #9A404D; }
   @media only screen and (min-width: 1000px) {
     .header-label-2 {
       font-size: 1.125rem;
@@ -1837,7 +1899,7 @@ html{
   }
   @media only screen and (min-width: 1800px) {
     .header-label-2 {
-      font-size: 1.75rem;
+      font-size: 1.55rem;
     }
 }
 
@@ -2032,19 +2094,19 @@ a[title]:hover:after {
 
 .nav-tooltip {
   font-family: "Miller Disp It", Georgia, serif;
-  font-style: italic;
-  display: none;
-  font-size: 16px;
-  color: #555;
-  left: -12em;
-  top: 13px;
-  line-height: 30px;
-  text-align: right !important;
-  width: 170px;
-  padding: 0;
-  opacity: 0;
-  -webkit-transition:0.25s ease-out;
-  transition: 0.25s ease-out; }
+    font-style: italic;
+    display: none;
+    font-size: 16px;
+    color: #555;
+    left: -12em;
+    top: 11px;
+    line-height: 30px !important;
+    text-align: right !important;
+    width: 180px;
+    padding: 0;
+    opacity: 0;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out; }
   @media only screen and (min-width: 770px) {
     .nav-tooltip {
       display: block;
