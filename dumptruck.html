@@ -1,9 +1,9 @@
 ---
 meta_title: Dumptruck.com | Alex Cagwin
 project: Dumptruck
-nextProject: octaneai
-nextProjectTitle: Octane AI
-previousProject: hopsy
+nextProject: hopsy
+nextProjectTitle: Hopsy
+previousProject: octaneai
 challenge: Streamline the contracting dumptruck industry by creating a fully comprehensive logistics platform.
 details:
   - label: Role
@@ -21,22 +21,15 @@ menu:
     link:
   - title: About Me
     link: about
-  - title: Hopsy
-    link: hopsy
-  - title: Dumptruck
-    link: dumptruck
   - title: Octane AI
     link: octaneai
+  - title: Dumptruck
+    link: dumptruck
+  - title: Hopsy
+    link: hopsy
   - title: Nvolv
     link: nvolv
-  - title: Instapark
-    link: instapark
-  - title: Dodo App
-    link: dodo
-  - title: Cal Poly Distance Club
-    link: cpdc
-  - title: The Underground Symphony
-    link: ug
+
 ---
 
 
@@ -48,8 +41,8 @@ menu:
 
     {% include headjs.html %}
 </head>
-  <body id="dumptruck" class="main-bg">
-    <div id="main" class="content flex flex-horizontal-center">
+  <body id="main" class="main-bg">
+    <div id="dumptruck" class="content flex flex-horizontal-center">
 
       {% include navigation.html %}
 
@@ -59,6 +52,7 @@ menu:
             <h1 class="hidden">{{ page.project }}</h1>
           </div>
           <div class="header-content">
+            <span class="header-project-text">{{ page.project }}</span>
             <span class="h4 white">Get rid of those tickets.</span>
           </div>
         </div>
@@ -67,34 +61,21 @@ menu:
             <img src="../assets/media/dumptruck/main-hero.png" alt="Mobile Background">
           </picture>
         </div>
-        <div class="header-text">
-          <span class="header-project-text">{{ page.project }}</span>
-        </div>
       </div>
 
       <section class="intro split split-p-a">
         <div class="intro-content">
-          <div class="intro-project-header">
-            <span class="intro-project-title">{{ page.project }}</span>
-          </div>
-          <div class="intro-break"></div>
           <div class="intro-details">
-            <div class="intro-details-1">
-              <span class="header-label">Challenge</span>
-              <div class="details-item">
-                <p>{{ page.challenge }}</p>
-              </div>
-            </div>
             {% for item in page.details %}
               <div class="intro-details-2">
-                <span class="header-label">{{ item.label}}</span>
+                <span class="fact-label">{{ item.label}}</span>
                 <div class="details-item">
                   <p>{{ item.content}}</p>
                 </div>
               </div>
             {% endfor %}
           </div>
-          <div class="intro-break"></div>
+          <div class="case-study-break"></div>
           <div class="intro-link">
             <a target="_blank" title="View Live" class="project-live">
               <p>Coming Soon</p>
@@ -102,6 +83,10 @@ menu:
           </div>
         </div>
         <div class="split-content">
+          <div class="header-content-bio">
+            <span>{{ page.challenge }}</span>
+          </div>
+          <div class="section-break"></div>
           <div class="section-content">
             <p>While the gig economy has risen in new areas, it's been strong in markets such as big-rig trucking and dumptrucking. Bucky's Hauling LLC is a network of trucking comapnies and suppliers fulfilling orders on an on-demand basis. They were looking for a transition from excel spreadsheets to the digital world to better manage and scale their business. They partnered with Gigster and their freelance network to take them into the digital age.</p>
             <p>I worked closely with product manager, Rathan Haran, and art director, Brian Basher, to create a new digital experience for Bucky's Hauling. We focused on streamlining the entire order journey and automating complex workflows to help them scale Bucky's Hauling' business. There was a simple goal: get rid of the paper tickets needed at every stage of the trucking process. We designed a platform for dispatchers, customers, trucking companies and truck drivers to manage their respective needs and eliminate the tremendous paper trail. The product is currently in the development phase and will be launching end of Summer 2017. Once it launches, it'll be known as Dumptruck.</p>
@@ -140,7 +125,7 @@ menu:
       <div class="project-break m"></div>
 
       <section class="project-section split split-p-t">
-        <div class="project-content">
+        <div class="intro-content">
           <span class="intro-project-title">Dispatch Ecosystem</span>
         </div>
         <div class="split-content">
@@ -226,7 +211,7 @@ menu:
       <div class="project-break"></div>
 
       <section class="project-section split split-p-t">
-        <div class="project-content">
+        <div class="intro-content">
           <span class="intro-project-title">Consumer Ecosystem</span>
         </div>
         <div class="split-content">
@@ -349,7 +334,7 @@ menu:
         <div class="project-break"></div>
 
         <section class="project-section split split-p-a">
-          <div class="project-content">
+          <div class="intro-content">
             <span class="intro-project-title">Trucking Companies</span>
           </div>
           <div class="split-content">
@@ -427,9 +412,6 @@ menu:
             </div>
           </div>
         </div>
-
-
-        {% include next-project.html %}
 
       </div>
 

@@ -1,9 +1,9 @@
 ---
 meta_title: Octane AI | Alex Cagwin
 project: Octane AI
-nextProject: vfl
-nextProjectTitle: Virtual Fantasty League
-previousProject: dumptruck
+nextProject: dumptruck
+nextProjectTitle: Dumptruck
+previousProject: nvolv
 challenge: Allow anyone with no knowledge of chatbots, to build a chatbot in only a few minutes.
 details:
   - label: Role
@@ -19,22 +19,15 @@ menu:
     link:
   - title: About Me
     link: about
-  - title: Hopsy
-    link: hopsy
-  - title: Dumptruck
-    link: dumptruck
   - title: Octane AI
     link: octaneai
+  - title: Dumptruck
+    link: dumptruck
+  - title: Hopsy
+    link: hopsy
   - title: Nvolv
     link: nvolv
-  - title: Instapark
-    link: instapark
-  - title: Dodo App
-    link: dodo
-  - title: Cal Poly Distance Club
-    link: cpdc
-  - title: The Underground Symphony
-    link: ug
+
 ---
 
 <!DOCTYPE html>
@@ -45,8 +38,8 @@ menu:
 
     {% include headjs.html %}
 </head>
-  <body id="octaneai" class="main-bg">
-    <div id="main" class="content flex flex-horizontal-center">
+  <body id="main" class="main-bg">
+    <div id="octaneai" class="content flex flex-horizontal-center">
 
       {% include navigation.html %}
 
@@ -56,7 +49,8 @@ menu:
             <h1 class="hidden">{{ page.project }}</h1>
           </div>
           <div class="header-content">
-            <span class="h4 white">The easiest way to create a chatbot.</span>
+            <span class="header-project-text">{{ page.project }}</span>
+            <span class="h4 white">Build your audience on Facebook Messenger.</span>
           </div>
         </div>
         <div class="header-hero">
@@ -64,34 +58,21 @@ menu:
             <img src="../assets/media/octane/main-hero.png" alt="Laptop Background">
           </picture>
         </div>
-        <div class="header-text">
-          <span class="header-project-text">{{ page.project }}</span>
-        </div>
       </div>
 
         <section class="intro split split-p-a">
           <div class="intro-content">
-            <div class="intro-project-header">
-              <span class="intro-project-title">{{ page.project }}</span>
-            </div>
-            <div class="intro-break"></div>
             <div class="intro-details">
-              <div class="intro-details-1">
-                <span class="header-label">Challenge</span>
-                <div class="details-item">
-                  <p>{{ page.challenge }}</p>
-                </div>
-              </div>
               {% for item in page.details %}
                 <div class="intro-details-2">
-                  <span class="header-label">{{ item.label}}</span>
+                  <span class="fact-label">{{ item.label}}</span>
                   <div class="details-item">
                     <p>{{ item.content}}</p>
                   </div>
                 </div>
               {% endfor %}
             </div>
-            <div class="intro-break"></div>
+            <div class="case-study-break"></div>
             <div class="intro-link">
               <a href="http://www.octaneai.com/" target="_blank" title="View Live" class="project-live">
                 <p>View Live</p>
@@ -99,6 +80,10 @@ menu:
             </div>
           </div>
           <div class="split-content">
+            <div class="header-content-bio">
+              <span>{{ page.challenge }}</span>
+            </div>
+            <div class="section-break"></div>
             <div class="section-content">
               <p>Over 1 billion people use Facebook messenger every month. That's more than Snapchat, Instagram, and Twitter combined. At the moment, there's no sign of it slowing down. With publishers and content creators amassing fan bases as large as 34m+ followers like  Aerosmith, building chatbots provides an opportunity to engage your audience on a mass scale like never before.</p>
               <p>At the beginning of fall 2016, Matt Schilitcht, Ben Parr, and Leif K-Brooks saw this huge market opportunity to design and build a technology to allow anyone, with or without a chatbot. After an exhaustive search, they partnered with West Agile Labs to help build out their vision of a more automated and connected messaging platform.</p>
@@ -125,7 +110,7 @@ menu:
         <div class="project-break"></div>
 
         <section class="project-section split split-p-a">
-          <div class="project-content">
+          <div class="intro-content">
             <span class="intro-project-title">Building Chatbots</span>
           </div>
           <div class="split-content">
@@ -167,7 +152,7 @@ menu:
         <div class="project-break m"></div>
 
         <section class="project-section split split-p-t">
-          <div class="project-content">
+          <div class="intro-content">
             <span class="intro-project-title">Managing Your Bot</span>
           </div>
           <div class="split-content">
@@ -253,7 +238,7 @@ menu:
         <div class="project-break"></div>
 
         <section class="project-section split split-p-t">
-          <div class="project-content">
+          <div class="intro-content">
             <span class="intro-project-title">Custom Responses</span>
           </div>
           <div class="split-content">
@@ -294,7 +279,7 @@ menu:
         <div class="project-break"></div>
 
         <section class="project-section split split-p-t">
-          <div class="project-content">
+          <div class="intro-content">
             <span class="intro-project-title">Results</span>
           </div>
           <div class="split-content">
@@ -317,7 +302,7 @@ menu:
         <div class="project-break m"></div>
 
         <section class="project-section split split-p-a">
-          <div class="project-content">
+          <div class="intro-content">
             <span class="intro-project-title">Industry Responses</span>
           </div>
           <div class="split-content">
@@ -369,8 +354,6 @@ menu:
             </div>
           </div>
         </div>
-
-        {% include next-project.html %}
 
 
       </div>

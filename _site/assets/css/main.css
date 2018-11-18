@@ -17,7 +17,7 @@ html{
 
 p{
   font-family: "Miller Disp Roman", serif;
-  font-size: 1.063rem;
+  font-size: 1.125rem;
   line-height: 1.6em;
   margin: 0 0 1.75em 0;
   letter-spacing: 0px;
@@ -130,26 +130,27 @@ h4{
 }
 
 .h4 {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.1em;
   text-rendering: optimizelegibility;  }
   @media only screen and (min-width: 770px) {
     .h4 {
-      font-size: 1.375rem;
+      font-size: 3rem;
     }
   }
   @media only screen and (min-width: 1000px) {
     .h4 {
-      font-size: 1.5rem;
+      font-size: 3.25rem;
     }
   }
   @media only screen and (min-width: 1200px) {
     .h4 {
-      font-size: 1.75rem;
+      font-size: 3.5rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     .h4 {
-      font-size: 2rem;
+      font-size: 4rem;
     }
 }
 
@@ -894,10 +895,28 @@ a:hover.marcel-color span{
   }
 }
 
+.fact-label {
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9a9a9a;
+  display: block;
+  margin: 0 0 5px;
+}
+
+.intro-details .fact-label {
+  margin: 0;
+}
+
 .header-content-bio {
-  font-family: "Miller Disp Lt", Georgia, serif;
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.3;
   margin: 0 0 1em 0;}
   @media only screen and (min-width: 770px) {
     .header-content-bio {
@@ -918,6 +937,10 @@ a:hover.marcel-color span{
     .header-content-bio {
       font-size: 3rem;
   }
+}
+
+.light .header-content-bio {
+  color: #fff;
 }
 
 /*
@@ -1536,6 +1559,7 @@ html{
   @media only screen and (min-width: 770px) {
     .header-content {
       margin: 1.5em 0;
+      max-width: 600px;
     }
   }
 
@@ -1565,36 +1589,6 @@ html{
   right: 0;
   overflow: hidden;
 }
-
-.header-project-text {
-  line-height: .87;
-  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
-  color: #000;
-  opacity: .1;
-  font-size: 14rem;
-  white-space: nowrap;
-  word-break: normal; }
-  @media only screen and (min-width: 770px) {
-    .header-project-text {
-      font-size: 26rem;
-    }
-  }
-  @media only screen and (min-width: 1000px) {
-    .header-project-text {
-      font-size: 28rem;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    .header-project-text {
-      font-size: 32rem;
-    }
-  }
-  @media only screen and (min-width: 1800px) {
-    .header-project-text {
-      font-size: 40rem;
-    }
-  }
-
 
 .split {
   display: flex;
@@ -1651,11 +1645,21 @@ html{
   flex-basis: 420px;
   flex-grow: 1; }
   @media only screen and (min-width: 1000px) {
-    .intro-content, .split-content, .project-content {
-      max-width: 47%;
+    .split-content, .project-content {
+      max-width: 63%;
       margin: 0 3% 0 0;
     }
 }
+
+.intro-content {
+  max-width: 100%;
+  margin: 0; }
+  @media only screen and (min-width: 1000px) {
+    .intro-content {
+      max-width: 30%;
+      margin: 0 3% 0 0;
+    }
+  }
 
 .intro-content {
   margin: 0 0 2em 0;
@@ -1680,22 +1684,17 @@ html{
   }
 
 .intro-project-title {
-  font-family: "Miller Disp Lt", serif;
+  font-family: 'NHaasGroteskDSPro-45Lt', helvetica, sans-serif;
   line-height: 1;
-  font-size: 2rem; }
-  @media only screen and (min-width: 770px) {
-    .intro-project-title {
-      font-size: 2.4rem;
-    }
-  }
+  font-size: 1.325rem; }
   @media only screen and (min-width: 1000px) {
     .intro-project-title {
-      font-size: 2.8rem;
+      font-size: 1.5rem;
     }
   }
   @media only screen and (min-width: 1200px) {
     .intro-project-title {
-      font-size: 3.125rem;
+      font-size: 1.625rem;
     }
   }
   @media only screen and (min-width: 1800px) {
@@ -1785,19 +1784,34 @@ html{
   flex-wrap: wrap;
 }
 
-.intro-details-1 {
-  flex: 1;
-  flex-basis: 100%;
-}
-
 .intro-details-2 {
   flex-basis: 47%;
-  margin: 0 3% 0 0;
-}
+  margin: 0 3% 0 0; }
+  @media only screen and (min-width: 1000px) {
+    .intro-details-2 {
+        flex-basis: 100%;
+        margin: 0;
+    }
+  }
 
 .project-live p {
   font-family: "Miller Disp It", serif;
   font-style: italic;
+}
+
+.header-project-text {
+  font-family: "Miller Disp It", serif;
+  font-style: italic;
+  display: block;
+  color: #fff;
+  opacity: .6;
+  font-size: 1.25rem;
+  margin: 1em 0;
+}
+
+.light .header-project-text {
+  color: #000;
+  opacity: .6;
 }
 
 
@@ -1903,29 +1917,41 @@ html{
     }
 }
 
-.section-break {
-  width: 35px;
+.case-study-break, .section-break {
+  width: 55px;
   display: block;
   content: '';
   height: 1px;
   background-color: #dadada;
-  margin: 1em 0 1.5em; }
+}
+
+.light .case-study-break, .light .section-break {
+  background-color: #444
+}
+
+.case-study-break {
+  margin: 0 0 32px;
+}
+
+.section-break {
+  margin: 40px 0 46px; }
   .case-studies .section-break {
     margin: 1em 0 0.6em;
   }
   @media only screen and (min-width: 1000px) {
     .section-break {
-        margin: 1.5em 0 2em;
+        width: 100px;
+        margin: 50px 0 55px;
     }
   }
-  @media only screen and (min-width: 1000px) {
-    .case-studies .section-break {
-        margin: 1.5em 0 1.3em;
+  @media only screen and (min-width: 1200px) {
+    .section-break {
+        margin: 60px 0;
     }
   }
   @media only screen and (min-width: 1800px) {
     .case-studies .section-break {
-        margin: 1.5em 0 1.7em;
+        margin: 80px 0;
     }
   }
 
@@ -1938,6 +1964,11 @@ html{
   @media only screen and (min-width: 1000px) {
     .section-title {
       margin: 0 0 1em;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .section-title {
+      margin: 0 0 2em;
     }
   }
 
@@ -1972,12 +2003,12 @@ html{
   margin: 1em 0 2em 0; }
   @media only screen and (min-width: 1200px) {
     .section-content {
-      margin: 1em 0 4em 0;
+      margin: 0em 0 4em 0;
     }
   }
   @media only screen and (min-width: 1800px) {
     .section-content {
-      margin: 1em 0 8em 0;
+      margin: 0em 0 8em 0;
     }
 }
 
@@ -2447,23 +2478,27 @@ a[title]:hover:after {
   padding: 4em 25px; }
   @media only screen and (min-width: 770px) {
     .next--content {
-      padding: 5em 0;
+      padding: 3em 50px 14em;
     }
   }
   @media only screen and (min-width: 1000px) {
     .next--content {
-      padding: 5.5em 0;
+      padding: 3em 50px 16em;
     }
   }
   @media only screen and (min-width: 1200px) {
     .next--content {
-      padding: 6.5em 0;
+      padding: 5em 80px 20em;
     }
   }
   @media only screen and (min-width: 1800px) {
     .next--content {
-      padding: 8em 0;
+      padding: 6em 80px 22em;
     }
+}
+
+a:hover.next--content {
+  background-color: #111;
 }
 
 .fw-2 img {
@@ -2649,7 +2684,8 @@ footer {
 .footer {
   width: 100%;
   padding: 3em 25px;
-  background-color: #f8f8f8;
+  color: #fff;
+  background-color: #000;
   margin: 0 0 65px 0; }
   @media only screen and (min-width: 770px) {
     .footer {
@@ -2686,6 +2722,13 @@ footer {
   }
 }
 
+.nextProject-label {
+  font-family: 'Miller Disp It', serif;
+  font-style: italic;
+  color: #fff;
+  opacity: .6;
+}
+
 
 
 .footer--content {
@@ -2704,13 +2747,13 @@ footer {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
-  margin: 0 0 1em 0; }
+  margin: 0 0 2em 0; }
   @media only screen and (min-width: 770px) {
     .footer--item {
       -webkit-flex-basis: 47%;
           -ms-flex-preferred-size: 47%;
               flex-basis: 47%;
-      margin: 0 3% 1em 0;
+      margin: 0 3% 2em 0;
     }
     .footer--item-2 {
       -webkit-flex-basis: 100%;
@@ -2718,14 +2761,21 @@ footer {
               flex-basis: 100%;
     }
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1000px) {
     .footer--item {
-      -webkit-flex-basis: 30%;
-          -ms-flex-preferred-size: 30%;
-              flex-basis: 30%;
-      margin: 0 3% 1em 0;
+      -webkit-flex-basis: 13%;
+          -ms-flex-preferred-size: 13%;
+              flex-basis: 13%;
+      margin: 0 3% 2em 0;
+    }
+    .footer--item-2 {
+      -webkit-flex-basis: 47%;
+          -ms-flex-preferred-size: 47%;
+              flex-basis: 47%;
+      margin: 0 3% 2em 0;
     }
   }
+/*
   @media only screen and (min-width: 1800px) {
     .footer--item {
       -webkit-flex-basis: 22%;
@@ -2733,7 +2783,7 @@ footer {
               flex-basis: 22%;
       margin: 0 3% 1em 0;
     }
-  }
+  } */
 
 .footer--item, .footer--item-2 {
   display: -webkit-box;
@@ -2747,40 +2797,55 @@ footer {
           flex-direction: column;
 }
 
+/*
 .footer-label {
 	font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
   font-size: .9375rem !important;
   margin: 0 0 .25em 0;
-}
+} */
 
-.footer span {
+.footer {
   font-size: 1.063rem; }
   @media only screen and (min-width: 1000px) {
-    .footer span {
+    .footer {
       font-size: 1.125rem;
     }
   }
   @media only screen and (min-width: 1200px) {
-    .footer span {
+    .footer {
       font-size: 1.25rem;
     }
   }
   @media only screen and (min-width: 1800px) {
-    .footer span {
+    .footer {
       font-size: 1.5rem;
     }
 }
 
 .footer-contact {
-  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  font-family: 'Miller Disp It', serif;
+  font-style: italic;
   font-size: .9375rem !important;
   color: #666;
+}
+
+.footer a {
+  color: #fff;
 }
 
 a:hover .footer-contact {
   color: #9A404D;
   cursor: pointer;
 }
+
+.footer-about {
+  font-family: 'Miller Disp Lt', serif;
+  font-size: 3em;
+  color: #222;
+  margin-top: -12px;
+  line-height: 1.3;
+}
+
 
 .top-1 {
   z-index: 5;
@@ -2908,7 +2973,12 @@ a:hover .footer-contact {
   background-color: #f2f2f2;
 }
 
-#hopsy a:hover .next-label {
+#hopsy a:hover.next--content {
+  color: #111;
+  background-color: #FCB714;
+}
+
+#hopsy a:hover .nextProject-label {
   color: #111;
 }
 
@@ -2951,8 +3021,12 @@ a:hover .footer-contact {
   background-color: #106BE0;
 }
 
-#octaneai a:hover .next-label {
+#octaneai a:hover.next--content {
   color: #FFF;
+}
+
+#octaneai a:hover.next--content {
+  background-color: #106BE0;
 }
 
 #dumptruck #octaneai .next-background {
@@ -2983,11 +3057,11 @@ a:hover .footer-contact {
   background-color: #f2f2f2;
 }
 
-#dumptruck a:hover .next-label {
+#dumptruck a:hover.next--content {
   color: #FFF;
 }
 
-#hopsy #dumptruck .next-background {
+#dumptruck a:hover.next--content {
   background-color: #1C6FB3;
 }
 
@@ -3016,12 +3090,13 @@ a:hover .footer-contact {
   background-color: #d7d7d7;
 }
 
-#everwill #nvolv a:hover .next-label {
+#nvolv a:hover.next--content {
   color: #111;
+  background-color: #F77143;
 }
 
-#everwill #nvolv .next-background {
-  background-color: #F77143;
+#nvolv a:hover .nextProject-label {
+  color: #111;
 }
 
 #vfl .project-period, #vfl .main, #vfl .action, #vfl .close a:hover .fa, #vfl a:hover, #projects #vfl .action, #projects #vfl .project-period, #projects #vfl a:hover, #vfl a:hover .footer-contact, #vfl a.project-live p {

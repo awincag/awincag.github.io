@@ -52,7 +52,7 @@ for (i = 0; i < close.length; i++) {
 
 
 $(document).ready(function() {
-  $(".header-action").each(function() {
+  $(".header-project").each(function() {
     $(this).mouseenter(function() {
       var target = $(this).data("target");
       $('[data-target="'+target+'"]').addClass("hovered");
