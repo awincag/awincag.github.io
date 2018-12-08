@@ -1,6 +1,11 @@
 <footer>
 
-  {% include next-project.html %}
+  {% if page.nextProject %}
+    {% include next-project.html %}
+  {% else %}
+    <div></div>
+  {% endif %}
+
 
   <div class="footer">
     <div class="footer--content">

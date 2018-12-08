@@ -1684,7 +1684,7 @@ html{
   }
 
 .intro-project-title {
-  font-family: 'NHaasGroteskDSPro-45Lt', helvetica, sans-serif;
+	font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
   line-height: 1;
   font-size: 1.325rem; }
   @media only screen and (min-width: 1000px) {
@@ -1709,6 +1709,10 @@ html{
   height: 1px;
   background-color: #C8C8C8;
   width: 100%;
+}
+
+.intro-break.header {
+  margin: 2em 0 4em;
 }
 
 .project-break {
@@ -1784,6 +1788,14 @@ html{
   flex-wrap: wrap;
 }
 
+.intro-reverse {
+  flex-direction: column-reverse; }
+  @media only screen and (min-width: 1000px) {
+    .intro-reverse {
+      flex-direction: row;
+    }
+  }
+
 .intro-details-2 {
   flex-basis: 47%;
   margin: 0 3% 0 0; }
@@ -1814,7 +1826,37 @@ html{
   opacity: .6;
 }
 
+.project-highlight {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.section-reverse {
+  flex-direction: row-reverse;
+}
+
+.highlight-project-title {
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  font-size: 1.125rem;
+  display: block; }
+  @media only screen and (min-width: 1000px) {
+    .highlight-project-title {
+      font-size: 1.25rem;
+      padding: 0 0 .25em;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .highlight-project-title {
+      font-size: 1.5rem;
+      padding: 0 0 .5em;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .highlight-project-title {
+      font-size: 2rem;
+    }
+  }
 
 .details-item {
   position: relative;
@@ -2309,6 +2351,24 @@ a[title]:hover:after {
       -ms-flex-preferred-size: 301px;
           flex-basis: 301px;
 }
+
+.mocks-proto {
+  padding: 1em 0 0; }
+  @media only screen and (min-width: 770px) {
+    .mocks-proto {
+      padding: 3.5em 0 0;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .mocks-proto {
+      padding: 4em 0 0;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .mocks-proto {
+      padding: 5em 0 0;
+    }
+  }
 
 .view {
 
@@ -3011,6 +3071,10 @@ a:hover .footer-contact {
 
 #octaneai .project--header {
   background-color: #106BE0;
+}
+
+#octaneai .mocks-proto {
+  background-color: #014AA8
 }
 
 #octaneai a:hover.project-live, #hopsy a:hover.project-live p {
