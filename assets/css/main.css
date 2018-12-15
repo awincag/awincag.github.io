@@ -290,7 +290,8 @@ img {
   position: relative;
   z-index: 100;
   width: 100%;
-  min-height: 90vh; }
+  height: 90vh;
+  max-height: 900px; }
 .header-space.about {
   min-height: 500px;
 }
@@ -299,12 +300,13 @@ img {
       padding: 3em 0 1em;
     }
     .header-space.about {
-      min-height: 90vh;
+      height: 90vh;
     }
   }
-  @media only screen and (min-width: 180px) {
+  @media only screen and (min-width: 1800px) {
     .header-space {
       padding: 5em 0 2em;
+      max-height: 1000px;
     }
   }
 
