@@ -1564,6 +1564,12 @@ html{
       max-width: 600px;
     }
   }
+  @media only screen and (min-width: 1800px) {
+    .header-content {
+      margin: 1.5em 0;
+      max-width: 800px;
+    }
+  }
 
 .header-hero {
   margin: 2em auto; }
