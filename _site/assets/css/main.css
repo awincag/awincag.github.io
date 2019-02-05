@@ -1464,6 +1464,7 @@ html{
   }
 
 .client-list {
+  max-width: 300px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2692,6 +2693,7 @@ a:hover.next--content {
 @media only screen and (min-width: 770px) {
   .experience--item-timeline {
     font-size: 1.125rem;
+  }
 }
 
 .experience--br {
@@ -2824,8 +2826,6 @@ a:hover.next--content {
   background-color: #000;
   opacity: .1;
   margin: 0 0 2em 0; }
-  .press-br {
-    margin: 0 0 2em 0; }
     @media only screen and (min-width: 1200px) {
       .press-br {
         margin: 0 0 3em 0;
