@@ -291,13 +291,15 @@ img {
   z-index: 100;
   width: 100%;
   min-height: 640px;
-  height: 85vh;
-  max-height: 900px; }
+  max-height: 900px;
+}
+
 .header-space.about {
   min-height: 500px;
 }
   @media only screen and (min-width: 770px) {
     .header-space {
+      height: 85vh;
       padding: 3em 0 1em;
     }
     .header-space.about {
