@@ -35,7 +35,7 @@ p{
   }
   @media only screen and (min-width: 1800px) {
     p {
-      font-size: 1.5rem;
+      font-size: 1.65rem;
     }
 }
 
@@ -357,7 +357,7 @@ img {
   }
   @media only screen and (min-width: 1800px) {
     .p-action a {
-      font-size: 1.5rem;
+      font-size: 1.65rem;
     }
   }
 
@@ -1720,6 +1720,8 @@ html{
 .intro-project-title {
 	font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
   line-height: 1;
+  margin-top: 0.15em;
+  display: block;
   font-size: 1.325rem; }
   @media only screen and (min-width: 1000px) {
     .intro-project-title {
@@ -2077,6 +2079,11 @@ html{
 
 .section-content {
   margin: 1em 0 2em 0; }
+  @media only screen and (min-width: 770px) {
+    .section-content {
+      margin: 0em 0 2em 0;
+    }
+  }
   @media only screen and (min-width: 1200px) {
     .section-content {
       margin: 0em 0 4em 0;

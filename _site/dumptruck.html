@@ -108,7 +108,29 @@
         </div>
         <div class="header-hero">
           <picture>
-            <img src="../assets/media/dumptruck/main-hero.png" alt="Mobile Background">
+            <source
+                data-srcset="../assets/media/dumptruck/main-hero-xxl.png"
+                media="(min-width: 1900px)" />
+            <source
+                data-srcset="../assets/media/dumptruck/main-hero-xl.png"
+                media="(min-width: 1500px)" />
+            <source
+                data-srcset="../assets/media/dumptruck/main-hero-l.png"
+                media="(min-width: 1200px)" />
+            <source
+                data-srcset="../assets/media/dumptruck/main-hero-m.png"
+                media="(min-width: 1000px)" />
+            <source
+                data-srcset="../assets/media/dumptruck/main-hero-s.png"
+                media="(min-width: 700px)" />
+            <source
+                data-srcset="../assets/media/dumptruck/main-hero-p.png"
+                media="(min-width: 100px)" />
+            <img
+                data-sizes="auto"
+                data-src="../assets/media/dumptruck/main-hero-l.png"
+                class="lazyload"
+                alt="Mobile Background" />
           </picture>
         </div>
       </div>
@@ -178,6 +200,9 @@
             <div class="photo-width">
               <picture>
                 <source
+                    data-srcset="../assets/media/dumptruck/hero-xxl.jpg"
+                    media="(min-width: 1900px)" />
+                <source
                     data-srcset="../assets/media/dumptruck/hero-xl.jpg"
                     media="(min-width: 1500px)" />
                 <source
@@ -207,8 +232,9 @@
         </div>
         <div class="split-content">
           <div class="section-content">
-            <p>At the heart of the new digital experience, there needed to be a robust admin system to manage every aspect of every order. We designed an extensive platform to manage customers, new and incoming orders, current loads, trucking companies, suppliers and materials. Each piece revolved around the life-cycle of the order and it's respective loads.</p>
-            <p>At the heart of the new digital experience, there needed to be a robust admin system to manage every aspect of every order. We designed an extensive platform to manage customers, new and incoming orders, current loads, trucking companies, suppliers and materials. Each piece revolved around the life-cycle of the order and it's respective loads.</p>
+            <p>At the heart of the new digital experience, there needed to be a robust admin system to manage every aspect of every order. We were porting over a completely manual process to nearly automated. Dispatchers, the manager to oversee and ensure loads are being completed, needed to have full control over the order in the event the system failed. We designed an extensive platform which allows dispatchers manage customers, new and incoming orders, current loads, trucking companies, suppliers and materials.</p>
+            <p>Enabling dispatchers to do their job well meant providing a full comprehensive look at everything active at any given point of the day. We surfaced up all active orders, incoming orders, orders that needed their attention and pending invoices. The design focused on surfacing up only the most relevant information in order to push that order to the next stage and closer to completion.</p>
+            </p>
           </div>
         </div>
       </section>
@@ -217,6 +243,9 @@
           <div class="screens--screen">
             <div class="photo-width">
               <picture>
+                <source
+                    data-srcset="../assets/media/dumptruck/1-xxl.jpg"
+                    media="(min-width: 1900px)" />
                 <source
                     data-srcset="../assets/media/dumptruck/1-xl.jpg"
                     media="(min-width: 1500px)" />
@@ -246,14 +275,17 @@
           <div>
             <div class="section-content">
               <span class="highlight-project-title">Order Management</span>
-              <p>Due to the complex nature of chatbots and artificial intelligence, the core focus of the project was to simplify and humanize every step of creating a chatbot. The solution needed to clearly articulate how it was being built and what that meant for people interacting with it. This was the primary driver of every design decision.</p>
+              <p>At it's core, an order is defined by it's loads. Thus, the entire design system was crafted around loads. Incoming orders are triaged by the system into individual loads for more precise and efficient fulfillment methods. Loads could be filled by single or multiple suppliers as well as single or multiple trucking contractors, enabling maximum flexibility. The dispatcher has full control over every step of the process.</p>
             </div>
           </div>
         </div>
         <div class="split-content edge">
           <div class="screens--screen">
-            <div class="photo-width">
+            <div class="photo-width" style="margin:0;">
               <picture>
+                <source
+                    data-srcset="../assets/media/dumptruck/2-xxl.jpg"
+                    media="(min-width: 1900px)" />
                 <source
                     data-srcset="../assets/media/dumptruck/2-xl.jpg"
                     media="(min-width: 1500px)" />
@@ -285,43 +317,20 @@
         </div>
         <div class="split-content">
           <div class="section-content">
-            <p>Due to the complex nature of chatbots and artificial intelligence, the core focus of the project was to simplify and humanize every step of creating a chatbot. The solution needed to clearly articulate how it was being built and what that meant for people interacting with it. This was the primary driver of every design decision.</p>
+            <p>We designed a complementing consumer ecosystem that allowed landscape architects and construction contractors to purchase and track various types of orders. Given the number of order types (flat rate, disposal, materials and duration), the process of purchasing evolves and responds as contractors complete the checkout process. They have full control over the length and duration of the job, removel of waste, and materials. They have the option of 'borrowing' a truck on-site if they need.</p>
+            <p>To ensure all parties (contractors, trucking companies, suppliers and the dispatch) are compensated equitably, we included a quoting flow that allows parties to negotiate before signing a contract. Once content, parties could manage and track the order across any device.</p>
           </div>
         </div>
       </section>
 
-        <div class="fw-2 fw-p customer-bg">
-          <div class="screens--screen">
-            <div class="photo-width">
-              <picture>
-                <source
-                    data-srcset="../assets/media/dumptruck/c-main-xl.jpg"
-                    media="(min-width: 1500px)" />
-                <source
-                    data-srcset="../assets/media/dumptruck/c-main-l.jpg"
-                    media="(min-width: 1200px)" />
-                <source
-                    data-srcset="../assets/media/dumptruck/c-main-m.jpg"
-                    media="(min-width: 1000px)" />
-                <source
-                    data-srcset="../assets/media/dumptruck/c-main-s.jpg"
-                    media="(min-width: 700px)" />
-                <source
-                    data-srcset="../assets/media/dumptruck/c-main-p.jpg"
-                    media="(min-width: 100px)" />
-                <img
-                    data-sizes="auto"
-                    data-src="../assets/media/dumptruck/c-main-l.jpg"
-                    class="lazyload blur-up" />
-              </picture>
-            </div>
-          </div>
-        </div>
 
-        <div class="fw-2 fw-p customer-bg">
+        <div class="fw-2 customer-bg">
           <div class="screens--screen">
             <div class="photo-width">
               <picture>
+                <source
+                    data-srcset="../assets/media/dumptruck/c-1-xxl.jpg"
+                    media="(min-width: 1900px)" />
                 <source
                     data-srcset="../assets/media/dumptruck/c-1-xl.jpg"
                     media="(min-width: 1500px)" />
@@ -346,6 +355,37 @@
           </div>
         </div>
 
+        <div class="fw-2 customer-bg">
+          <div class="screens--screen">
+            <div class="photo-width">
+              <picture>
+                <source
+                    data-srcset="../assets/media/dumptruck/c-main-xxl.jpg"
+                    media="(min-width: 1900px)" />
+                <source
+                    data-srcset="../assets/media/dumptruck/c-main-xl.jpg"
+                    media="(min-width: 1500px)" />
+                <source
+                    data-srcset="../assets/media/dumptruck/c-main-l.jpg"
+                    media="(min-width: 1200px)" />
+                <source
+                    data-srcset="../assets/media/dumptruck/c-main-m.jpg"
+                    media="(min-width: 1000px)" />
+                <source
+                    data-srcset="../assets/media/dumptruck/c-main-s.jpg"
+                    media="(min-width: 700px)" />
+                <source
+                    data-srcset="../assets/media/dumptruck/c-main-p.jpg"
+                    media="(min-width: 100px)" />
+                <img
+                    data-sizes="auto"
+                    data-src="../assets/media/dumptruck/c-main-l.jpg"
+                    class="lazyload blur-up" />
+              </picture>
+            </div>
+          </div>
+        </div>
+
 
 
         <section class="project-section split split-p-a driver-bg white">
@@ -354,16 +394,19 @@
           </div>
           <div class="split-content">
             <div class="section-content">
-              <p>After the chatbot has been created, a user can monitor their bot from a high-level or individual plugin level. This allows for users to monitor the engagement level of their content within Facebook Messenger, previously only available through Newsfeed. From here, a user can quickly update or push new content through the plugins that have alreayd been created.</p>
+              <p>A system can only be as successful as the information it receives. The nearly all of the dumptruck platform required order statuses. The driver app we designed focused on providing a contextual and focused experience to ensure that drivers could update their orders with ease. Each step of updating an order only focused on providing the right information at the right time with one primary action: move forward in the flow.</p>
             </div>
           </div>
         </section>
 
 
-        <div class="fw-2 fw-p driver-bg">
+        <div class="fw-2 driver-bg">
           <div class="screens--screen">
             <div class="photo-width">
               <picture>
+                <source
+                    data-srcset="../assets/media/dumptruck/mobile-1-xxl.jpg"
+                    media="(min-width: 1900px)" />
                 <source
                     data-srcset="../assets/media/dumptruck/mobile-1-xl.jpg"
                     media="(min-width: 1500px)" />
