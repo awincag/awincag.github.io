@@ -112,7 +112,7 @@ h1{
   }
   @media only screen and (min-width: 1800px) {
     .h1 {
-      font-size: 2.75rem;
+      font-size: 3rem;
     }
 }
 
@@ -279,11 +279,11 @@ img {
 
 .header-title {
   margin: 2em 0 3em; }
-  @media only screen and (min-width: 770px) {
+  /* @media only screen and (min-width: 770px) {
     .header-title {
       margin: 1em 0;
     }
-  }
+  } */
 
 .header-space {
   padding: 3em 0 2em;
@@ -291,7 +291,7 @@ img {
   z-index: 100;
   width: 100%;
   min-height: 640px;
-  max-height: 900px;
+  /* max-height: 900px; */
 }
 
 .header-space.about {
@@ -299,7 +299,7 @@ img {
 }
   @media only screen and (min-width: 770px) {
     .header-space {
-      height: 85vh;
+      min-height: 85vh;
       padding: 3em 0 1em;
     }
     .header-space.about {
@@ -309,9 +309,27 @@ img {
   @media only screen and (min-width: 1800px) {
     .header-space {
       padding: 5em 0 2em;
-      max-height: 1000px;
     }
   }
+
+.header-about-content {
+  max-width: 690px; }
+  @media only screen and (min-width: 1800px) {
+    .header-about-content {
+      max-width: 1000px;
+    }
+  }
+
+.header-about-content p {
+  font-family: 'NHaasGroteskDSPro-45Lt', helvetica, sans-serif;
+  color: #d8d8d8;
+}
+
+.header-about-content a.header-action {
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  color: #fff;
+  font-style: normal;
+}
 
 .p-action, .fold-sep {
   display: flex;
@@ -327,6 +345,11 @@ img {
   @media only screen and (min-width: 770px) {
     .case-studies {
       margin: 10em 0 0;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .case-studies {
+      margin: 18em 0 0;
     }
   }
 
@@ -361,10 +384,21 @@ img {
     }
   }
 
+.case-studies p {
+  margin: 0; }
+  @media only screen and (min-width: 770px) {
+    .case-studies p {
+      margin: -1em 0 0;
+    }
+  }
+
+.header-action {
+  font-style: normal !important;
+}
 
 a .header-action, a .header-action-2 {
 	font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
-  color: #868686;
+  color: #fff;
   transition-duration: .2s;
 }
 
@@ -373,9 +407,10 @@ a:hover .header-action {
   color: #ffffff; }
 
 a .header-action-a {
-  font-family: "Miller Disp It", Georgia, serif;
-  font-style: italic;
-  color: #e8e8e8;
+  /* font-family: "Miller Disp It", Georgia, serif;
+  font-style: italic; */
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  color: #aaa;
   transition-duration: .2s;
   /*display: block;*/ }
   @media only screen and (min-width: 700px) {
@@ -384,16 +419,20 @@ a .header-action-a {
     }
   }
 
-a:hover.about-color .header-action-a {
+a:hover.about-color.header-action {
   color: #9A404D;
 }
 
-a:hover.baby-color .header-action-a {
+a:hover.baby-color.header-action {
   color: #F28E1E;
 }
 
-a:hover.marcel-color .header-action-a {
+a:hover.marcel-color.header-action {
   color: #8f2cff;
+}
+
+a:hover.harley-color.header-action {
+  color: #ff6600;
 }
 
 a:hover.hopsy-color .header-action-a {
@@ -468,13 +507,44 @@ a:hover.nvolv-color .header-action-a {
   transform: translate3d(0,0,0);
 }
 
-.header-assets-img img.hovered {
+@media only screen and (min-width: 770px) {
+  .header-assets-img img.hovered {
+    position: absolute;
+    opacity: 1;
+    top: -2em;
+    right: 0;
+    left: -.75em;
+    bottom: 0px;
+  }
+}
+
+.about-header-img {
   position: absolute;
-  opacity: 1;
-  top: -2em;
+  top: 12em;
   right: 0;
-  left: -.75em;
-  bottom: 0px;
+  bottom: 0;
+  z-index: 1; }
+  @media only screen and (min-width: 770px) {
+    .about-header-img {
+      top: 12em;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .about-header-img {
+      top: 6em;
+      right: 10%;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .about-header-img {
+      top: 0;
+      right: 10%;
+    }
+  }
+
+.about-header-img img {
+  height: 100%;
+  width: auto;
 }
 
 /*
@@ -946,6 +1016,23 @@ a:hover.marcel-color span{
 
 .light .header-content-bio {
   color: #fff;
+}
+
+.experience--item li {
+  position: relative;
+  padding: 0;
+}
+
+.about-list-dot {
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 100%;
+  position: absolute;
+  left: -2.5em;
+  top: 0.75em;
 }
 
 /*
@@ -1537,6 +1624,11 @@ html{
   background-color: #333;
 }
 
+.home-wrap {
+  position: relative;
+  z-index: 2;
+}
+
 .header-line {
   width: 100%;
   margin: 3em 0 0 0; }
@@ -1845,6 +1937,14 @@ html{
 .project-live p {
   font-family: "Miller Disp It", serif;
   font-style: italic;
+}
+
+
+.header-project {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  padding: 1em 0 0 0;
 }
 
 .header-project-text {
