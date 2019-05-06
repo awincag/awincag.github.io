@@ -373,11 +373,6 @@ img {
       padding: .15em 0;
     }
   }
-  @media only screen and (min-width: 770px) {
-    .p-action a {
-      font-size: 1.375rem;
-    }
-  }
   @media only screen and (min-width: 1800px) {
     .p-action a {
       font-size: 1.65rem;
@@ -1018,21 +1013,35 @@ a:hover.marcel-color span{
   color: #fff;
 }
 
+.intro-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .experience--item li {
   position: relative;
-  padding: 0;
+  padding: 0 0 0 2em; }
+  @media only screen and (min-width: 1000px) {
+    .experience--item li {
+      padding: 0;
+  }
 }
 
 .about-list-dot {
   display: block;
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background-color: #333;
   border-radius: 100%;
   position: absolute;
-  left: -2.5em;
-  top: 0.75em;
+  left: 0;
+  top: 13px; }
+  @media only screen and (min-width: 1000px) {
+    .about-list-dot {
+        left: -2rem;
+  }
 }
 
 /*
@@ -1295,7 +1304,7 @@ a:hover.marcel-color span{
 }
 
 .mobile-hide {
-  display: none;
+  display: none !important;
   visibility: none;
 }
 
@@ -1310,7 +1319,7 @@ a:hover.marcel-color span{
     visibility: none !important;
   }
   .mobile-hide {
-    display: block;
+    display: block !important;
     visibility: visible;
   }
 }
@@ -1571,8 +1580,12 @@ html{
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}
+          flex-wrap: wrap; }
+  @media only screen and (min-width: 1000px) {
+    .client-list {
+      margin: 0 10% 0 0;
+    }
+  }
 
 .clients {
   order: 2;
@@ -1603,7 +1616,7 @@ html{
     .client-list span {
       font-size: 1rem;
       width: 100%;
-      margin: 0 0 .5em 0;
+      margin: 0 0 2em 0;
     }
   }
   @media only screen and (min-width: 1200px) {
@@ -1617,6 +1630,14 @@ html{
     }
   }
 
+.client-list a {
+  color: #666;
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+}
+
+.client-list a:hover {
+  color: #000;
+}
 
 .header-line, .line-break, .label-break {
   content: '';
@@ -2767,13 +2788,21 @@ a:hover.next--content {
           flex-wrap: wrap;
 }
 
-.press, .experience {
+.press {
   margin: 1em 0; }
   @media only screen and (min-width: 1000px) {
-    .press, .experience {
+    .press {
       margin: 0;
     }
   }
+
+.experience {
+    margin: 2em 0 0 0; }
+    @media only screen and (min-width: 1000px) {
+      .experience {
+        margin: 0;
+      }
+    }
 
 .experience--item {
   display: -webkit-box;
@@ -2788,17 +2817,22 @@ a:hover.next--content {
 
 
 .experience--item-title {
-  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-family: "Miller Disp Lt", Georgia, serif;
+  font-size: 1.25rem;
   line-height: 1em; }
   @media only screen and (min-width: 770px) {
     .experience--item-title {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
   }
   @media only screen and (min-width: 1200px) {
     .experience--item-title {
-      font-size: 2rem;
+      font-size: 1.65rem;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .experience--item-title {
+      font-size: 2.25rem;
     }
   }
 
@@ -2825,13 +2859,22 @@ a:hover.next--content {
   font-family: "Miller Disp It", serif;
   font-style: italic;
   font-size: 1rem;
-  margin: .5em 0 1.5em;
+  margin: .15em 0 1.5em;
   color: #9B9B9B; }
-@media only screen and (min-width: 770px) {
-  .experience--item-timeline {
-    font-size: 1.125rem;
+  @media only screen and (min-width: 770px) {
+    .experience--item-timeline {
+      font-size: 1.45rem;
+      line-height: 1;
+      margin: .35em 0 40px;
+    }
   }
-}
+  @media only screen and (min-width: 770px) {
+    .experience--item-timeline {
+      font-size: 1.75rem;
+      line-height: 1;
+      margin: .35em 0 48px;
+    }
+  }
 
 .experience--br {
   display: block;
@@ -3141,7 +3184,7 @@ a:hover .footer-contact {
   font-family: 'Miller Disp Lt', serif;
   font-size: 2rem;
   color: #222;
-  margin-top: -12px;
+  margin-top: -9px;
   line-height: 1.3; }
   @media only screen and (min-width: 770px) {
     .footer-about {
@@ -3310,6 +3353,10 @@ a:hover .footer-contact {
 
 #westagile #hopsy .next-background {
   background-color: #F77143;
+}
+
+#babynoggin .project-period, #babynoggin .main, #babynoggin .action, #babynoggin .close a:hover .fa, #babynoggin a:hover, #projects #babynoggin .action, #projects #babynoggin .project-period, #projects #babynoggin a:hover, #babynoggin a:hover .footer-contact, #babynoggin a.project-live {
+  color: #F28E1E;
 }
 
 
