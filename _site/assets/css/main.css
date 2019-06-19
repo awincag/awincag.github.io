@@ -1256,6 +1256,7 @@ a:hover.marcel-color span{
       height: 48px;
       border-radius: 50%;
       margin: 2px 0;
+      padding: 14px 0;
       transition: .3s ease-out;
     }
     #header .nav--content a {
@@ -1272,7 +1273,7 @@ a:hover.marcel-color span{
       padding: 0;
     }
     .project-btn-out {
-      margin: 3px 0 0 3px;
+      margin: 0 0 -3px 3px;
     }
     .project-btn-item {
       background-color: #ccc;
@@ -2868,9 +2869,9 @@ a:hover.next--content {
       margin: .35em 0 40px;
     }
   }
-  @media only screen and (min-width: 770px) {
+  @media only screen and (min-width: 1800px) {
     .experience--item-timeline {
-      font-size: 1.75rem;
+      font-size: 1.85rem;
       line-height: 1;
       margin: .35em 0 48px;
     }
