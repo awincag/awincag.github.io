@@ -506,9 +506,9 @@ a:hover.nvolv-color .header-action-a {
   .header-assets-img img.hovered {
     position: absolute;
     opacity: 1;
-    top: -2em;
+    top: 0;
     right: 0;
-    left: -.75em;
+    left: 0;
     bottom: 0px;
   }
 }
@@ -1622,12 +1622,12 @@ html{
   }
   @media only screen and (min-width: 1200px) {
     .client-list span {
-      font-size: 1.125rem;
+      font-size: .875rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     .client-list span {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
 
@@ -1857,7 +1857,7 @@ html{
   display: block;
   content: '';
   height: 1px;
-  background-color: #C8C8C8;
+  background-color: #e8e8e8;
   width: 100%;
 }
 
@@ -2122,7 +2122,7 @@ html{
   display: block;
   content: '';
   height: 1px;
-  background-color: #dadada;
+  background-color: #e8e8e8;
 }
 
 .light .case-study-break, .light .section-break, .light .intro-break {
