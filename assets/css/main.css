@@ -1303,7 +1303,7 @@ a:hover.marcel-color span{
     }
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1350px) {
     .hero-h1 {
       font-size: 7.5rem;
     }
