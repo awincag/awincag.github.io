@@ -1271,6 +1271,7 @@ a:hover.marcel-color span{
 
 
 .content-padding {
+  overflow: hidden;
   padding: 50px 24px; }
   @media only screen and (min-width: 700px) {
     .content-padding {
@@ -2383,6 +2384,7 @@ html{
 }
 
 .home-padding {
+  overflow: hidden;
   padding: 50px 24px; }
   @media only screen and (min-width: 700px) {
     .home-padding {
