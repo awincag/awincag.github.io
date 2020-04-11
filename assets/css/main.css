@@ -392,6 +392,11 @@ img {
       margin: 18em 0 0;
     }
   }
+  @media only screen and (min-width: 2400px) {
+    .case-studies {
+      margin: 24em 0 0;
+    }
+  }
 
 .case-studies .header-label-2 {
   color: #555555;
@@ -574,7 +579,7 @@ a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
   height: 100%;
   z-index: 1;
   background: -webkit-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.2) 100%);
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .header-assets-overlay-2 {
@@ -587,7 +592,7 @@ a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
   height: 100%;
   z-index: 1;
   background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.2) 100%);
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .header-assets {
@@ -614,6 +619,7 @@ a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
   right: 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .header-assets-img {
@@ -629,12 +635,8 @@ a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
 .header-assets-img img {
   position: absolute;
   opacity: 0;
-  top: 0;
-  right: 0;
-  left: 0;
   bottom: 0;
-  height: 100%;
-  width: auto;
+  object-fit: cover;
   -webkit-transition: .4s ease-out;
   transition: .4s ease-out;
   -webkit-transform: translate3d(0,0,0);
@@ -645,12 +647,8 @@ a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
   .header-assets-img img.hovered {
     position: absolute;
     opacity: 1;
-    top: 0;
-    right: 0;
-    left: 0;
     bottom: 0;
-    height: 100%;
-    width: auto;
+    object-fit: cover;
   }
 }
 
