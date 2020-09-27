@@ -606,10 +606,10 @@ a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
   position: absolute;
   bottom: 0;
   right: 0;
-  left: 45%;
-  top: 35%;
-  height: 65%;
-  width: 55%;
+  left: 35%;
+  top: 30%;
+  height: 70%;
+  width: 65%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
