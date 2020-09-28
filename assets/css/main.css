@@ -1548,6 +1548,14 @@ a:hover.marcel-color span{
     }
 }
 
+#about .main {
+  color: #9A404D;
+}
+
+.about-bg {
+  background-color: #9A404D;
+}
+
 
 .vignette {
   background-color: #f7f7f7;
@@ -2659,7 +2667,6 @@ html{
   top: 0;
   height: 4px;
   z-index: 1000;
-  background-color: #fff;
 }
 
 .header-hero {
