@@ -6,7 +6,7 @@ project: Harley-Davidson
 nextProject: marcel
 nextProjectTitle: Marcel
 previousProject: dumptruck
-highlight: Redesigning Harley-Davidson’s Ride Planning Ecosystem
+highlight: A Ride Planning Ecosystem for Moto-heads
 challenge: Enable Harley riders to discover, customize and ride the best routes near them.
 details:
   - label: Role
@@ -66,6 +66,8 @@ menu:
 
       {% include navigation.html %}
 
+      <div class="hero-banner harley-bg"></div>
+
       <div class="home-padding project-hero" style="background-color: #0F0F0F">
         <div class="hero">
           <div class="header-title block">
@@ -74,17 +76,25 @@ menu:
           <div class="header-content">
             <span class="header-project-text main">{{ page.project }}</span>
             <span class="header-project-desc white">{{ page.highlight }}</span>
-            <a href="https://apps.apple.com/us/app/harley-davidson/id1292723595" target="_blank" title="View Live" class="header-project-live">View Live</a>
+            <!-- <a href="https://apps.apple.com/us/app/harley-davidson/id1292723595" target="_blank" title="View Live" class="header-project-live">View Live</a> -->
+            <div class="header--details">
+              {% for item in page.details %}
+                <div class="header--details-item">
+                  <span class="header--details-label">{{ item.label }}</span>
+                  <span class="header--details-content">{{ item.content}}</span>
+                </div>
+              {% endfor %}
+            </div>
           </div>
         </div>
-        <div class="header--details">
+        <!-- <div class="header--details">
           {% for item in page.details %}
             <div class="header--details-item">
               <span class="header--details-label">{{ item.label }}</span>
               <span class="header--details-content">{{ item.content}}</span>
             </div>
           {% endfor %}
-        </div>
+        </div> -->
         <div class="header-hero">
           <picture>
             <img src="../assets/media/harley/hero.png" alt="Screenshot of Harley-Davidson on iPhone">
@@ -129,6 +139,7 @@ menu:
               {% endfor %}
 
             </div>
+            <a href="https://apps.apple.com/us/app/harley-davidson/id1292723595" target="_blank" title="View Live" class="header-project-live">View Live</a>
           </div>
 
 

@@ -7,8 +7,8 @@ previousProject: harleydavidson
 highlight: Connecting the Publicis Groupe's 80,000 Employees.
 challenge: Removing information and work silos across the Publicis Groupe's 150+ brands.
 details:
-  - label: Client
-    content: The Publicis Groupe
+  - label: Role
+    content: Product Design Lead
   - label: Timeline
     content: Jan '18 – May '20
   - label: Delivery
@@ -61,24 +61,25 @@ menu:
 
       {% include navigation.html %}
 
+      <div class="hero-banner marcel-bg"></div>
+
       <div class="home-padding project-hero" style="background-color: #000">
         <div class="hero">
           <div class="header-title block">
             <h1 class="hidden">{{ page.project }}</h1>
           </div>
           <div class="header-content">
-            <span class="header-project-text">{{ page.project }}</span>
+            <span class="header-project-text main">{{ page.project }}</span>
             <span class="header-project-desc white">{{ page.highlight }}</span>
-            <a href="http://www.marcel.ai/" target="_blank" title="View Live" class="header-project-live marcel-color">View Live</a>
-          </div>
-        </div>
-        <div class="header--details">
-          {% for item in page.details %}
-            <div class="header--details-item">
-              <span class="header--details-label">{{ item.label }}</span>
-              <span class="header--details-content">{{ item.content}}</span>
+            <div class="header--details">
+              {% for item in page.details %}
+                <div class="header--details-item">
+                  <span class="header--details-label">{{ item.label }}</span>
+                  <span class="header--details-content">{{ item.content}}</span>
+                </div>
+              {% endfor %}
             </div>
-          {% endfor %}
+          </div>
         </div>
         <div class="header-hero">
           <picture>
@@ -124,6 +125,7 @@ menu:
               {% endfor %}
 
             </div>
+            <a href="http://www.marcel.ai/" target="_blank" title="View Live" class="header-project-live main">View Live</a>
           </div>
 
 

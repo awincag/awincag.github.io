@@ -563,11 +563,19 @@ a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  max-width: 600px;
+  max-width: 600px; }
+@media only screen and (min-width: 1800px) {
+  .case-studies-list {
+    max-width: 800px;
+  }
 }
 
 .header-project {
-  width: 295px;
+  width: 295px; }
+@media only screen and (min-width: 1800px) {
+  .header-project {
+    width: 400px;
+  }
 }
 
 
@@ -1481,17 +1489,18 @@ a:hover.marcel-color span{
   font-size: 1.5rem; }
 @media only screen and (min-width: 1000px) {
   .focus-header {
-    font-size: 1.75rem;
+    font-size: 1.675rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .focus-header {
     margin: .5em 0;
+    font-size:1.75rem;
   }
 }
 @media only screen and (min-width: 1800px) {
   .focus-header {
-    font-size: 1.375rem;
+    font-size: 2rem;
   }
 }
 
@@ -2596,15 +2605,17 @@ html{
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media only screen and (min-width: 1000px) {
+  /* @media only screen and (min-width: 1000px) {
     .header-hero {
       position: absolute;
     }
-  }
+  } */
 
+/*
 .header-hero picture {
   height: calc(100% - 160px);
-}
+} */
+
 
 .project-hero {
   width: 100%;
@@ -2619,10 +2630,8 @@ html{
           flex-direction: column;
   position: relative; }
   @media only screen and (min-width: 1025px) {
-    .project-hero {ß
+    .project-hero {
       width: 100%;
-      height: 95vh;
-      min-height: 800px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -2641,17 +2650,29 @@ html{
   }
 
 
+.hero-banner {
+  position: fixed;
+  display: block;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  z-index: 1000;
+  background-color: #fff;
+}
+
 .header-hero {
   margin: 2em auto 0;
   width: 100%; }
-  @media only screen and (min-width: 700px) {
-    .header-hero {
-      width: 75%;
-    }
-  }
   @media only screen and (min-width: 1000px) {
     .header-hero {
-      width: 50%;
+      margin: 0 auto 0;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .header-hero {
+      margin: -2em auto 0;
     }
   }
 
@@ -2667,12 +2688,34 @@ html{
           align-items: center;
 }
 
+.header-hero.monitor {
+  margin-bottom: -8em; }
+  @media only screen and (min-width: 1000px) {
+    .header-hero.monitor {
+      margin-bottom: -20em; }
+  }
+
+.header-hero.ipad {
+  margin: 2em -5em -5em;
+  width: 150%; }
+  @media only screen and (min-width: 700px) {
+    .header-hero.ipad {
+      margin: 2em -8em -10em;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .header-hero.ipad {
+      margin: -2em -17em -20em;
+    }
+  }
+
+/*
 .header-hero img {
   max-width: 100%;
   width: auto;
   max-height: calc(100% - 80px);
   vertical-align: top;
-}
+} */
 
 .intro {
   display: -webkit-box;
@@ -2840,50 +2883,55 @@ html{
   }
 
 .header-project-text {
-  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  font-family: "Miller Disp It", serif;
   display: block;
-  color: #fff;
   line-height: 1;
-  font-size: 2rem;
-  margin: 0 0 8px; }
+  font-size: 1.125rem;
+  margin: 2rem 0 3rem; }
   @media only screen and (min-width: 1000px) {
     .header-project-text {
-      font-size: 3.25rem;
+      font-size: 1.25rem;
+      margin: 0 0 2em;
     }
   }
   @media only screen and (min-width: 1200px) {
     .header-project-text {
-      font-size: 3.5rem;
+      font-size: 1.5rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     .header-project-text {
-      font-size: 4rem;
+      font-size: 2rem;
     }
   }
 
 
 .header-project-desc {
-  font-family: 'NHaasGroteskDSPro-45Lt', Helvetica, sans-serif;
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
   display: block;
   color: #fff;
   opacity: .95;
-  line-height: 1.2;
-  font-size: 1.875rem;
-  margin: 0 0 8px; }
+  line-height: 1.05;
+  font-size: 2.5rem;
+  margin: 0 0 .875em; }
+  @media only screen and (min-width: 700px) {
+    .header-project-desc {
+      font-size: 3.75rem;
+    }
+  }
   @media only screen and (min-width: 1000px) {
     .header-project-desc {
-      font-size: 2.75rem;
+      font-size: 4.25rem;
     }
   }
   @media only screen and (min-width: 1200px) {
     .header-project-desc {
-      font-size: 3rem;
+      font-size: 4.75rem;
     }
   }
   @media only screen and (min-width: 1800px) {
     .header-project-desc {
-      font-size: 3.5rem;
+      font-size: 5.5rem;
     }
   }
 
@@ -2967,55 +3015,43 @@ html{
     }
   }
 
-  @media only screen and (min-width: 1000px) {
-    .hero {
-      width: 50%;
-    }
-  }
   @media only screen and (min-width: 1200px) {
     .hero {
-      width: 50%;
+      display: grid;
+      -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 24px;
+      grid-template-areas: "title title title title title title title title title title free free ";
+    }
+    .header-content {
+      grid-area: title;
     }
   }
+
+
 
 .header--details {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
   margin: 24px 0 0; }
   @media only screen and (min-width: 700px) {
     .header--details {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
     }
   }
   @media only screen and (min-width: 1000px) {
     .header--details {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      width: 50%;
-      margin: 200px 0 0;
     }
   }
   @media only screen and (min-width: 1200px) {
     .header--details {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
       margin: 0 0 -20px;
       width: 100%;
     }
@@ -3024,17 +3060,44 @@ html{
 .header--details-item, .intro-details-2 {
   font-family: 'NHaasGroteskDSPro-45Lt', Helvetica, sans-serif;
   font-size: 1.125rem;
-  margin:0 32px 0 0;
+  margin:0 24px 0 0;  }
+@media only screen and (min-width: 700px) {
+  .header--details-item, .intro-details-2 {
+    margin: 0 32px 0 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .header--details-item, .intro-details-2 {
+    margin: 0 48px 0 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header--details-item, .intro-details-2 {
+    margin: 0 64px 0 0;
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .header--details-item, .intro-details-2 {
+    margin: 0 64px 0 0;
+    font-size: 1.5rem;
+  }
 }
 
 .header--details-item {
   color: #fff;
-}
-
-
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 700px) {
+    .header--details-item {
+      flex: 1;
+    }
+  }
 
 .header--details-label {
-  opacity: .65;
+  opacity: .5;
+  font-family: "Miller Disp It", serif;
+  margin: 0 0 0.5rem;
 }
 
 .list-item {
@@ -5162,6 +5225,10 @@ a:hover .footer-contact {
   color: #ff6600;
 }
 
+.harley-bg {
+  background-color: #ff6600;
+}
+
 #roadtrip .project-period {
   color: #32B67A;
 }
@@ -5225,6 +5292,10 @@ a:hover .footer-contact {
   color: #8F2CFF;
 }
 
+.marcel-bg {
+  background-color: #8F2CFF;
+}
+
 #parachute .project-period, #parachute .main, #parachute .action, #parachute .close a:hover .fa, #parachute a:hover, #projects #parachute .action, #projects #parachute .project-period, #projects #parachute a:hover, #parachute a:hover .footer-contact, #parachute a.project-live {
   color: #15BAAA;
 }
@@ -5233,9 +5304,17 @@ a:hover .footer-contact {
   color: #F28E1E;
 }
 
+.baby-bg {
+  background-color: #BE702A;
+}
+
 
 #octaneai .project-period, #octaneai .main, #octaneai .action, #octaneai .close a:hover .fa, #octaneai a:hover, #projects #octaneai .action, #projects #octaneai .project-period, #projects #octaneai a:hover, #octaneai a:hover .footer-contact, #octaneai a.project-live {
   color: #106BE0;
+}
+
+.octane-bg {
+  background-color: #4089E6;
 }
 
 #octaneai .project--header {
@@ -5276,6 +5355,10 @@ a:hover .footer-contact {
 
 #dumptruck .project-period, #dumptruck .main, #dumptruck .action, #dumptruck .close a:hover .fa, #dumptruck a:hover, #projects #dumptruck .action, #projects #dumptruck .project-period, #projects #dumptruck a:hover, #dumptruck a:hover .footer-contact, #dumptruck a.project-live {
   color: #1C6FB3;
+}
+
+.dumptruck-bg {
+  background-color: #0176B3;
 }
 
 #dumptruck .project--header {
