@@ -384,12 +384,12 @@ img {
   margin: 14em 0 0; }
   @media only screen and (min-width: 770px) {
     .case-studies {
-      margin: 14em 0 0;
+      margin: 16em 0 0;
     }
   }
   @media only screen and (min-width: 1800px) {
     .case-studies {
-      margin: 18em 0 0;
+      margin: 20em 0 0;
     }
   }
   @media only screen and (min-width: 2400px) {
@@ -419,7 +419,7 @@ img {
   @media only screen and (min-width: 700px) {
     .p-action a {
       font-size: 1.25rem;
-      padding: .15em 0;
+      padding: 0;
     }
   }
   @media only screen and (min-width: 1800px) {
@@ -427,6 +427,10 @@ img {
       font-size: 1.65rem;
     }
   }
+
+p.ov {
+  margin: 0 0 1em;
+}
 
 .case-studies p {
   margin: 0; }
@@ -548,6 +552,10 @@ a:hover.octane-color .header-action-a, a:hover.octane-color .header-action-year,
 
 a:hover.dumptruck-color .header-action-a, a:hover.dumptruck-color .header-action-year, a:hover.dumptruck-color .f-cs-item-num, a:hover.dumptruck-color .f-cs-item-title {
   color: #0076B3;
+}
+
+a:hover.archive-color .header-action-a, a:hover.archive-color .header-action-year, a:hover.archive-color .f-cs-item-num, a:hover.archive-color .f-cs-item-title {
+  color: #9A404D;
 }
 
 a:hover.nvolv-color .header-action-a, a:hover.nvolv-color .header-action-year {
@@ -1341,14 +1349,20 @@ a:hover.marcel-color span{
   margin: 40px 0;
 }
 
+.nh-b {
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+}
+
+.mban-l {
+  font-family: "Miller Ban Lt", Georgia, serif;
+}
 
 .hero-h1 {
-  font-family: "Miller Ban Lt", Georgia, serif;
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    font-size: 3.5rem; }
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 3.5rem; }
     @media only screen and (min-width: 770px) {
       .hero-h1 {
         font-size: 5rem;
@@ -2666,8 +2680,12 @@ html{
   right: 0;
   top: 0;
   height: 4px;
-  z-index: 1000;
-}
+  z-index: 1000; }
+  @media only screen and (min-width: 1800px) {
+    .hero-banner {
+      height: 6px;
+    }
+  }
 
 .header-hero {
   margin: 2em auto 0;
@@ -2715,6 +2733,17 @@ html{
       margin: -2em -17em -20em;
     }
   }
+
+.header-hero.archive {
+  z-index:0;
+  margin-top: -10em;
+  margin-bottom: -4em; }
+  @media only screen and (min-width: 1000px) {
+    .header-hero.archive {
+      margin-top: -15em;
+      margin-bottom: -20em; }
+  }
+
 
 /*
 .header-hero img {
@@ -3855,7 +3884,7 @@ html{
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
-  padding: 0 0 0.25em 0; }
+  padding: 0 0 32px 0; }
   @media only screen and (min-width: 700px) {
     .projects li {
       -webkit-flex-basis: 46%;
@@ -3915,6 +3944,7 @@ html{
   @media only screen and (min-width: 1200px) {
     .header-label-2 {
       font-size: 1.25rem;
+      margin: 0 0 3rem;
     }
   }
   @media only screen and (min-width: 1800px) {
@@ -4777,6 +4807,9 @@ footer.f-light {
     .f-cs-item:nth-child(5), .header-action:nth-child(5) {
       order: 4;
     }
+    .f-cs-item:nth-child(6), .header-action:nth-child(6) {
+      order: 6;
+    }
   }
 @media only screen and (min-width: 1000px) {
   .f-cs-item {
@@ -5414,6 +5447,10 @@ a:hover .footer-contact {
   background-color: #1C6FB3;
 }
 
+.archive-bg {
+  background-color: #fff;
+}
+
 
 #nvolv .project-period, #nvolv .main, #nvolv .action, #nvolv .close a:hover .fa, #nvolv a:hover, #projects #nvolv .action, #projects #nvolv .project-period, #projects #nvolv a:hover, #nvolv a:hover .footer-contact, #nvolv a.project-live {
   color: #F77143;
@@ -5748,7 +5785,7 @@ a:hover .footer-contact {
 }
 
 .p-action {
-  margin-top: .25em;
+  margin-top: .15em;
   position: relative;
 }
 
@@ -5813,7 +5850,7 @@ a:hover .footer-contact {
     visibility: hidden;
   }
   .p-process li {
-    padding: 0 0 0.25em 1.5em;
+    padding: 0 0 .5em 1.5em;
   }
   .mobile-mockup li {
     padding:0 1em 1em 1em;
@@ -5866,7 +5903,7 @@ a:hover .footer-contact {
     max-width: none;
   }
   #projects li {
-    padding: 0 0 1.8em 0;
+    padding: 0 0 80px 0;
   }
 }
 
