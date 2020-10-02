@@ -490,7 +490,7 @@ a .header-action-a {
     }
   }
 
-a .header-action-year {
+a .header-action-year, .header-action-year {
   font-family: 'NHaasGroteskDSPro-45Lt', helvetica, sans-serif;
   color: #fff;
   -webkit-transition-duration: .2s;
@@ -502,6 +502,16 @@ a .header-action-year {
       line-height: 18px;
     }
   }
+
+.industries-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.industries-item .list-label {
+  margin: 0 .25em 0 0;
+  display: block;
+}
 
 
 a:hover.about-color.header-action {
@@ -1279,7 +1289,7 @@ a:hover.marcel-color span{
       -ms-grid-columns: (1fr)[12];
           grid-template-columns: repeat(12, 1fr);
       grid-template-areas:
-        "sidebar sidebar sidebar sidebar sidebar . main main main main main main";
+        "sidebar sidebar sidebar sidebar . . main main main main main main";
       grid-gap: 24px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -1287,6 +1297,17 @@ a:hover.marcel-color span{
           -ms-flex-direction: row;
               flex-direction: row;
   }
+}
+
+.caption {
+  font-family: 'NHaasGroteskDSPro-45Lt', helvetica, sans-serif;
+  font-size: .875rem;
+  color: #757575;
+  margin: .75em 0;
+}
+
+.content .caption a:hover {
+  color: #9A404D;
 }
 
 
@@ -1392,7 +1413,7 @@ a:hover.marcel-color span{
   font-style: italic;
 }
 
-.focuses-list {
+.focuses-list, .services {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1414,7 +1435,7 @@ a:hover.marcel-color span{
     }
 }
 
-.focus-item {
+.focus-item, .capabilities, .industries {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
@@ -1425,21 +1446,21 @@ a:hover.marcel-color span{
   /* margin: 1em auto 40px 0; */
   margin-bottom: 60px; }
   @media only screen and (min-width: 700px) {
-    .focus-item {
+    .focus-item, .capabilities, .industries {
       -webkit-flex-basis: 48%;
           -ms-flex-preferred-size: 48%;
               flex-basis: 48%;
     }
   }
   @media only screen and (min-width: 770px) {
-    .focus-item {
+    .focus-item, .capabilities, .industries {
       -webkit-flex-basis: 100%;
           -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
     }
   }
   @media only screen and (min-width: 1200px) {
-    .focus-item {
+    .focus-item, .capabilities, .industries {
       -webkit-flex-basis: 46%;
           -ms-flex-preferred-size: 46%;
               flex-basis: 46%;
@@ -1533,6 +1554,7 @@ a:hover.marcel-color span{
     font-size: 1.375rem;
   }
 }
+
 
 .about-img img {
   width: 100%;
@@ -1671,15 +1693,18 @@ a:hover.marcel-color span{
     }
   }
 
-.timeline-br {
+.timeline-br, .focuses-br {
   content: '';
   display: block;
-  position: absolute;
   width: 100%;
+  height: 1px;
+}
+
+.timeline-br {
+  position: absolute;
   left: 0;
   right: 0;
   top: 47px;
-  height: 1px;
   margin: 10px 0;
   background-color: #c4c4c4; }
   @media only screen and (min-width: 1200px) {
@@ -1691,6 +1716,11 @@ a:hover.marcel-color span{
       margin: 10px 0;
     }
   }
+
+.focuses-br {
+  background-color: #171717;
+  margin: 20px 0 80px;
+}
 
 .timeline-item {
   display: -webkit-box;
