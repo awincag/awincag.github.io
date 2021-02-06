@@ -415,6 +415,10 @@ img {
   background-color: #FF0000;
 }
 
+.partial-available {
+  background-color: #FFa500;
+}
+
 .live-status {
   font-family: 'NHaasGroteskDSPro-55Rg', helvetica, sans-serif;
   font-size: 1rem;
