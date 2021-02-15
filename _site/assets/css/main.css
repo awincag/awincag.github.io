@@ -70,6 +70,12 @@ p{
 	font-style: normal;
 }
 
+.h1-light {
+	font-family: 'NHaasGroteskDSPro-45Lt', Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*
 .subHeader{
   font-size:1.5em;
@@ -122,21 +128,21 @@ h1,h2,h3{
 h1{
   font-size: 4.6rem; }
 
-.h1 {
+.h1, .h1-light {
   font-size: 1.5rem;
   line-height: 1.15em;}
   @media only screen and (min-width: 1000px) {
-    .h1 {
+    .h1, .h1-light {
       font-size: 1.75rem;
     }
   }
   @media only screen and (min-width: 1200px) {
-    .h1 {
+    .h1, .h1-light {
       font-size: 2.25rem;
     }
   }
   @media only screen and (min-width: 1800px) {
-    .h1 {
+    .h1, .h1-light {
       font-size: 3rem;
     }
 }
@@ -308,6 +314,8 @@ img {
 }
 
 .header-title {
+  display: flex;
+  flex-direction: column;
   margin: 2em 0 3em; }
   @media only screen and (min-width: 770px) {
     .header-title {
@@ -419,10 +427,42 @@ img {
   background-color: #FFa500;
 }
 
-.live-status {
+.live-status, .location {
   font-family: 'NHaasGroteskDSPro-55Rg', helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.live-status {
+  margin-right: 32px;
+}
+
+.location {
+  color: #757575;
+}
+
+a:hover.location {
+  color: #fff;
+}
+
+.location {
+  display: flex;
+}
+
+.location-item {
+  margin-right: 8px;
+  display: flex;
+}
+
+.coordinate {
+  margin-right: 2px;
+}
+
+.coordinate-degree {
+  font-family: 'NHaasGroteskTXStd-75Bd', Helvetica, sans-serif;
+  font-size: .875rem;
+  line-height: 1.5;
+  margin-top: 2px;
 }
 
 
@@ -445,21 +485,44 @@ img {
           justify-content: space-between;
 }
 
+.header-about-content a.current.header-action {
+  font-family: 'NHaasGroteskDSPro-55Rg', helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d8d8d8;
+}
+
+.header-current {
+  display: flex;
+  align-items: center;
+}
+
+.header-current-logo {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+a .current-action {
+  color: #fff;
+}
+
 .case-studies {
   margin: 14em 0 0; }
   @media only screen and (min-width: 770px) {
     .case-studies {
-      margin: 16em 0 0;
+      margin: 22em 0 0;
     }
   }
   @media only screen and (min-width: 1800px) {
     .case-studies {
-      margin: 20em 0 0;
+      margin: 26em 0 0;
     }
   }
   @media only screen and (min-width: 2400px) {
     .case-studies {
-      margin: 24em 0 0;
+      margin: 32em 0 0;
     }
   }
 
@@ -1359,7 +1422,7 @@ a:hover.marcel-color span{
       -ms-flex-direction: column;
           flex-direction: column; }
   @media only screen and (min-width: 770px) {
-    .content, .hero-content {
+    .content {
       display: -ms-grid;
       display: grid;
       -ms-grid-columns: (1fr)[12];
@@ -1373,6 +1436,23 @@ a:hover.marcel-color span{
           -ms-flex-direction: row;
               flex-direction: row;
   }
+}
+
+@media only screen and (min-width: 1025px) {
+  .hero-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "sidebar sidebar sidebar sidebar . . main main main main main main";
+    grid-gap: 24px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
 }
 
 .caption {
@@ -1403,7 +1483,7 @@ a:hover.marcel-color span{
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1025px) {
   .content-padding {
       padding: 120px;
   }
@@ -1462,25 +1542,25 @@ a:hover.marcel-color span{
   font-size: 3.5rem; }
     @media only screen and (min-width: 770px) {
       .hero-h1 {
-        font-size: 5rem;
+        font-size: 4rem;
       }
   }
 
   @media only screen and (min-width: 1000px) {
     .hero-h1 {
-      font-size: 6.5rem;
+      font-size: 4.5rem;
     }
   }
 
   @media only screen and (min-width: 1350px) {
     .hero-h1 {
-      font-size: 7.5rem;
+      font-size: 5.25rem;
     }
   }
 
   @media only screen and (min-width: 1800px) {
     .hero-h1 {
-        font-size: 10rem;
+        font-size: 6.5rem;
     }
   }
 
@@ -1529,14 +1609,14 @@ a:hover.marcel-color span{
     }
   }
   @media only screen and (min-width: 770px) {
-    .focus-item, .capabilities, .industries {
+    .focus-item {
       -webkit-flex-basis: 100%;
           -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
     }
   }
   @media only screen and (min-width: 1200px) {
-    .focus-item, .capabilities, .industries {
+    .capabilities, .industries {
       -webkit-flex-basis: 46%;
           -ms-flex-preferred-size: 46%;
               flex-basis: 46%;
@@ -2547,7 +2627,7 @@ html{
       padding: 100px;
     }
   }
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 1025px) {
     .home-padding {
       padding: 120px;
     }
@@ -2807,11 +2887,6 @@ html{
   @media only screen and (min-width: 1000px) {
     .header-hero {
       margin: 0 auto 0;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    .header-hero {
-      margin: -2em auto 0;
     }
   }
 
@@ -3202,7 +3277,7 @@ html{
   }
   @media only screen and (min-width: 1200px) {
     .header--details {
-      margin: 0 0 -20px;
+      margin: 0;
       width: 100%;
     }
   }
@@ -3210,25 +3285,29 @@ html{
 .header--details-item, .intro-details-2 {
   font-family: 'NHaasGroteskDSPro-45Lt', Helvetica, sans-serif;
   font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.header--details-item {
   margin:0 24px 0 0;  }
 @media only screen and (min-width: 700px) {
-  .header--details-item, .intro-details-2 {
+  .header--details-item {
     margin: 0 32px 0 0;
   }
 }
 @media only screen and (min-width: 1000px) {
-  .header--details-item, .intro-details-2 {
+  .header--details-item {
     margin: 0 48px 0 0;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .header--details-item, .intro-details-2 {
+  .header--details-item {
     margin: 0 64px 0 0;
     font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 1800px) {
-  .header--details-item, .intro-details-2 {
+  .header--details-item {
     margin: 0 64px 0 0;
     font-size: 1.5rem;
   }
