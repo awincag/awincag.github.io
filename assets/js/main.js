@@ -110,9 +110,59 @@
     };
   }
 
+  function initViewportVideos() {
+    var videos = document.querySelectorAll('[data-viewport-video]');
+    if (!videos.length || !('IntersectionObserver' in window)) return;
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var visible = new Set();
+    var manuallyPaused = new Set();
+
+    function play(video) {
+      if (reducedMotion.matches || document.hidden || manuallyPaused.has(video)) return;
+      video.muted = true;
+      var promise = video.play();
+      if (promise && promise.catch) promise.catch(function () {});
+    }
+
+    var observer = new window.IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var video = entry.target;
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
+          visible.add(video);
+          play(video);
+        } else {
+          visible.delete(video);
+          video.pause();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    Array.prototype.forEach.call(videos, function (video) {
+      video.addEventListener('pause', function () {
+        if (visible.has(video) && !document.hidden && !reducedMotion.matches) manuallyPaused.add(video);
+      });
+      video.addEventListener('play', function () { manuallyPaused.delete(video); });
+      observer.observe(video);
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      visible.forEach(function (video) {
+        if (document.hidden) video.pause();
+        else play(video);
+      });
+    });
+    if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', function () {
+      visible.forEach(function (video) {
+        if (reducedMotion.matches) video.pause();
+        else play(video);
+      });
+    });
+  }
+
   var socialLabels = initSocialLabels();
   initClipboard(socialLabels);
   initArchiveBackground();
+  initViewportVideos();
 
   // The home hero is a CSS-driven marquee, not a scrollable carousel.
   // Its former scroll-indicator loop referenced a removed toggle handler.

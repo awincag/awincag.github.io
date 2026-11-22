@@ -1,8 +1,8 @@
 <script src="../assets/js/headroom.min.js"></script>
-<script src="../assets/js/smooth-scroll.min.js"></script>
+{% unless page.native_media %}<script src="../assets/js/smooth-scroll.min.js"></script>{% endunless %}
 <script src="../assets/js/clipboard.min.js"></script>
 
-<script src="../assets/js/jquery-3.6.3.js"></script>
+{% unless page.native_media %}<script src="../assets/js/jquery-3.6.3.js"></script>{% endunless %}
 <script src="../assets/js/main.js"></script>
 <script>
   (function() {
