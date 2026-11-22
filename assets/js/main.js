@@ -113,16 +113,22 @@
   function initViewportVideos() {
     var videos = Array.prototype.slice.call(document.querySelectorAll('[data-viewport-video]'));
     if (!videos.length) return;
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var states = new Map();
+    var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var pausedByUser = new Set();
+    var manuallyStarted = new Set();
+    var reported = new Set();
+    var frame = null;
 
     function sync(video) {
-      var state = states.get(video);
-      var shouldPlay = state.visible && !document.hidden &&
-        !state.userPaused && (!reducedMotion.matches || state.userStarted);
+      var rect = video.getBoundingClientRect();
+      var visible = rect.width > 0 && rect.height > 0 &&
+        rect.bottom > 0 && rect.top < window.innerHeight &&
+        rect.right > 0 && rect.left < window.innerWidth;
+      var shouldPlay = visible && !document.hidden && !pausedByUser.has(video) &&
+        (!motion.matches || manuallyStarted.has(video));
 
+      video.autoplay = shouldPlay;
       if (!shouldPlay) {
-        video.autoplay = false;
         if (!video.paused) video.pause();
         return;
       }
@@ -130,90 +136,66 @@
       video.defaultMuted = true;
       video.muted = true;
       video.playsInline = true;
-      video.autoplay = true;
-      if (!video.paused || state.pending) return;
-      state.pending = true;
+      if (!video.paused) return;
       var promise = video.play();
-      if (promise && promise.then) {
-        promise.then(function () {
-          state.pending = false;
-          if (!state.visible || document.hidden || state.userPaused ||
-              (reducedMotion.matches && !state.userStarted)) {
-            video.autoplay = false;
-            video.pause();
-          }
-        }, function (error) {
-          state.pending = false;
-          if (error.name !== 'AbortError' && !state.reported) {
-            state.reported = true;
-            console.warn('Portfolio video could not autoplay:', video.currentSrc || video.src, error);
-          }
-          if (error.name === 'AbortError' && state.visible && !video.autoplay) sync(video);
-        });
-      } else {
-        state.pending = false;
-      }
+      if (promise && promise.catch) promise.catch(function (error) {
+        if (error.name !== 'AbortError' && !reported.has(video)) {
+          reported.add(video);
+          console.warn('Portfolio video playback:', video.currentSrc || video.src, error);
+        }
+      });
     }
 
-    function toggle(video) {
-      var state = states.get(video);
-      state.userStarted = true;
-      state.userPaused = !video.paused || state.pending;
-      sync(video);
+    function update() {
+      frame = null;
+      videos.forEach(sync);
+    }
+
+    function schedule() {
+      if (frame === null) frame = window.requestAnimationFrame(update);
     }
 
     videos.forEach(function (video) {
-      states.set(video, { visible: false, userPaused: false, userStarted: false, pending: false });
       video.defaultMuted = true;
       video.muted = true;
       video.playsInline = true;
       video.controls = false;
-      video.addEventListener('loadeddata', function () { sync(video); });
-      video.addEventListener('click', function () { toggle(video); });
+
+      function toggle() {
+        if (video.paused) {
+          pausedByUser.delete(video);
+          manuallyStarted.add(video);
+        } else {
+          pausedByUser.add(video);
+        }
+        sync(video);
+      }
+
+      video.addEventListener('loadedmetadata', schedule);
+      video.addEventListener('canplay', schedule);
+      video.addEventListener('error', function () {
+        console.warn('Portfolio media error:', video.currentSrc || video.src, video.error);
+      });
+      video.addEventListener('click', toggle);
       video.addEventListener('keydown', function (event) {
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault();
-          toggle(video);
+          toggle();
         }
       });
     });
 
-    function setVisible(video, visible) {
-      var state = states.get(video);
-      if (state.visible === visible) return;
-      state.visible = visible;
-      sync(video);
-    }
-
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    window.addEventListener('pageshow', schedule);
+    window.addEventListener('load', schedule);
+    document.addEventListener('visibilitychange', update);
+    if (motion.addEventListener) motion.addEventListener('change', update);
     if ('IntersectionObserver' in window) {
-      var frames = new Map();
-      var observer = new window.IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          setVisible(frames.get(entry.target), entry.isIntersecting && entry.intersectionRatio > 0);
-        });
-      }, { threshold: [0, 0.01] });
-      videos.forEach(function (video) {
-        var frame = video.closest('.looping-video') || video;
-        frames.set(frame, video);
-        observer.observe(frame);
-      });
-    } else {
-      function checkVisibility() {
-        videos.forEach(function (video) {
-          var rect = video.getBoundingClientRect();
-          setVisible(video, rect.bottom > 0 && rect.top < window.innerHeight &&
-            rect.right > 0 && rect.left < window.innerWidth);
-        });
-      }
-      window.addEventListener('scroll', checkVisibility, { passive: true });
-      window.addEventListener('resize', checkVisibility);
-      checkVisibility();
+      var observer = new window.IntersectionObserver(schedule, { threshold: [0, 0.01] });
+      videos.forEach(function (video) { observer.observe(video); });
     }
-
-    document.addEventListener('visibilitychange', function () { videos.forEach(sync); });
-    if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', function () {
-      videos.forEach(sync);
-    });
+    update();
   }
 
   function initWorkCursor() {
