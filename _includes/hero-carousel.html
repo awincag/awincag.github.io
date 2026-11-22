@@ -1,0 +1,12 @@
+<div class="hero-assets"{% if include.duplicate %} aria-hidden="true"{% endif %}>
+  {% for item in site.data.hero %}
+    <div class="hero-asset-item">
+      <div class="hero-item-img">
+        <img src="{{ item.image | relative_url }}" alt="{{ item.alt | escape }}">
+      </div>
+      <div class="hero-item-bg">
+        <img src="{{ '/assets/media/drop-shadow.png' | relative_url }}" alt="">
+      </div>
+    </div>
+  {% endfor %}
+</div>

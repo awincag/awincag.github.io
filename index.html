@@ -2,6 +2,7 @@
 meta_title: Alex Cagwin | Digital Designer
 ---
 
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
 
@@ -13,134 +14,9 @@ meta_title: Alex Cagwin | Digital Designer
 
     <div id="main" class="">
 
-      <a id="toggle" href="/work" class="hero black-bg hero-padding">
-        <div id="carousel" class="hero-assets">
-
-          <!-- Harley-Davidson -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-hd.png" alt="Harley-Davidson Image">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-          <!-- Marcel -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-mrcl.png" alt="Screenshot of Marcel results">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-
-          <!-- Metromile -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-mm.png" alt="Screenshot of Metromile Bundling discount">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow"">
-            </div>
-          </div>
-
-
-          <!-- ShearShare -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-ss.png" alt="Screenshot of ShearShare Homepage">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-
-          <!-- Dumptruck -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-dt.png" alt="Screenshot of Dumptruck Ordering Page">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-          <!-- <div class="hero-asset-item white desktop-hide">
-            <div class="hero-btn">
-              <span class="hero-btn-txt">View All Work</span>
-            </div>
-          </div> -->
-
-
-        </div>
-
-        <div id="carousel" class="hero-assets">
-
-          <!-- Harley-Davidson -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-hd.png" alt="Harley-Davidson Image">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-          <!-- Marcel -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-mrcl.png" alt="Screenshot of Marcel results">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-
-          <!-- Metromile -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-mm.png" alt="Screenshot of Metromile Bundling discount">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow"">
-            </div>
-          </div>
-
-
-          <!-- ShearShare -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-ss.png" alt="Screenshot of ShearShare Homepage">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-
-          <!-- Dumptruck -->
-          <div class="hero-asset-item">
-            <div class="hero-item-img">
-              <img src="../assets/media/hero-dt.png" alt="Screenshot of Dumptruck Ordering Page">
-            </div>
-            <div class="hero-item-bg">
-              <img src="../assets/media/drop-shadow.png" alt="background drop-shadow">
-            </div>
-          </div>
-
-          <!-- <div class="hero-asset-item white desktop-hide">
-            <div class="hero-btn">
-              <span class="hero-btn-txt">View All Work</span>
-            </div>
-          </div> -->
-
-
-        </div>
+      <a id="toggle" href="/work" class="hero black-bg hero-padding" aria-label="View selected work">
+        {% include hero-carousel.html %}
+        {% include hero-carousel.html duplicate=true %}
 
 
         <!-- hero indicators -->
@@ -613,8 +489,7 @@ meta_title: Alex Cagwin | Digital Designer
               <div class="p-action nh-t-55">
                 <p>Helping doctors and parents to screen children more effectivelly at <a Href="http://www.babynoggin.com/" target="_blank" title="BabyNoggin" class="projects-link">BabyNoggin</a>. Led design throughout the latter half of 2018.</p>
               </div>
-            </li
-
+            </li>
           </ul>
 
 

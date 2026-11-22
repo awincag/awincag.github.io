@@ -53,3 +53,7 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Internal development instructions must not be emitted in the public build.
+exclude:
+  - AGENTS.md
