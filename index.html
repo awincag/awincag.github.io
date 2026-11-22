@@ -15,7 +15,7 @@ native_media: true
 
     <div id="main" class="">
 
-      <a id="toggle" href="/work" class="hero black-bg hero-padding" aria-label="View selected work">
+      <a id="toggle" href="/work" class="hero black-bg hero-padding" aria-label="View selected work" data-work-cursor>
         {% include hero-carousel.html %}
         {% include hero-carousel.html duplicate=true %}
 
@@ -26,6 +26,8 @@ native_media: true
             <div id="indicator" class="scroll-indicator"></div>
           </div>
         </div>
+        <span class="work-cursor nh-t-55" aria-hidden="true">View Work</span>
+
 
       </a>
     </div>

@@ -4531,3 +4531,53 @@ footer a:hover .foot-btn {
 
 /* Intrinsic dimensions reserve layout space; rendered images stay responsive. */
 .archive img[width][height] { max-width: 100%; height: auto; }
+
+/* A live-text cursor for the homepage work link. Keep the native cursor
+   until the replacement is positioned and fully visible. */
+.hero[data-work-cursor] {
+  cursor: pointer;
+}
+.hero[data-work-cursor].work-cursor-active {
+  cursor: none;
+}
+.hero[data-work-cursor] .work-cursor {
+  position: absolute;
+  z-index: 101;
+  left: var(--work-cursor-x, 50%);
+  top: var(--work-cursor-y, 50%);
+  width: 96px;
+  height: 96px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+}
+.hero[data-work-cursor].work-cursor-active .work-cursor {
+  opacity: 1;
+  visibility: visible;
+}
+.hero[data-work-cursor]:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+.hero[data-work-cursor]:focus-visible:not(.work-cursor-active) .work-cursor {
+  left: auto;
+  top: auto;
+  right: 12px;
+  bottom: 12px;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero[data-work-cursor].work-cursor-active { cursor: pointer; }
+}

@@ -159,10 +159,86 @@
     });
   }
 
+  function initWorkCursor() {
+    var hero = document.querySelector('[data-work-cursor]');
+    if (!hero) return;
+    var cursor = hero.querySelector('.work-cursor');
+    if (!cursor || !window.matchMedia || !window.requestAnimationFrame) return;
+
+    var finePointer = window.matchMedia('(any-hover: hover) and (any-pointer: fine)');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var pointer = null;
+    var frame = null;
+
+    function hide() {
+      pointer = null;
+      if (frame !== null) window.cancelAnimationFrame(frame);
+      frame = null;
+      hero.classList.remove('work-cursor-active');
+    }
+
+    function update() {
+      frame = null;
+      if (!pointer || !finePointer.matches || reducedMotion.matches) {
+        hide();
+        return;
+      }
+
+      var rect = hero.getBoundingClientRect();
+      var left = Math.max(rect.left, 0);
+      var right = Math.min(rect.right, document.documentElement.clientWidth);
+      var top = Math.max(rect.top, 0);
+      var bottom = Math.min(rect.bottom, document.documentElement.clientHeight);
+      var radiusX = cursor.offsetWidth / 2 + 4;
+      var radiusY = cursor.offsetHeight / 2 + 4;
+
+      if (right - left < radiusX * 2 || bottom - top < radiusY * 2 ||
+          pointer.x < left || pointer.x >= right || pointer.y < top || pointer.y >= bottom) {
+        hide();
+        return;
+      }
+
+      var x = Math.max(left + radiusX, Math.min(right - radiusX, pointer.x));
+      var y = Math.max(top + radiusY, Math.min(bottom - radiusY, pointer.y));
+      hero.style.setProperty('--work-cursor-x', (x - rect.left - hero.clientLeft) + 'px');
+      hero.style.setProperty('--work-cursor-y', (y - rect.top - hero.clientTop) + 'px');
+      hero.classList.add('work-cursor-active');
+    }
+
+    function schedule() {
+      if (pointer && frame === null) frame = window.requestAnimationFrame(update);
+    }
+
+    function move(event) {
+      if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') {
+        hide();
+        return;
+      }
+      if (!finePointer.matches || reducedMotion.matches) { hide(); return; }
+      pointer = { x: event.clientX, y: event.clientY };
+      schedule();
+    }
+
+    hero.addEventListener('pointerenter', move);
+    hero.addEventListener('pointermove', move, { passive: true });
+    hero.addEventListener('pointerleave', hide);
+    hero.addEventListener('pointercancel', hide);
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    window.addEventListener('blur', hide);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) hide();
+    });
+    [finePointer, reducedMotion].forEach(function (query) {
+      if (query.addEventListener) query.addEventListener('change', hide);
+    });
+  }
+
   var socialLabels = initSocialLabels();
   initClipboard(socialLabels);
   initArchiveBackground();
   initViewportVideos();
+  initWorkCursor();
 
   // The home hero is a CSS-driven marquee, not a scrollable carousel.
   // Its former scroll-indicator loop referenced a removed toggle handler.
