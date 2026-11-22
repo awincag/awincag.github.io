@@ -4562,7 +4562,7 @@ footer a:hover .foot-btn {
   transform: translate(-50%, -50%);
 }
 .hero[data-work-cursor].work-cursor-active .work-cursor {
-  opacity: 1;
+  opacity: var(--work-cursor-opacity, 1);
   visibility: visible;
 }
 .hero[data-work-cursor]:focus-visible {

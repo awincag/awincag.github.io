@@ -189,20 +189,22 @@
       var right = Math.min(rect.right, document.documentElement.clientWidth);
       var top = Math.max(rect.top, 0);
       var bottom = Math.min(rect.bottom, document.documentElement.clientHeight);
-      var radiusX = cursor.offsetWidth / 2 + 4;
-      var radiusY = cursor.offsetHeight / 2 + 4;
-
-      if (right - left < radiusX * 2 || bottom - top < radiusY * 2 ||
-          pointer.x < left || pointer.x >= right || pointer.y < top || pointer.y >= bottom) {
+      if (pointer.x < left || pointer.x >= right || pointer.y < top || pointer.y >= bottom) {
         hide();
         return;
       }
 
-      var x = Math.max(left + radiusX, Math.min(right - radiusX, pointer.x));
-      var y = Math.max(top + radiusY, Math.min(bottom - radiusY, pointer.y));
-      hero.style.setProperty('--work-cursor-x', (x - rect.left - hero.clientLeft) + 'px');
-      hero.style.setProperty('--work-cursor-y', (y - rect.top - hero.clientTop) + 'px');
-      hero.classList.add('work-cursor-active');
+      // Keep the label centered on the pointer, rather than clamping it
+      // to an inset boundary. Fade it out before its circle is clipped.
+      var radius = Math.max(cursor.offsetWidth, cursor.offsetHeight) / 2;
+      var distance = Math.min(pointer.x - left, right - pointer.x, pointer.y - top, bottom - pointer.y);
+      var t = Math.max(0, Math.min(1, (distance - radius) / 48));
+      var opacity = t * t * (3 - 2 * t);
+
+      hero.style.setProperty('--work-cursor-x', (pointer.x - rect.left - hero.clientLeft) + 'px');
+      hero.style.setProperty('--work-cursor-y', (pointer.y - rect.top - hero.clientTop) + 'px');
+      hero.style.setProperty('--work-cursor-opacity', String(opacity));
+      hero.classList.toggle('work-cursor-active', opacity > 0);
     }
 
     function schedule() {
