@@ -111,51 +111,108 @@
   }
 
   function initViewportVideos() {
-    var videos = document.querySelectorAll('[data-viewport-video]');
-    if (!videos.length || !('IntersectionObserver' in window)) return;
+    var videos = Array.prototype.slice.call(document.querySelectorAll('[data-viewport-video]'));
+    if (!videos.length) return;
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var visible = new Set();
-    var manuallyPaused = new Set();
+    var states = new Map();
 
-    function play(video) {
-      if (reducedMotion.matches || document.hidden || manuallyPaused.has(video)) return;
+    function sync(video) {
+      var state = states.get(video);
+      var shouldPlay = state.visible && !document.hidden &&
+        !state.userPaused && (!reducedMotion.matches || state.userStarted);
+
+      if (!shouldPlay) {
+        video.autoplay = false;
+        if (!video.paused) video.pause();
+        return;
+      }
+
+      video.defaultMuted = true;
       video.muted = true;
+      video.playsInline = true;
+      video.autoplay = true;
+      if (!video.paused || state.pending) return;
+      state.pending = true;
       var promise = video.play();
-      if (promise && promise.catch) promise.catch(function () {});
+      if (promise && promise.then) {
+        promise.then(function () {
+          state.pending = false;
+          if (!state.visible || document.hidden || state.userPaused ||
+              (reducedMotion.matches && !state.userStarted)) {
+            video.autoplay = false;
+            video.pause();
+          }
+        }, function (error) {
+          state.pending = false;
+          if (error.name !== 'AbortError' && !state.reported) {
+            state.reported = true;
+            console.warn('Portfolio video could not autoplay:', video.currentSrc || video.src, error);
+          }
+          if (error.name === 'AbortError' && state.visible && !video.autoplay) sync(video);
+        });
+      } else {
+        state.pending = false;
+      }
     }
 
-    var observer = new window.IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var video = entry.target;
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
-          visible.add(video);
-          play(video);
-        } else {
-          visible.delete(video);
-          video.pause();
+    function toggle(video) {
+      var state = states.get(video);
+      state.userStarted = true;
+      state.userPaused = !video.paused || state.pending;
+      sync(video);
+    }
+
+    videos.forEach(function (video) {
+      states.set(video, { visible: false, userPaused: false, userStarted: false, pending: false });
+      video.defaultMuted = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.controls = false;
+      video.addEventListener('loadeddata', function () { sync(video); });
+      video.addEventListener('click', function () { toggle(video); });
+      video.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggle(video);
         }
       });
-    }, { threshold: 0.15 });
-
-    Array.prototype.forEach.call(videos, function (video) {
-      video.addEventListener('pause', function () {
-        if (visible.has(video) && !document.hidden && !reducedMotion.matches) manuallyPaused.add(video);
-      });
-      video.addEventListener('play', function () { manuallyPaused.delete(video); });
-      observer.observe(video);
     });
 
-    document.addEventListener('visibilitychange', function () {
-      visible.forEach(function (video) {
-        if (document.hidden) video.pause();
-        else play(video);
+    function setVisible(video, visible) {
+      var state = states.get(video);
+      if (state.visible === visible) return;
+      state.visible = visible;
+      sync(video);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var frames = new Map();
+      var observer = new window.IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          setVisible(frames.get(entry.target), entry.isIntersecting && entry.intersectionRatio > 0);
+        });
+      }, { threshold: [0, 0.01] });
+      videos.forEach(function (video) {
+        var frame = video.closest('.looping-video') || video;
+        frames.set(frame, video);
+        observer.observe(frame);
       });
-    });
+    } else {
+      function checkVisibility() {
+        videos.forEach(function (video) {
+          var rect = video.getBoundingClientRect();
+          setVisible(video, rect.bottom > 0 && rect.top < window.innerHeight &&
+            rect.right > 0 && rect.left < window.innerWidth);
+        });
+      }
+      window.addEventListener('scroll', checkVisibility, { passive: true });
+      window.addEventListener('resize', checkVisibility);
+      checkVisibility();
+    }
+
+    document.addEventListener('visibilitychange', function () { videos.forEach(sync); });
     if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', function () {
-      visible.forEach(function (video) {
-        if (reducedMotion.matches) video.pause();
-        else play(video);
-      });
+      videos.forEach(sync);
     });
   }
 
@@ -236,10 +293,10 @@
     });
   }
 
+  initViewportVideos();
   var socialLabels = initSocialLabels();
   initClipboard(socialLabels);
   initArchiveBackground();
-  initViewportVideos();
   initWorkCursor();
 
   // The home hero is a CSS-driven marquee, not a scrollable carousel.
