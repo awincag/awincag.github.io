@@ -1,0 +1,10 @@
+<ul class="case-studies-secondary">
+  {% for client in site.data.clients.secondary %}
+    <li>
+      <span class="cs-title nh-d-65">{{ client.name | escape }}</span>
+      <div class="p-action nh-t-55">
+        <p>{{ client.description }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

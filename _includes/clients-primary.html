@@ -1,0 +1,22 @@
+<ul class="case-studies-primary">
+  {% for client in site.data.clients.primary %}
+    <li{% if client.space_between %} class="space-between"{% endif %}>
+      {% if client.space_between %}<div>{% endif %}
+        {% include client-details.html client=client %}
+      {% if client.space_between %}</div>{% endif %}
+      {% if client.metrics.size > 0 %}
+        <div class="result">
+          {% for metric in client.metrics %}
+            <div class="result-item">
+              <div class="result-item-num">
+                <span class="r-i-n-txt nh-d-55">{{ metric.value | escape }}</span>
+                {% if metric.suffix %}<span class="r-i-n-xtr nh-d-65">{{ metric.suffix | escape }}</span>{% endif %}
+              </div>
+              <span class="result-item-label nh-t-65">{{ metric.label | escape }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
