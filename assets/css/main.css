@@ -4459,3 +4459,14 @@ footer a:hover .foot-btn {
     padding: 0;
   }
 }
+
+/* Header labels occupy the same space; only the current state may be visible. */
+.header-text .socials-status {
+  visibility: hidden;
+  pointer-events: none;
+  transition: none;
+}
+.header-text .socials-status.active {
+  visibility: visible;
+  pointer-events: auto;
+}

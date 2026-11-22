@@ -34,3 +34,5 @@
 - Verify that scripts initialize only when necessary elements exist, IDs are unique, and there are no unexpected console errors.
 - Check link targets, image loading, metadata, keyboard navigation, zoom, and reduced-motion preferences.
 - Compare rendered output with the baseline before approving visual changes.
+
+- Preserve the author's conversational, first-person voice. Make surgical edits rather than converting portfolio prose into resume language. Keep bio paragraph edits separate from technical fixes.

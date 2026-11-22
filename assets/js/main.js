@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function initClipboard() {
+  function initClipboard(socialLabels) {
     var buttons = document.querySelectorAll('.copied');
     if (!buttons.length || typeof window.Clipboard !== 'function') return;
 
@@ -9,21 +9,27 @@
     var failMessage = document.getElementById('f-msg');
     var footerClick = document.getElementById('foot-btn');
     var footerMessage = document.getElementById('foot-msg');
-    var messageTimer;
     var footerTimer;
     var failureTimer;
     var clipboard = new window.Clipboard('.copied');
 
+    Array.prototype.forEach.call(buttons, function (button) {
+      if (button.getAttribute('role') !== 'button' || button.tagName === 'BUTTON') return;
+      button.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          button.click();
+        }
+      });
+    });
+
     clipboard.on('success', function (event) {
       event.clearSelection();
-      if (message) {
-        message.classList.add('content-open');
-        window.clearTimeout(messageTimer);
-        messageTimer = window.setTimeout(function () {
-          message.classList.remove('content-open');
-        }, 2500);
-      }
-      if (footerClick && footerMessage) {
+      var trigger = event.trigger;
+      var fromHeader = trigger && trigger.closest('.header-socials');
+      var fromFooter = trigger && trigger.closest('footer');
+      if (fromHeader && socialLabels) socialLabels.showCopied();
+      if (fromFooter && footerClick && footerMessage) {
         footerMessage.classList.remove('f-active');
         footerClick.classList.add('f-active');
         window.clearTimeout(footerTimer);
@@ -64,35 +70,49 @@
   }
 
   function initSocialLabels() {
-    var links = document.querySelectorAll('.links-item-click');
-    var availability = document.querySelector('[data-target="availability"]');
+    var header = document.querySelector('.header-socials');
+    if (!header) return null;
+
+    var labels = Array.prototype.slice.call(header.querySelectorAll('.header-text .socials-status'));
+    var links = header.querySelectorAll('.links-item-click');
+    var hovered = null;
+    var focused = null;
+    var copied = false;
+    var timer;
+
+    function render() {
+      var target = copied ? 'copied' : (hovered || focused || 'availability');
+      labels.forEach(function (label) {
+        var visible = label.getAttribute('data-target') === target;
+        label.classList.toggle('active', visible);
+        label.classList.remove('content-open');
+        label.setAttribute('aria-hidden', String(!visible));
+      });
+    }
 
     Array.prototype.forEach.call(links, function (link) {
       var target = link.getAttribute('data-target');
-      var labels = Array.prototype.filter.call(document.querySelectorAll('[data-target]'), function (element) {
-        return element.getAttribute('data-target') === target;
-      });
-
-      function show() {
-        labels.forEach(function (label) { label.classList.add('active'); });
-        if (availability) availability.classList.remove('active');
-      }
-
-      function hide() {
-        labels.forEach(function (label) { label.classList.remove('active'); });
-        if (availability) availability.classList.add('active');
-      }
-
-      link.addEventListener('mouseenter', show);
-      link.addEventListener('mouseleave', hide);
-      link.addEventListener('focus', show);
-      link.addEventListener('blur', hide);
+      link.addEventListener('mouseenter', function () { hovered = target; render(); });
+      link.addEventListener('mouseleave', function () { if (hovered === target) hovered = null; render(); });
+      link.addEventListener('focus', function () { focused = target; render(); });
+      link.addEventListener('blur', function () { if (focused === target) focused = null; render(); });
     });
+
+    render();
+
+    return {
+      showCopied: function () {
+        copied = true;
+        window.clearTimeout(timer);
+        render();
+        timer = window.setTimeout(function () { copied = false; render(); }, 2500);
+      }
+    };
   }
 
-  initClipboard();
+  var socialLabels = initSocialLabels();
+  initClipboard(socialLabels);
   initArchiveBackground();
-  initSocialLabels();
 
   // The home hero is a CSS-driven marquee, not a scrollable carousel.
   // Its former scroll-indicator loop referenced a removed toggle handler.

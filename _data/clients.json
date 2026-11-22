@@ -2,7 +2,7 @@
   "primary": [
     {
       "name": "Meta",
-      "description": "I've been at Meta since the end of 2023 working on a number of internal products. I started out on procurement tools and have since moved over to recruiting, where I've spent a lot of my time designing and building tools to help people at Meta interview and hire. Some of my favorite work has been getting to build out the experiences myself.",
+      "description": "Since 2023, I've been working in the Enterprise org, focused on building internal products for all of Meta. I started out on procurement tools and have since moved over to recruiting, where I oversee the entire interviewing and candidate evaluation experience, with a focus on ensuring fair and equitable assessments.",
       "space_between": true,
       "metrics": [
         {
@@ -115,10 +115,6 @@
   ],
   "secondary": [
     {
-      "name": "Metromile",
-      "description": "Worked with <a Href=\"https://www.metromile.com/\" target=\"_blank\" title=\"Metromile\" class=\"projects-link\">Metromile</a> on designing out a new bundling partnership product throughout 2021. We integrated a discounts flow into their core customer sign up. I also helped redesign their homepage. The bundling experience increased conversion by 5.7%."
-    },
-    {
       "name": "Nissan North America",
       "description": "Worked with teams at Nissan North America in 2018 on various concepts. All work is strictly confidential."
     },
@@ -129,6 +125,10 @@
     {
       "name": "Astellas Pharmaceuticals",
       "description": "Worked with Astellas Pharmaceuticals on innovation lab projects beginning in 2020. All work is strictly confidential."
+    },
+    {
+      "name": "Metromile",
+      "description": "Worked with <a Href=\"https://www.metromile.com/\" target=\"_blank\" title=\"Metromile\" class=\"projects-link\">Metromile</a> on designing out a new bundling partnership product throughout 2021. We integrated a discounts flow into their core customer sign up. I also helped redesign their homepage. The bundling experience increased conversion by 5.7%."
     },
     {
       "name": "Natera",
