@@ -4528,3 +4528,6 @@ footer a:hover .foot-btn {
   html { scroll-behavior: auto; }
   .hero-assets { animation: none; }
 }
+
+/* Intrinsic dimensions reserve layout space; rendered images stay responsive. */
+.archive img[width][height] { max-width: 100%; height: auto; }
