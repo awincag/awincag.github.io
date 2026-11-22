@@ -1,6 +1,6 @@
 {% assign client = include.client %}
 <div class="client-logo">
-  {% if client.logo %}<img src="{{ client.logo | relative_url }}" alt="{{ client.alt | escape }}">{% endif %}
+  {% if client.logo %}<img src="{{ client.logo | relative_url }}" alt="{{ client.alt | escape }}">{% elsif client.logo_text %}<span class="nh-d-65">{{ client.logo_text | escape }}</span>{% endif %}
 </div>
 <span class="cs-title nh-d-65">{{ client.name | escape }}</span>
 <div class="p-action nh-t-55">

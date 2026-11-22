@@ -1,20 +1,28 @@
 {
   "primary": [
     {
-      "name": "Harley-Davidson",
-      "logo": "/assets/media/logo/hd.jpg",
-      "alt": "Screenshot of Harley-Davidson Logo",
-      "description": "Partnered with the teams at Gigster and Pivotal Labs to redefine Harley-Davidson’s ride planner tool on <a Href=\"https://apps.apple.com/us/app/harley-davidson/id1292723595\" target=\"_blank\" title=\"Harley on iOS\" class=\"projects-link\">iOS</a>, <a Href=\"https://play.google.com/store/apps/details?id=com.harley_davidson.ride_planner&hl=en_US&gl=US\" target=\"_blank\" title=\"Harley on Android\" class=\"projects-link\">Android</a>, and <a Href=\"https://maps.harley-davidson.com/?source_cd=Vanity_rideplanner\" target=\"_blank\" title=\"Harley on web\" class=\"projects-link\">web</a> throughout 2017. I led design in the second half of the project. I focused on refactoring the core experience, creating a new ride overview and allowing riders to customize their routes with ease.",
-      "space_between": false,
+      "name": "Meta",
+      "logo_text": "Meta",
+      "description": "Product designer at Meta working on enterprise products. My work spans product strategy, systems and interaction design, and building functional prototypes.",
+      "space_between": true,
+      "metrics": []
+    },
+    {
+      "name": "Credo Health",
+      "logo": "/assets/media/logo/ch.jpg",
+      "alt": "Screenshot of Credo Health Logo",
+      "description": "Joined <a href=\"https://credohealth.com\" target=\"_blank\">Credo Health</a> as its first designer. Led the launch of its first mobile and web products and designed AI-assisted medical document preprocessing. Helped reposition the product toward comprehensive clinical intelligence, turning fragmented medical records into actionable patient histories.",
+      "space_between": true,
       "metrics": [
         {
-          "value": "4.9",
-          "label": "Average Review"
+          "value": "82",
+          "suffix": "%",
+          "label": "Increase in medical record retrieval"
         },
         {
-          "value": "22",
-          "suffix": "k",
-          "label": "Reviews on iOS Store"
+          "value": "24",
+          "suffix": "%",
+          "label": "Increase in risk adjustment efficiency"
         }
       ]
     },
@@ -22,37 +30,12 @@
       "name": "The Publicis Groupe",
       "logo": "/assets/media/logo/pg.jpg",
       "alt": "Screenshot of The Publicis Groupe Logo",
-      "description": "Former Product Design Lead on <a Href=\"https://www.youtube.com/watch?v=eid8C_dTVvo\" target=\"_blank\" title=\"Marcel\" class=\"projects-link\">Marcel</a> at Publicis. Worked with the talented team at SapientRazorfish from 2018 to 2020. I worked on a number projects including: implementing Microsoft’s fluent design across the entire experience, designing the CMS, refactoring the core mobile app, and launching web 1.0",
+      "description": "Joined <a href=\"https://www.youtube.com/watch?v=eid8C_dTVvo\" target=\"_blank\" title=\"Marcel\" class=\"projects-link\">Marcel</a> as a systems designer and progressed to UX lead and manager. Marcel connected Publicis Groupe agencies through talent discovery, work sharing, mobility, timesheets, and industry news. Led experience architecture and design across web and mobile, in collaboration with Microsoft’s Fluent Design team.",
       "space_between": false,
       "metrics": [
         {
-          "value": "272",
-          "suffix": "x",
-          "label": "Growth in Mobile Adoption"
-        },
-        {
-          "value": "50",
-          "suffix": "%",
-          "label": "Reduction in time to release"
-        }
-      ]
-    },
-    {
-      "name": "Metromile",
-      "logo": "/assets/media/logo/mm.jpg",
-      "alt": "Screenshot of Metromile Logo",
-      "description": "Worked with <a Href=\"https://www.metromile.com/\" target=\"_blank\" title=\"Metromile\" class=\"projects-link\">Metromile</a> on designing out a new bundling partnership product throughout 2021. We integrated a discounts flow into their core customer sign up. I also helped redesign their homepage. ",
-      "space_between": true,
-      "metrics": [
-        {
-          "value": "381",
-          "suffix": "%",
-          "label": "Projected ROI"
-        },
-        {
-          "value": "5.7",
-          "suffix": "%",
-          "label": "Increase in Conversion"
+          "value": "5",
+          "label": "Product teams supported"
         }
       ]
     },
@@ -60,18 +43,36 @@
       "name": "Parachute Health",
       "logo": "/assets/media/logo/ph.jpg",
       "alt": "Screenshot of Parachute Health Logo",
-      "description": "Spent some time supporting <a Href=\"https://www.parachutehealth.com/\" target=\"_blank\" title=\"Parachute Health\" class=\"projects-link\">Parachute Health</a>, the health-tech startup focused on DME ordering, throughout 2020 and 2021. I led design for a new mobile intiative focused on account managers and a refactoring Parachute’s core platform to enable new product verticals. ",
+      "description": "Led design and strategy for growth initiatives at <a href=\"https://www.parachutehealth.com/\" target=\"_blank\" class=\"projects-link\">Parachute Health</a>, including launching an iOS companion app for account managers. Then led product design for platform expansion, collaborating with engineering on reusable application logic to enable new product verticals.",
       "space_between": false,
       "metrics": [
         {
-          "value": "205",
+          "value": "30",
           "suffix": "%",
-          "label": "Reduction in Order Closure"
+          "label": "Reduction in order-resolution time"
         },
         {
-          "value": "30",
-          "suffix": "x",
-          "label": "Growth in Mobile Adoption"
+          "value": "205",
+          "suffix": "%",
+          "label": "Increase in order conversion"
+        }
+      ]
+    },
+    {
+      "name": "Harley-Davidson",
+      "logo": "/assets/media/logo/hd.jpg",
+      "alt": "Screenshot of Harley-Davidson Logo",
+      "description": "Partnered with Gigster and Pivotal Labs to redesign Harley-Davidson’s ride planning experience across iOS, Android, and web. Led design in the second half of the engagement, focusing on the core mapping experience, ride overview, and route customization.",
+      "space_between": false,
+      "metrics": [
+        {
+          "value": "4.9",
+          "label": "App Store rating (at time of reporting)"
+        },
+        {
+          "value": "22",
+          "suffix": "k",
+          "label": "App Store reviews (at time of reporting)"
         }
       ]
     },
@@ -79,7 +80,7 @@
       "name": "Octane AI",
       "logo": "/assets/media/logo/ai.jpg",
       "alt": "Screenshot of Octane Ai Logo",
-      "description": "Lead product design for <a href=\"https://octaneai.com/\" target=\"_blank\" title=\"View Site\">Octane AI's</a> first version. They're a platform that enables merchants to create Chatbots on Facebook Messenger. I focused on creating flows for chatbot creation and management. This was back in winter of 2016.",
+      "description": "Led product design for the first version of <a href=\"https://octaneai.com/\" target=\"_blank\">Octane AI</a>, a platform for merchants to build and manage conversational interfaces on Facebook Messenger, in 2016.",
       "space_between": true,
       "metrics": [
         {
@@ -92,28 +93,13 @@
           "label": "Fans interacted with Chatbot"
         }
       ]
-    },
-    {
-      "name": "Credo Health",
-      "logo": "/assets/media/logo/ch.jpg",
-      "alt": "Screenshot of Credo Health Logo",
-      "description": "Founding member and Head of Design at <a href=\"https://credohealth.com\" target=\"_blank\">Credo Health</a> helping value-based-care organizations onboard new patients. I focused on finding product market fit, company strategy and product marketing, investor decks, and everything necessary for growth.",
-      "space_between": true,
-      "metrics": [
-        {
-          "value": "82",
-          "suffix": "%",
-          "label": "Increase in Retrieval Rates"
-        },
-        {
-          "value": "24",
-          "suffix": "%",
-          "label": "Increase in Risk Adjuster efficiency"
-        }
-      ]
     }
   ],
   "secondary": [
+    {
+      "name": "Metromile",
+      "description": "Led research and design for a new insurance-bundling experience at <a href=\"https://www.metromile.com/\" target=\"_blank\">Metromile</a> in 2021, increasing conversion by 5.7%."
+    },
     {
       "name": "Nissan North America",
       "description": "Worked with teams at Nissan North America in 2018 on various concepts. All work is strictly confidential."
@@ -123,8 +109,8 @@
       "description": "Helped re-design <a Href=\"https://www.fidsafe.com/\" target=\"_blank\" title=\"Fidsafe\" class=\"projects-link\">Fidsafe</a>, a document collaboration tool for Fidelity clients in Winter of 2017."
     },
     {
-      "name": "Astellas Pharmacueticals",
-      "description": "Working with Astellas Pharmacueticals on innovation lab projects since 2020. All work is strictly confidential."
+      "name": "Astellas Pharmaceuticals",
+      "description": "Worked with Astellas Pharmaceuticals on innovation lab projects beginning in 2020. All work is strictly confidential."
     },
     {
       "name": "Natera",
@@ -144,7 +130,7 @@
     },
     {
       "name": "BabyNoggin",
-      "description": "Helping doctors and parents to screen children more effectivelly at <a Href=\"http://www.babynoggin.com/\" target=\"_blank\" title=\"BabyNoggin\" class=\"projects-link\">BabyNoggin</a>. Led design throughout the latter half of 2018."
+      "description": "Helping doctors and parents to screen children more effectively at <a Href=\"http://www.babynoggin.com/\" target=\"_blank\" title=\"BabyNoggin\" class=\"projects-link\">BabyNoggin</a>. Led design throughout the latter half of 2018."
     }
   ]
 }
