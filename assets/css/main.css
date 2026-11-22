@@ -4470,3 +4470,28 @@ footer a:hover .foot-btn {
   visibility: visible;
   pointer-events: auto;
 }
+
+/* Keep client metrics aligned across each responsive grid row. */
+.case-studies-primary > .client-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.case-studies-primary > .client-card > .result {
+  margin-top: auto;
+}
+
+/* Share the description and metrics tracks so wrapped metric labels
+   cannot shift the metric numbers out of alignment. */
+@supports (grid-template-rows: subgrid) {
+  .case-studies-primary > .client-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    row-gap: 0;
+  }
+  .case-studies-primary > .client-card > .result {
+    grid-row: 2;
+    margin-top: 0;
+  }
+}

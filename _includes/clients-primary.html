@@ -1,9 +1,9 @@
 <ul class="case-studies-primary">
   {% for client in site.data.clients.primary %}
-    <li{% if client.space_between %} class="space-between"{% endif %}>
-      {% if client.space_between %}<div>{% endif %}
+    <li class="client-card">
+      <div class="client-card-details">
         {% include client-details.html client=client %}
-      {% if client.space_between %}</div>{% endif %}
+      </div>
       {% if client.metrics.size > 0 %}
         <div class="result">
           {% for metric in client.metrics %}

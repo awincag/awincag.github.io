@@ -3,7 +3,6 @@
     {
       "name": "Meta",
       "description": "Since 2023, I've been working in the Enterprise org, focused on building internal products for all of Meta. I started out on procurement tools and have since moved over to recruiting, where I oversee the entire interviewing and candidate evaluation experience, with a focus on ensuring fair and equitable assessments.",
-      "space_between": true,
       "metrics": [
         {
           "value": "XX",
@@ -24,7 +23,6 @@
       "logo": "/assets/media/logo/ch.jpg",
       "alt": "Screenshot of Credo Health Logo",
       "description": "Founding member and Head of Design at <a href=\"https://credohealth.com\" target=\"_blank\">Credo Health</a> helping value-based-care organizations onboard new patients. I focused on finding product market fit, company strategy and product marketing, investor decks, and everything necessary for growth.",
-      "space_between": true,
       "metrics": [
         {
           "value": "82",
@@ -43,7 +41,6 @@
       "logo": "/assets/media/logo/pg.jpg",
       "alt": "Screenshot of The Publicis Groupe Logo",
       "description": "Former Product Design Lead on <a Href=\"https://www.youtube.com/watch?v=eid8C_dTVvo\" target=\"_blank\" title=\"Marcel\" class=\"projects-link\">Marcel</a> at Publicis. Worked with the talented team at SapientRazorfish from 2018 to 2020. I worked on a number projects including: implementing Microsoft’s fluent design across the entire experience, designing the CMS, refactoring the core mobile app, and launching web 1.0",
-      "space_between": false,
       "metrics": [
         {
           "value": "272",
@@ -62,7 +59,6 @@
       "logo": "/assets/media/logo/ph.jpg",
       "alt": "Screenshot of Parachute Health Logo",
       "description": "Spent some time supporting <a Href=\"https://www.parachutehealth.com/\" target=\"_blank\" title=\"Parachute Health\" class=\"projects-link\">Parachute Health</a>, the health-tech startup focused on DME ordering, throughout 2020 and 2021. I led design for a new mobile initiative focused on account managers and a refactoring Parachute’s core platform to enable new product verticals.",
-      "space_between": false,
       "metrics": [
         {
           "value": "205",
@@ -81,7 +77,6 @@
       "logo": "/assets/media/logo/hd.jpg",
       "alt": "Screenshot of Harley-Davidson Logo",
       "description": "Partnered with the teams at Gigster and Pivotal Labs to redefine Harley-Davidson’s ride planner tool on <a Href=\"https://apps.apple.com/us/app/harley-davidson/id1292723595\" target=\"_blank\" title=\"Harley on iOS\" class=\"projects-link\">iOS</a>, <a Href=\"https://play.google.com/store/apps/details?id=com.harley_davidson.ride_planner&hl=en_US&gl=US\" target=\"_blank\" title=\"Harley on Android\" class=\"projects-link\">Android</a>, and <a Href=\"https://maps.harley-davidson.com/?source_cd=Vanity_rideplanner\" target=\"_blank\" title=\"Harley on web\" class=\"projects-link\">web</a> throughout 2017. I led design in the second half of the project. I focused on refactoring the core experience, creating a new ride overview and allowing riders to customize their routes with ease.",
-      "space_between": false,
       "metrics": [
         {
           "value": "4.9",
@@ -99,7 +94,6 @@
       "logo": "/assets/media/logo/ai.jpg",
       "alt": "Screenshot of Octane Ai Logo",
       "description": "Lead product design for <a href=\"https://octaneai.com/\" target=\"_blank\" title=\"View Site\">Octane AI's</a> first version. They're a platform that enables merchants to create Chatbots on Facebook Messenger. I focused on creating flows for chatbot creation and management. This was back in winter of 2016.",
-      "space_between": true,
       "metrics": [
         {
           "value": "3:00",
