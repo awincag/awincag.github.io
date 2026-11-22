@@ -36,3 +36,10 @@
 - Compare rendered output with the baseline before approving visual changes.
 
 - Preserve the author's conversational, first-person voice. Make surgical edits rather than converting portfolio prose into resume language. Keep bio paragraph edits separate from technical fixes.
+
+## Open visual and media tasks
+
+- Add approved Credo Health videos to the work archive and selected motion to the homepage marquee after reviewing source media and poster frames.
+- Review shared archive video frame sizing, mobile layout, close control placement, and View Work cursor treatment in browser.
+- Preserve image quality; use responsive media derivatives where beneficial. Check intrinsic image dimensions, compression, video codecs, and actual transfer/performance before publication.
+- Keep three succinct focus areas in the home introduction; the current wording is a trial.
