@@ -4496,47 +4496,47 @@ footer a:hover .foot-btn {
   }
 }
 
-/* Archive video stages are viewport-led, not fixed pixel heights.
-   Portrait and landscape footage retain their own intrinsic proportions. */
-.archive .looping-video {
+/* Archive media stages: size the artwork first, then add a generous frame.
+   The stage can exceed a viewport; the artwork remains legible and contained. */
+.archive {
+  --media-inset: clamp(40px, 6vw, 112px);
+  --portrait-height: 86vh;
+  --portrait-height: 86svh;
+}
+.archive .looping-video,
+.archive .side-grid > .side-picture {
   box-sizing: border-box;
   min-width: 0;
-  height: 92vh;
-  height: 92svh;
-  padding: clamp(12px, 2vw, 28px);
+  height: auto;
+  padding: var(--media-inset);
+  overflow: hidden;
 }
 .archive .looping-video .laptop-video {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: auto 16 / 9;
   object-fit: contain;
   margin: 0;
   min-width: 0;
   max-width: 100%;
 }
+.archive .looping-video.tall,
 .archive .side-grid > .side-picture {
-  box-sizing: border-box;
-  min-width: 0;
-  height: 92vh;
-  height: 92svh;
-  padding: clamp(12px, 2vw, 28px);
+  height: calc(var(--portrait-height) + 2 * var(--media-inset));
+}
+.archive .looping-video.tall .laptop-video {
+  height: 100%;
+  aspect-ratio: auto 9 / 19.5;
 }
 @media (max-width: 699px) {
+  .archive {
+    --media-inset: clamp(16px, 5vw, 32px);
+    --portrait-height: 86vh;
+    --portrait-height: 86svh;
+  }
   .archive .looping-video:not(.tall) {
-    height: auto;
-    min-height: 0;
-    aspect-ratio: 16 / 9;
-    padding: 10px;
-  }
-  .archive .looping-video:not(.tall) .laptop-video {
-    height: auto;
-    max-height: 88svh;
-  }
-  .archive .looping-video.tall,
-  .archive .side-grid > .side-picture {
-    height: 90vh;
-    height: 90svh;
-    padding: 12px;
+    padding: var(--media-inset);
   }
 }
 .archive .final-content img[loading="lazy"] {
